@@ -1,13 +1,19 @@
 .NavBar {
     display: flex;
-    background-color: white;
+    background: rgb(252,110,106);
+    background: -moz-linear-gradient(-45deg,  rgba(252,110,106,1) 0%, rgba(247,137,80,1) 100%);
+    background: -webkit-linear-gradient(-45deg,  rgba(252,110,106,1) 0%,rgba(247,137,80,1) 100%);
+    background: linear-gradient(135deg,  rgba(252,110,106,1) 0%,rgba(247,137,80,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc6e6a', endColorstr='#f78950',GradientType=1 );
+    overflow: hidden;
     height: 60px;
     padding: 10px;
-    border-style: none none inset none;
+    border-style: none none none none;
     border-radius: 0.5px;
     border-color: #EAECEE;
     justify-content: space-between;
 }
+
 
 .components {
     display: flex;
@@ -18,11 +24,11 @@
 .urlLinks {
     margin-right: 20px;
     text-decoration: none;
-    color: #2C3E50;
+    color: white;
 } 
 
 .logo {
     width: 200px;
     height: 55px;
-    margin-left: 32px;
+    margin-left: 52px;
 }

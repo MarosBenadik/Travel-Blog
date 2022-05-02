@@ -1,7 +1,10 @@
+.custom-shape-divider-bottom-1645114717 {position: absolute; bottom: -0; left: 0; width: 100%; overflow: hidden; line-height: 0; }
+.custom-shape-divider-bottom-1645114717 svg {position: relative; display: block; width: calc(100% + 1.3px); height: 180px; transform: rotateY(180deg); }
+.custom-shape-divider-bottom-1645114717 .shape-fill {fill: #f9f9f9; }
+
 .home{
-    display: flex;
     background-color: rgb(250, 250, 250);
-    height: 550px;
+    height: 710px;
     }
 
 .top-part{
@@ -16,21 +19,70 @@
 
 .top-part .left-part{
     display: flex;
-    width: 55%;
+    width: 75%;
     height: 45%;
-    float: left;
 }
 
 .top-part .right-part {
     display: flex;
+    padding-top: 70px;
+    padding-left: 40px;
 }
 
 .right-part .right-image {
-    display: flex;
-    width: 90%;
-    height: 110%;
+    width: 100%;
+    height: 100%;
+    margin-right: 30px;
 }
 
-.text {
-    font-size: 20;
+.left-part {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.text-bold {
+    font-size: 60px;
+    font-weight: 800;
+    margin: 25px;
+    color: white;
+
+}
+
+.left-text-container {
+    margin-top: 5px;
+}   
+
+.left-text {
+    font-size: 29px;
+    color: white;
+    margin: 25px;
+}
+
+.left-text-download {
+    font-size: 29px;
+    color: white;
+    margin-top: 45px;
+    margin-left: 25px;
+}
+
+.google-container {
+    margin-left: 25px;
+    margin-top: -10px;
+}
+
+.google-image {
+    position: relative;
+    width: 23%;
+    height: 90%;
+}
+
+.top-component {
+    display: fle;
+    flex-direction: column;
+    background-color: rgb(161, 66, 66);
+    width: 100%;
+    height: 300px;
+
 }

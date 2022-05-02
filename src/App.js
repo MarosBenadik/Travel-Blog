@@ -16,7 +16,9 @@ import Error from './views/ErrorPage/ErrorPage';
 const App = () => {
   return (
     <Router>
-      {NavBar()}
+      <div>
+        {NavBar()}
+      </div>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/aboutus" element={<About />}/>
@@ -27,7 +29,9 @@ const App = () => {
 
         <Route path="*" element={<Error />}/>
       </Routes>
-      {Footer()}
+      <div>
+        {Footer()}
+      </div>
     </Router>
   );
 }
