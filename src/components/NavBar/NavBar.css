@@ -1,0 +1,28 @@
+.NavBar {
+    display: flex;
+    background-color: white;
+    height: 60px;
+    padding: 10px;
+    border-style: none none inset none;
+    border-radius: 0.5px;
+    border-color: #EAECEE;
+    justify-content: space-between;
+}
+
+.components {
+    display: flex;
+    margin-right: 10px;  
+    flex-direction: row;
+}
+
+.urlLinks {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #2C3E50;
+} 
+
+.logo {
+    width: 200px;
+    height: 55px;
+    margin-left: 32px;
+}

@@ -1,0 +1,61 @@
+.footer {
+    background-color: white;
+}
+
+.urllinks-container{
+    display: flex;
+    
+}
+
+.urllinks {
+    margin-right: 13%;
+    margin-top: 2%;
+    justify-content: space-around;
+    display: flex;
+    height: 280px;
+    flex: 100%;
+    flex-direction: row;
+}
+
+.link-text-container {
+    color: rgb(93, 93, 93);
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+}
+
+.link-text {
+    color: rgb(88, 84, 84);
+    font-size: 18px;
+    text-decoration: none;
+    margin-block-start: 15px;
+}
+
+.cc {
+    background-color: rgb(250, 248, 248);
+    padding: 23px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.cc-text {
+    color: rgb(149, 149, 149);
+    font-size: 14px;
+}
+
+.link-socialMedia {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+
+}
+.icons {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}

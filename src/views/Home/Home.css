@@ -1,0 +1,36 @@
+.home{
+    display: flex;
+    background-color: rgb(250, 250, 250);
+    height: 550px;
+    }
+
+.top-part{
+    display: flex;
+    background: rgb(251,112,105);
+    background: linear-gradient(90deg, rgba(251,112,105,1) 0%, rgba(249,122,95,1) 35%, rgba(248,127,89,1) 100%);
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+
+}
+
+.top-part .left-part{
+    display: flex;
+    width: 55%;
+    height: 45%;
+    float: left;
+}
+
+.top-part .right-part {
+    display: flex;
+}
+
+.right-part .right-image {
+    display: flex;
+    width: 90%;
+    height: 110%;
+}
+
+.text {
+    font-size: 20;
+}
