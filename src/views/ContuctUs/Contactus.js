@@ -1,8 +1,9 @@
 import React from 'react';
+import './Contactus.css';
 
 const Contuctus = () => {
   return (
-    <div>
+    <div className='contact'>
         <p>Contuctus Page</p>
     </div>
   );

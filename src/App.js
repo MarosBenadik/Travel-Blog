@@ -10,28 +10,34 @@ import Questions from './views/Questions/Questions';
 import Contuctus from './views/ContuctUs/Contactus';
 import Faq from './views/Faq/Faq';
 import Forbusiness from './views/ForBusiness/Forbusiness';
+import OurPlaces from './views/OurPlaces/OurPlaces';
 
 import Error from './views/ErrorPage/ErrorPage';
+
+
 
 const App = () => {
   return (
     <Router>
-      <div>
-        {NavBar()}
-      </div>
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/aboutus" element={<About />}/>
-        <Route path="/questions" element={<Questions />}/>
-        <Route path="/contactus" element={<Contuctus />}/>
-        <Route path="/forbusiness" element={<Forbusiness />}/>
-        <Route path="/FAQ" element={<Faq />}/>
+      <span className="font-link">
+        <div>
+          {NavBar()}
+        </div>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/aboutus" element={<About />}/>
+          <Route path="/questions" element={<Questions />}/>
+          <Route path="/contactus" element={<Contuctus />}/>
+          <Route path="/forbusiness" element={<Forbusiness />}/>
+          <Route path="/FAQ" element={<Faq />}/>
+          <Route path="/ourPlaces" element={<OurPlaces />}/>
 
-        <Route path="*" element={<Error />}/>
-      </Routes>
-      <div>
-        {Footer()}
-      </div>
+          <Route path="*" element={<Error />}/>
+        </Routes>
+        <div>
+          {Footer()}
+        </div>
+      </span>
     </Router>
   );
 }

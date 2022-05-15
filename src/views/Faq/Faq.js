@@ -1,8 +1,9 @@
 import React from 'react';
+import './Faq.css';
 
 const Faq = () => {
   return (
-    <div>
+    <div className='faq'>
         <p>FAQ Page</p>
     </div>
   );

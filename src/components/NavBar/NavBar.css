@@ -1,34 +1,226 @@
-.NavBar {
-    display: flex;
-    background: rgb(252,110,106);
-    background: -moz-linear-gradient(-45deg,  rgba(252,110,106,1) 0%, rgba(247,137,80,1) 100%);
-    background: -webkit-linear-gradient(-45deg,  rgba(252,110,106,1) 0%,rgba(247,137,80,1) 100%);
-    background: linear-gradient(135deg,  rgba(252,110,106,1) 0%,rgba(247,137,80,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc6e6a', endColorstr='#f78950',GradientType=1 );
-    overflow: hidden;
-    height: 60px;
-    padding: 10px;
-    border-style: none none none none;
-    border-radius: 0.5px;
-    border-color: #EAECEE;
-    justify-content: space-between;
+@import "../../public/assets/COLORS.css";
+
+@media (max-width: 768px) {
+    .NavBar{
+        display: flex;
+        background: var(--main-color);
+        background: -moz-linear-gradient(-45deg,  var(--main-color) 5%, var(--main-color1) 100%);
+        background: -webkit-linear-gradient(-45deg,  var(--main-color1) 0%,var(--main-color) 100%);
+        background: linear-gradient(135deg,  var(--main-color) 0%,var(--main-color2) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc6e6a', endColorstr='#f78950',GradientType=1 );
+        overflow: hidden;
+        height: 60px;
+        padding: 10px;
+        border-style: none none none none;
+        border-radius: 0.5px;
+        border-color: #EAECEE;
+        justify-content: space-between;
+    }
+    .components {
+        display: none;
+        margin-right: 10px;  
+        flex-direction: row;
+    }
+
+    .navBar-components{
+        display: flex;
+        margin-left: 20px;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 30px;
+        color: var(--main-color);
+        font-weight: 800;
+    }
+
+    .dropDownLogo {
+        width: 30px;
+        height: 30px;
+        cursor:pointer;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .urlLinks-navbar {
+        margin-right: 20px;
+        margin-left: 20px;
+        text-decoration: none;
+        color: white;
+    } 
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin-left: 32px;
+        cursor:pointer;
+    }
+    .logo-text {
+        color: white;
+        align-self: center;
+        margin-left: 10px;
+        text-decoration: none;
+        size: 15px;
+        font-weight: bold;
+        cursor:pointer;
+    }
 }
 
+@media (max-width: 992px) {
+    .NavBar{
+        display: flex;
+        background: var(--main-color);
+        background: -moz-linear-gradient(-45deg,  var(--main-color) 5%, var(--main-color1) 100%);
+        background: -webkit-linear-gradient(-45deg,  var(--main-color1) 0%,var(--main-color) 100%);
+        background: linear-gradient(135deg,  var(--main-color) 0%,var(--main-color2) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc6e6a', endColorstr='#f78950',GradientType=1 );
+        overflow: hidden;
+        height: 60px;
+        padding: 10px;
+        border-style: none none none none;
+        border-radius: 0.5px;
+        border-color: #EAECEE;
+        justify-content: space-between;
+    }
 
-.components {
+    .components {
+        display: none;
+        margin-right: 10px;  
+        flex-direction: row;
+    }
+
+    .navBar-components{
+        display: flex;
+        position: absolute;
+        margin-left: 20px;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 30px;
+        color: var(--main-color1);
+        font-weight: 800;
+    }
+
+    .navBar {
+        display: flex;
+    }
+
+    .navBar-parent {
+        width: 100%;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border-color: none;
+        border-style: none none none none;
+    }
+
+    .dropDownLogo {
+        align-self: center;
+        width: 40px;
+        height: 40px;
+        cursor:pointer;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .urlLinks-navbar {
+        margin-right: 20px;
+        text-decoration: none;
+        color: black;
+    } 
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin-left: 32px;
+        cursor:pointer;
+    }
+    .logo-text {
+        color: white;
+        align-self: center;
+        margin-left: 10px;
+        text-decoration: none;
+        size: 20px;
+        font-weight: bold;
+        cursor:pointer;
+    }
+}
+
+@media (min-width: 992px) {
+    .NavBar{
+        display: flex;
+        background: var(--main-color);
+        background: -moz-linear-gradient(-45deg,  var(--main-color) 5%, var(--main-color1) 100%);
+        background: -webkit-linear-gradient(-45deg,  var(--main-color1) 0%,var(--main-color2) 100%);
+        background: linear-gradient(135deg,  var(--main-color) 0%,var(--main-color2) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc6e6a', endColorstr='#f78950',GradientType=2 );
+        overflow: hidden;
+        height: 60px;
+        padding: 10px;
+        border-style: none none none none;
+        border-radius: 0.5px;
+        border-color: #EAECEE;
+        justify-content: space-between;
+    }
+
+    .components {
+        display: flex;
+        margin-right: 10px;  
+        flex-direction: row;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navBar {
+        display: none;
+    }
+    
+    .urlLinks {
+        margin-right: 20px;
+        text-decoration: none;
+        color: white;
+    } 
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin-left: 32px;
+        cursor: pointer;
+    }
+    .logo-text {
+        color: white;
+        align-self: center;
+        margin-left: 15px;
+        text-decoration: none;
+        size: 30px;
+        font-weight: bold;
+        cursor:pointer;
+        text-decoration: none;
+    }
+}
+
+.drob-menu {
     display: flex;
-    margin-right: 10px;  
     flex-direction: row;
+    align-items: center;
 }
 
-.urlLinks {
-    margin-right: 20px;
-    text-decoration: none;
-    color: white;
-} 
-
-.logo {
-    width: 200px;
-    height: 55px;
-    margin-left: 52px;
+.drob-icon {
+    width: 35px;
+    height: 35px;
+    justify-self: center;
 }
+
+
+

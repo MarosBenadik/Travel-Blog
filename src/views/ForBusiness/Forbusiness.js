@@ -1,8 +1,9 @@
 import React from 'react';
+import './Forbusiness.css';
 
 const Forbusiness = () => {
   return (
-    <div>
+    <div className='business'>
         <p>Forbusiness Page</p>
     </div>
   );

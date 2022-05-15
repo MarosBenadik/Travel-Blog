@@ -1,51 +1,145 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
+import images from '../../public/images/images';
+
+import DATA from '../../public/assets/DATA';
+
+import icons from '../../public/icons/icons';
+
+import StateCard from '../../components/StateCard/StateCard';
+
+import { ScrollableComponentElement } from "scrollable-component";
+
+
+
 const Home = () => {
-  function renderTabs() {
+
+  const initial_explore = {
+    id: 6,
+    name: "Favorit Locations",
+    states: [
+      {
+        id: 0,
+        name: "Spain",
+        icon: icons.spain
+      },{ 
+        id: 0,
+        name: "Italy",
+        icon: icons.italy
+      },{ 
+        id: 0,
+        name: "United Kingdom",
+        icon: icons.uk
+      },{ 
+        id: 0,
+        name: "Norway",
+        icon: icons.norway
+      },{ 
+        id: 0,
+        name: "Greece",
+        icon: icons.greece
+      },{ 
+        id: 0,
+        name: "United Kingdom",
+        icon: icons.uk
+      },{ 
+        id: 0,
+        name: "Slovakia",
+        icon: icons.sk
+      } ]
+  }
+
+  const [ explore, setExplore ] = React.useState(initial_explore);
+
+  function handleExploreChange(value) {
+    const explore_data = DATA.explore.find(x => x.id === value)
+    setExplore(explore_data);
+  }
+  
+  function topComponenet() {
     return (
-      <div className='top-component' >
-        <p>sd</p>
+      <div className='top-component'>
+        <img src={images.wings} className='main-image' alt='main' />
+        <div className='bacground-text' >
+          <Link to="/ourPlaces" className='text'>Explore Places With Us</Link>
+        </div>
       </div>
     )
   }
 
-  function renederHeaders(){
+  function middleComponent() {
+    return (
+      <div className='middle-component'>
+        <div className='header-background'>
+          <p className='header'>Newest Blogs:</p>
+        </div>
 
-    const header_img = require('../../bucket/images/small-img2.webp');
+      </div>
+    )
+  }
 
-    const google_img = require('../../bucket/images/google_play_store.webp');
+  function bottomComponent() {
+
+
+    const ContactWindow = () => {
+      return (
+        <scrollable-component class="my-content">
+          {explore.states.map((state, index) => {
+            return (
+              <StateCard
+                key={index}
+                pic={state.icon}
+                name={state.name}
+              />
+            );
+          })}
+        </scrollable-component>
+      );
+    };
 
     return (
-      <div className='top-part'>
-        <div className='left-part'>
-          <div className='left-text-container'>
-            <p className='left-text' >World's first social beauty app</p>
-            <h1 className='text-bold' >Find beauty salons,</h1><span><p className='text-bold' >barbers, henna artists  </p></span>
-            <p className='text-bold' >and spas near you</p>
+      <div className='bottom-component'>
+        <p className='explore'>Explore By Destination:</p>
+        <div className='explore-container'>
+          <div className='right-container'>
+            <h3>{explore.name}</h3>
+            <div className='list-scroll'>
+              {ContactWindow()}
+            </div>
           </div>
-          <div className='download' >
-            <p className='left-text-download' >Download ChicChic Today!</p>
-          </div>
-          <div className='google-container' >
-            <a href="https://play.google.com/store/apps/details?id=com.chicchic.app" className="playstorebtn" title="google play store"><img src={google_img} className='google-image' alt='google store'/></a>
+          <div className='left'>
+            <img src={images.map} alt='map' className='map-img'/>
+            <button className='pin' onClick={() => handleExploreChange(0)}>
+              <img src={icons.pin} alt='pin' className='icon'/>
+            </button>
+            <button className='pin1' onClick={() => handleExploreChange(1)}>
+              <img src={icons.pin} alt='pin' className='icon'/>
+            </button>
+            <button className='pin2' onClick={() => handleExploreChange(2)}>
+              <img src={icons.pin} alt='pin' className='icon'/>
+            </button>
+            <button className='pin3' onClick={() => handleExploreChange(5)}>
+              <img src={icons.pin} alt='pin' className='icon'/>
+            </button>
+            <button className='pin4' onClick={() => handleExploreChange(3)}>
+              <img src={icons.pin} alt='pin' className='icon'/>
+            </button>
+            <button className='pin5' onClick={() => handleExploreChange(4)}>
+              <img src={icons.pin} alt='pin' className='icon'/>
+            </button>
           </div>
         </div>
-        <div className='right-part'>
-          <img src={header_img} className="right-image" alt='artist'/>
-        </div>
-        <div class="custom-shape-divider-bottom-1645114717">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
-          </svg>
-		    </div>
       </div>
     )
   }
 
   return (
     <div className='home' >
-      {renederHeaders()}
+      {topComponenet()}
+      {middleComponent()}
+      {bottomComponent()}
     </div>
   );
 }

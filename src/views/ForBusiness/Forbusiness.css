@@ -1,0 +1,27 @@
+@media (max-width: 306px) {
+    .business{
+        background-color: rgb(250, 250, 250);
+        height: 710px;
+    }
+}
+
+@media (max-width: 568px) {
+    .business{
+        background-color: rgb(250, 250, 250);
+        height: 710px;
+    }
+}
+
+@media (max-width: 992px) {
+    .business{
+        background-color: rgb(250, 250, 250);
+        height: 710px;
+    }
+}
+
+@media (min-width: 992px) {
+    .business{
+        background-color: rgb(250, 250, 250);
+        height: 710px;
+    }
+}
