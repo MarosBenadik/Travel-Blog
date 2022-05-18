@@ -5,9 +5,15 @@ import Slider from 'react-slick';
 
 import images from '../../public/images/images';
 
+import NavBar from '../../components/NavBar/NavBar';
+
+import axios from 'axios';
+
+import ReactLoading from 'react-loading';
+
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
-import data from '../../public/assets/DATA'
+import data from '../../public/assets/DATA';
 
 const OurPlaces = () => {
 
@@ -17,7 +23,83 @@ const OurPlaces = () => {
 
   const [ categoryIndex, setCategory ] = React.useState(0);
 
-  
+  const [ loading, setLoading ] = React.useState(true);
+
+  const [ newBlogs, setNewBlogs ] = React.useState([]);
+
+  const [ categoryBlogs, setCategoryBlogs ] = React.useState([])
+
+  const recomendedBlogs = newBlogs.slice(0,8).sort(({likes:a}, {likes:b}) => b-a);
+
+  React.useEffect( () => {
+    axios.get(`http://localhost:8800/blogs/all`)
+      .then(res => {
+        const blogs = res.data;
+        
+        const initialBlogs = blogs.sort(function( a, b ) {
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        })
+
+        setNewBlogs(blogs.sort(function( a, b ) {
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        }))
+        setCategoryBlogs(initialBlogs.slice(0,6))
+        setLoading(false);
+      })
+  }, [])
+
+  function handleCategoryChange(index) {
+    const changeBlogs = newBlogs.filter(x => x.category === index && x.continent === imageIndex );
+    setCategoryBlogs(changeBlogs)
+  }
+
+  function recomendedComponenet() {
+
+    return (
+      <scrollable-component class="my-content">
+        {recomendedBlogs.map((blog, index) => {
+          return (
+            <div key={index} className='recomended-container' onClick={()=> console.log("blog")}>
+              <div>
+
+              </div>
+              <div>
+                <p>{blog.title}</p>
+
+              </div>
+              <div>
+
+              </div>
+            </div>
+          );
+        })}
+      </scrollable-component>
+    )
+  }
+
+  function curentCategoryComponent() {
+
+    return (
+      <scrollable-component class="my-content">
+        {categoryBlogs.map((blog, index) => {
+          return (
+            <div key={index} className='block-container' onClick={()=> console.log("blog")}>
+              <div>
+
+              </div>
+              <div>
+                <p>{blog.title}</p>
+
+              </div>
+              <div>
+
+              </div>
+            </div>
+          );
+        })}
+      </scrollable-component>
+    )
+  }
 
   function NextArrow({onClick}) {
     return (
@@ -44,7 +126,9 @@ const OurPlaces = () => {
     centerPadding: 0,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    beforeChange: (current, next) => setImageIndex(next)
+    beforeChange: (current, next) => {
+      setImageIndex(next)
+    }
   }
 
   const categorySettings = {
@@ -56,7 +140,10 @@ const OurPlaces = () => {
     centerPadding: -10,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    beforeChange: (current, next) => setCategory(next)
+    beforeChange: (current, next) => {
+      setCategory(next)
+      handleCategoryChange(next)
+    }
   }
 
   function topComponent() {
@@ -64,7 +151,7 @@ const OurPlaces = () => {
       <div className='map'>
         <Slider {...settings}>
           {slider_images.map((img, index) => (
-            <div className={index === imageIndex ? "activeSlide" : "inactiveSlide"} onClick={() => setImageIndex(index)}>
+            <div key={index} className={index === imageIndex ? "activeSlide" : "inactiveSlide"} onClick={() => setImageIndex(index)}>
               <img src={img} alt={img} className='img-size'/>
             </div>
           ))}
@@ -92,7 +179,9 @@ const OurPlaces = () => {
       <div className='category'>
         <Slider {...categorySettings}>
           {data.categories.map((category, index) => (
-            <div className={index === categoryIndex ? "activeCategory" : "inactiveCategory"} onClick={() => setCategory(index)}>
+            <div key={index} className={index === categoryIndex ? "activeCategory" : "inactiveCategory"} onClick={() => {
+                setCategory(index)
+                handleCategoryChange(index)}}>
               <img src={category.image} alt={category.name} className='category-image'/>
               <p className='category-name'>{category.name}</p>
             </div>
@@ -106,26 +195,38 @@ const OurPlaces = () => {
 
     const curent_category = data.categories.find(x => x.id === categoryIndex);
 
-    console.log(curent_category);
-
     return (
       <div className='blogs'>
         <div className='right-part'>
-        <p className='newest'>{curent_category.name}</p>
+          <p className='newest'>{curent_category.name}</p>
+          {curentCategoryComponent()}
         </div>
         <div className='left-part'>
           <p className='recomended'>Recomended Blogs</p>
+          {recomendedComponenet()}
         </div>
+      </div>
+    )
+  }
+
+  if(loading) {
+    return (
+      <div className='navbar'>
+          {NavBar()}
+          <ReactLoading type="balls" color="#fff" height={'20%'} width={'20%'}/>
       </div>
     )
   }
 
   return (
     <div className='OurPlaces'>
-        {topComponent()}
-        {middleComponent()}
-        {categoryComponent()}
-        {blogsComponent()}
+      <div className='navbar'>
+          {NavBar()}
+      </div>
+      {topComponent()}
+      {middleComponent()}
+      {categoryComponent()}
+      {blogsComponent()}
     </div>
   );
 }

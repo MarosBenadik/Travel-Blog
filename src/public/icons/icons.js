@@ -71,10 +71,19 @@ const home = require('../../bucket/icons/home.png');
 const question = require('../../bucket/icons/question.png');
 const blogers = require('../../bucket/icons/blogers.png');
 const blog = require('../../bucket/icons/blog.png');
-
+const globe = require('../../bucket/icons/globe.png');
+const idea = require('../../bucket/icons/idea.png');
+const country_guide = require('../../bucket/icons/country_guide.png');
+const todo = require('../../bucket/icons/todo.png');
+const journey = require('../../bucket/icons/journey.png');
 
 
 export default {
+    idea,
+    country_guide,
+    todo,
+    journey,
+    globe,
     blog,
     blogers,
     question,

@@ -1,7 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 // Routes
 import Home from './views/Home/Home';
@@ -20,9 +19,6 @@ const App = () => {
   return (
     <Router>
       <span className="font-link">
-        <div>
-          {NavBar()}
-        </div>
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/aboutus" element={<About />}/>

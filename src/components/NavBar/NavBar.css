@@ -4,22 +4,25 @@
     .NavBar{
         display: flex;
         background: var(--main-color);
-        background: -moz-linear-gradient(-45deg,  var(--main-color) 5%, var(--main-color1) 100%);
+        background: -moz-linear-gradient(-45deg,  var(--main-color) 0%, var(--main-color1) 100%);
         background: -webkit-linear-gradient(-45deg,  var(--main-color1) 0%,var(--main-color) 100%);
-        background: linear-gradient(135deg,  var(--main-color) 0%,var(--main-color2) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc6e6a', endColorstr='#f78950',GradientType=1 );
-        overflow: hidden;
-        height: 60px;
-        padding: 10px;
+        background: linear-gradient(135deg,  var(--main-color) 0%,var(--main-color1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc6e6a', endColorstr='#f78950',GradientType=2 );
+        height: 55px;
+        padding: 5px;
         border-style: none none none none;
         border-radius: 0.5px;
         border-color: #EAECEE;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .components {
         display: none;
         margin-right: 10px;  
         flex-direction: row;
+    }
+
+    .company-name-container {
+
     }
 
     .navBar-components{
@@ -71,19 +74,19 @@
 
 @media (max-width: 992px) {
     .NavBar{
-        display: flex;
+        display: grid;
+        grid-template-columns: 6fr 6fr 1fr;
         background: var(--main-color);
-        background: -moz-linear-gradient(-45deg,  var(--main-color) 5%, var(--main-color1) 100%);
+        background: -moz-linear-gradient(-45deg,  var(--main-color) 0%, var(--main-color1) 100%);
         background: -webkit-linear-gradient(-45deg,  var(--main-color1) 0%,var(--main-color) 100%);
-        background: linear-gradient(135deg,  var(--main-color) 0%,var(--main-color2) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc6e6a', endColorstr='#f78950',GradientType=1 );
-        overflow: hidden;
-        height: 60px;
-        padding: 10px;
+        background: linear-gradient(135deg,  var(--main-color) 0%,var(--main-color1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc6e6a', endColorstr='#f78950',GradientType=2 );
+        height: 55px;
+        padding: 5px;
         border-style: none none none none;
         border-radius: 0.5px;
         border-color: #EAECEE;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .components {
@@ -120,10 +123,11 @@
     }
 
     .dropDownLogo {
-        align-self: center;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         cursor:pointer;
+        margin-top: 10px;
+        margin-left: 50px;
     }
 
     .logo-container {
@@ -136,6 +140,40 @@
         text-decoration: none;
         color: black;
     } 
+
+    .search-component {
+        display: none;
+        flex-direction: row-reverse;
+    }
+
+    .search-placeholder {
+        margin-top: 10px;
+        background-color: var(--main-color);
+        border-radius: 10px;
+        height: 20px;
+        font-weight: 400;
+        padding-left: 10px;
+    }
+
+    .search-buttom{
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border-color: none;
+        border-style: none none none none;
+    }
+
+    .destination {
+        width: 40px;
+        height: 40px;
+        align-self: center;
+    }
+
+    .destination:hover {
+        width: 47px;
+        height: 47px;
+        align-self: center;
+    }
     
     .logo {
         width: 60px;
@@ -144,7 +182,7 @@
         cursor:pointer;
     }
     .logo-text {
-        color: white;
+        color: black;
         align-self: center;
         margin-left: 10px;
         text-decoration: none;
@@ -158,17 +196,65 @@
     .NavBar{
         display: flex;
         background: var(--main-color);
-        background: -moz-linear-gradient(-45deg,  var(--main-color) 5%, var(--main-color1) 100%);
-        background: -webkit-linear-gradient(-45deg,  var(--main-color1) 0%,var(--main-color2) 100%);
-        background: linear-gradient(135deg,  var(--main-color) 0%,var(--main-color2) 100%);
+        background: -moz-linear-gradient(-45deg,  var(--main-color) 0%, var(--main-color1) 100%);
+        background: -webkit-linear-gradient(-45deg,  var(--main-color1) 0%,var(--main-color) 100%);
+        background: linear-gradient(135deg,  var(--main-color) 0%,var(--main-color1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc6e6a', endColorstr='#f78950',GradientType=2 );
-        overflow: hidden;
-        height: 60px;
-        padding: 10px;
+        height: 55px;
+        padding: 5px;
         border-style: none none none none;
         border-radius: 0.5px;
         border-color: #EAECEE;
-        justify-content: space-between;
+        justify-content: space-around;
+    }
+    .company-name-container{
+        display: none;
+    }
+
+    .search-component {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .search-placeholder {
+        margin-top: 20px;
+        background-color: var(--main-color);
+        border-radius: 10px;
+        height: 20px;
+        font-weight: 400;
+        padding-left: 10px;
+    }
+
+    .search-buttom{
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border-color: none;
+        border-style: none none none none;
+    }
+
+    .search-icon {
+        width: 40px;
+        height: 40px;
+        align-self: center;
+    }
+
+    .search-icon:hover {
+        width: 42px;
+        height: 42px;
+        align-self: center;
+    }
+
+    .destination {
+        width: 40px;
+        height: 40px;
+        align-self: center;
+    }
+
+    .destination:hover {
+        width: 47px;
+        height: 47px;
+        align-self: center;
     }
 
     .components {
@@ -187,10 +273,21 @@
     }
     
     .urlLinks {
+        display: flex;
+        flex-direction: row;
         margin-right: 20px;
-        text-decoration: none;
-        color: white;
     } 
+
+
+    .urlinks-text{
+        color: black;
+        text-decoration: none;
+    }
+
+    .urlinks-text:hover {
+        color: var(--gray-color);
+        text-decoration: none;
+    }
     
     .logo {
         width: 60px;
@@ -199,15 +296,14 @@
         cursor: pointer;
     }
     .logo-text {
-        color: white;
-        align-self: center;
+        color: black;
         margin-left: 15px;
         text-decoration: none;
-        size: 30px;
-        font-weight: bold;
+        size: 25px;
+        font-weight: 400;
         cursor:pointer;
-        text-decoration: none;
     }
+
 }
 
 .drob-menu {

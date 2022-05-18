@@ -1,10 +1,11 @@
 import icons from '../icons/icons';
+import images from '../images/images';
 
 const continents = [
     {
         id: 0,
         name: "Europe",
-        desc: "Europe is the continent of hopeless romantics. A place that radiates warmth, happiness, and enchantment in the form of hot summer nights, under the stars. By day, wander picturesque streets, laughing and chatting, or dip salty, sunkissed skin in beautiful blue waters. Continue to feed the soul by visiting the most sensational cities in the world! Each magical European city writes a love letter to the past, through its buildings and customs. For example, the abstract works of Gaudi in Barcelona, the love lock bridge of Paris, or the exotic grand bazaar of Istanbul. Alternatively, get ready for an epic adventure through the ages. Discover wonders like the majestic acropolis in Athens, the magnificent Colosseum in Rome, or the remarkable floating city of Venice."
+        desc: "Europe is the continent of hopeless romantics. A place that radiates warmth, happiness, and enchantment in the form of hot summer nights, under the stars. By day, wander picturesque streets, laughing and chatting, or dip salty, sunkissed skin in beautiful blue waters. Continue to feed the soul by visiting the most sensational cities in the world! Each magical European city writes a love letter to the past, through its buildings and customs. For example, the abstract works of Gaudi in Barcelona, the love lock bridge of Paris, or the exotic grand bazaar of Istanbul. Alternatively, get ready for an epic adventure through the ages. Discover wonders like the majestic acropolis in Athens, the magnificent Colosseum in Rome, or the remarkable floating city of Venice.",
     },
     {
         id: 1,
@@ -32,6 +33,81 @@ const continents = [
         desc: "Being the third-largest continent in the world, North America is home to Mexico, Canada, and the United States. Because of its size, there are SO many things you can do on a trip to North America—hit the ski slopes in Canada, drive the California coastline, pound the pavement in NYC, catch some rays in Mexico, go scuba diving off the coast of Florida, and explore the islands of Puerto Rico or Hawaii. There is a North American destination for every occasion and season—so many climates, landscapes, and hidden gems to see! You can literally hit the mountains, beaches, and desert all in one trip."
     }
 ]
+
+const essentials = [
+    {
+        id: 1,
+        image: require('../../bucket/images/camera.png'),
+        link: "https://www.amazon.co.uk/Sony-ILCE6000LB-Compact-SELP1650-Electronic/dp/B00IE9XHE0/ref=sr_1_1_sspa?crid=4VHXHFZT32B9&keywords=camera%2Bsony&qid=1652817909&sprefix=camera%2Bsony%2Caps%2C67&sr=8-1-spons&th=1",
+    },{
+        id: 2,
+        image: require('../../bucket/images/case.png'),
+        link: "https://www.amazon.co.uk/Kono-Luggage-Lightweight-Trolley-Suitcase/dp/B07GR2RVL8/ref=sr_1_14?crid=3HI4N3Y123II&keywords=luggage&qid=1652818560&sprefix=ludgege%2Caps%2C66&sr=8-14&th=1",
+    },{
+        id: 3,
+        image: require('../../bucket/images/sunglases.png'),
+        link: "https://www.amazon.co.uk/dp/B07DFTDWS8/ref=sspa_dk_detail_2?psc=1p13NParams&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExMVNZRDdRSVlJMjZFJmVuY3J5cHRlZElkPUEwMTc2NzAyMkEwWUQ2REZXOUZXOCZlbmNyeXB0ZWRBZElkPUEwMDc3MTIxOTBHS0ZDSFEyMjJQJndpZGdldE5hbWU9c3BfZGV0YWlsMiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=",
+    },{
+        id: 4,
+        image: require('../../bucket/images/purse.png'),
+        link: "https://www.amazon.co.uk/SENDEFN-Blocking-Leather-Compact-Bi-fold/dp/B082Y41C6Q/ref=sr_1_34?crid=ABUUNFGDO4KT&keywords=purse&qid=1652819656&s=clothing&sprefix=purse%2Cclothing%2C72&sr=1-34",
+    },{
+        id: 5,
+        image: require('../../bucket/images/drone.png'),
+        link: "https://www.amazon.co.uk/DJI-Mini-Pro-Lightweight-Tri-Directional/dp/B09WDBDGBZ/ref=sr_1_10?keywords=dji&qid=1652819999&sr=8-10",
+    }
+]
+
+const initial_explore = {
+    id: 6,
+    name: "Favorit Locations",
+    states: [
+      {
+        id: 0,
+        name: "Spain",
+        icon: icons.spain,
+        subTitle: "Spain is known for its food, Flamenco music and dance!",
+        desc: "As you guys might have guessed, I adore Spain. Spain was the first destination on my first international trip. I did a study abroad program there in 2008, and it was one of the best experiences of my life. I spent a month studying Spanish between Salamanca and El Puerto de Santa Maria, exploring different cities along the way. With endless cultural festivals, world-class beaches, and renowned nightlife, Spain is impressive 365 days a year. I could spend years exploring Spain. From Madrid to Barcelona to Girona to Bilbao, it’s such a vibrant country. Whether you hit the slopes of the Sierra Nevada, wander the vineyards of Rioja, or worship the sun in the Canary Islands, Spain is guaranteed to impress you any day of the week.",
+        image: images.spain,
+        image1: images.spain1
+      },{ 
+        id: 0,
+        name: "Italy",
+        icon: icons.italy,
+        desc: "Italy is a must-visit country and is one of the most-traveled destinations in Europe. There are so many highlights in this beautiful country — from the canals of Venice to the Tuscan wine lands to the cobblestone streets of Rome to the Arno river running through Florence to the cliffs of Positano… and beyond. Florence was one of my favorite cities because of the architecture and natural beauty— the sun setting over the Arno River is something you can’t soon forget. Rome is one of the most iconic and most traveled cities in Europe and you could spend days getting lost in this magnificent destination. The most picturesque spots in Italy might just be Cinque Terre and all the stops along the Amalfi Coast. Positano is the gem of the Amalfi Coast and is arguably the most picturesque and most romantic town in the whole of Italy—here are the best things to do on the Amalfi Coast!",
+        image: images.italy,
+      },{ 
+        id: 0,
+        name: "United Kingdom",
+        icon: icons.uk,
+        desc: "As COVID-19 restrictions have been relaxed in the UK and those missing travel – international trips or staycations – are preparing to make their returns to the outside world, we make a return to our Top UK Travel Blog ranking. Still First Class when it comes to sharing travel content is Lloyd Griffiths and Yaya Onalaja-Aliu’s Hand Luggage Only. Check out their Travel Journal, Travel Advice and Travel Inspiration sections for great trips, both home and away. Recently covered – the 14 best beaches to visit in Cornwall, a 7-day itinerary that will help you make the most of Malta and things to keep you busy in Rhode Island. And their new book, of course!",
+        image: images.uk
+      },{ 
+        id: 0,
+        name: "Norway",
+        icon: icons.norway,
+        desc: "If  you are planning a trip to Norway but are unsure where you want to go, click the different regions on the Norway map above to find out more about the particular draws and attractions of each region, as well as links to my posts from that region and recommendations for where to stay and how to get there. Some of the areas aren’t filled in yet – I only write about the places in Norway that I have visited myself and know really well! I’ve also written two 95-page Norway travel guide ebooks that cover my top recommendations for places to visit (both on and off the beaten path), the best times of year to visit, how long to visit for, the best accommodation choices, transportation, what to eat, what to pack, and tips for planning a Norway itinerary that you will love. You can purchase my Norway travel guides here. And if you’re looking for Norway itineraries I’ve written you can find a guide to my top 27 Norway itineraries here. If you’re planning a road trip in Norway, here is my guide to planning a Norwegian road trip, including car rental tips and how to find the most beautiful roads.",
+        image: images.norway
+      },{ 
+        id: 0,
+        name: "Greece",
+        icon: icons.greece,
+        desc: "Greece: where historic ruins, volcanic cliffs, and friendly locals meet the blue Mediterranean Sea. My first trip to Greece was a summer adventure through Athens and Mykonos. I returned again to sail the Saronic Islands on The Yacht Week Greece, and then again to explore the Cyclades islands of Santorini, Milos, Paros, and Naxos! There are some islands that are famous for their beaches and natural features, while others have a significant nightlife scene or strong cultural traditions. Mykonos is one of the most popular tourist destinations in the Greek islands and is famed for its incredible beaches and world-renowned party scene. I spent a week on the island and indulged in delicious food, epic sunsets, and some of the best parties I’ve ever been to.",
+        image: images.greece
+      },{ 
+        id: 0,
+        name: "United State",
+        icon: icons.usa,
+        desc: "Apart from my bias of being an American, I truly believe that everyone needs to explore the USA (yes, even those that already live here!) The more I travel around the states, the more I realize that they have SO much adventure to offer! Each state offers something unique—whether you’re looking to experience a relaxing tropical holiday, snow-filled adventure, or the wonders of our incredible National Parks, there’s something for every kind of traveler. The United States is the perfect destination for scenic drives, delicious food, cosmopolitan city life, wilderness, cultural diversity, beautiful beaches, and so much more.",
+        image: images.us
+      },{ 
+        id: 0,
+        name: "Slovakia",
+        icon: icons.sk,
+        desc: "Slovakia is a Central European country known for its dramatic mountainous landscapes, medieval history, and stunning architecture. As a land-locked country, it’s been part of numerous empires and governments throughout its history, all of which have left their own unique influence on the region. Slovakia is filled with beautiful rivers, lakes, national parks, tiny towns, and castle ruins. And compared to its neighbors it’s also quite affordable. It’s the perfect place to hike, road trip, and escape Europe’s summer crowds — all while on a budget!",
+        image: images.slovakia
+      } ]
+  }
 
 const categories = [
     {
@@ -76,84 +152,97 @@ const explore = [
     // 1: coold, 2: city life, 3: 
 
     {
-        id: 0,
+        id: 5,
         name: "North America",
         states: [
             {
                 id: 0,
                 name: "Canada",
                 icon: icons.canada,
+                desc: "Canada is one of those countries that continuously finds itself on “top 10” destination lists. Whether it’s for the country’s incredible natural beauty, delicious food, mountain resorts, unique culture, or unbeatable road trips—Canada has it all! And, Canada is home to 16 UNESCO World Heritage Sites! It also has the longest ski season in the world, polar bears, the Northern Lights, and poutine (fries covered in squeaky cheese and gravy! *drool*). On my first trip to the Great White North, I snowboarded the snowy mountains of Whistler and have since ticked off bucket list-worthy destinations like Banff National Park, Montreal, Mont Tremblant, and Vancouver."
             }, 
             {
                 id: 1,
                 name: "Mexico",
-                icon: icons.mexico
+                icon: icons.mexico,
+                desc: "Ahh, Mexico, a country rich with diversity and culture, and one of my favorites! For travelers looking to relax resort-side, and sip on margaritas by the beach, visit Cancun or Los Cabos. For those in search of a bustling city where you can learn about the history of the country and have some amazing foodie experiences, take a trip to Mexico City. Or maybe you want to cool off in the gem-colored waters of the trendy town of Tulum. No matter which getaway you choose, you will be met with some of the best food in the world, colorful buildings, and friendly locals that want to help you experience what their country has to offer."
             }, 
             {
                 id:2,
                 name: "United States",
-                icon: icons.usa
+                icon: icons.usa,
+                desc: "Apart from my bias of being an American, I truly believe that everyone needs to explore the USA (yes, even those that already live here!) The more I travel around the states, the more I realize that they have SO much adventure to offer! Each state offers something unique—whether you’re looking to experience a relaxing tropical holiday, snow-filled adventure, or the wonders of our incredible National Parks, there’s something for every kind of traveler. The United States is the perfect destination for scenic drives, delicious food, cosmopolitan city life, wilderness, cultural diversity, beautiful beaches, and so much more."
             }
         ]
     },
     {
-        id: 1,
+        id: 4,
         name: "South America",
         states: [
             {
                 id: 0,
                 name: "Argentina",
-                icon: icons.argentina
+                icon: icons.argentina,
+                desc: "Argentina is a tricky country to travel in. Whilst removing the 'blue dollar' has made accessing the local currency is much easier, the inflation that has run rampant over the last few years means that planning a budget for your trip can be difficult. However, do not let this put you off visiting this vast, varied and infinitely beautiful country. Whether you crave beautiful European cities, lush vineyards and world class wines, stunning natural landscapes and once-in-a-lifetime wildlife or cowboys and cattle, Argentina will prove a worthy choice. Just don't try and do it all at once - Argentina needs time!"
             },{
                 id: 1,
                 name: "Bolivia",
-                icon: icons.bolivia
+                icon: icons.bolivia,
+                desc: "There is no other place like Bolivia. Dubbed a country of extremes, that goes from sweltering Amazon lowlands to frozen cold mountain peaks, you can experience all kinds of climate in one country! I spent a month traveling around this incredible country, discovering its rich culture and unbelievable natural beauty. Some of my favorite experiences in Bolivia are cycling the World’s Deadliest Road in La Paz and taking a 4-day 4×4 tour to the incredible Uyuni Salt Flats. Bolivia is affordable, with beautiful natural landscapes, and it’s no wonder that many people consider it their favorite South American destination!"
             },
             {
                 id: 2,
                 name: "Brazil",
-                icon: icons.brazil
+                icon: icons.brazil,
+                desc: "Brazil encompasses around half of South America’s landmass, making it the largest country on the continent. Because it’s so large, it’s not surprising that it is made up of a wide variety of landscapes, coastlines, and experiences. Wildlife lovers can explore the wetlands and the rainforest, while city lovers can wander the streets of Rio. Along with beautiful beaches, one of the world’s best soccer teams, and the world-famous Carnival celebration, Brazil is truly a melting pot, perfect for every kind of traveler."
             },
             {
                 id: 3,
                 name: "Chile",
-                icon: icons.chile
+                icon: icons.chile,
+                desc: "Chile is one of the most slender and longest countries in the world — it’s just 150 miles across at its widest point! From the snow-capped volcanoes of Patagonia and blistering heights of the Andes to world-class wineries and Maoi sculptures of Easter Island, there are a lot of wonderful things to see in Chile. Traveling to Chile was one of the best experiences I’ve had in South America. It just constantly blew me away. It’s one of the most developed South American countries (the capital, Santiago, is a tech hub for the region), the people were awesome, the food was incredible, and the scenery made me feel in awe of nature."
             },
             {
                 id: 4,
                 name: "Colombia",
-                icon: icons.columbia
+                icon: icons.columbia,
+                desc: "Colombia is fast becoming the travel highlight of South America. After decades of struggling with crime and cartels, Colombia has become a hub for digital nomads and budget backpackers. More and more people are visiting to soak up the sun and enjoy the country’s low cost of living."
             },
             {
                 id: 5,
                 name: "Peru",
-                icon: icons.peru
+                icon: icons.peru,
+                desc: "After spending three months fundraising for Peruvian Hearts, an all-girls orphanage in Cusco, my friend and I embarked on an epic adventure to Peru to visit the orphanage and explore the beautiful country. We spent four days trekking the Inca Trail to Machu Picchu which was a major bucket list trip for me. Machu Picchu, one of the Seven Wonders of the World, is one of the biggest attractions for tourists around the world. This unique and fascinating country stands out from the crowd with its different cultural and natural treasures. Peru is also home to natural wonders like the Amazon, Lake Titicaca, and Rainbow Mountain as well as the beautiful coastal city of Lima. It’s a diverse country with countless destinations to discover!"
             },
             {
                 id: 6,
                 name: "Venezuela",
-                icon: icons.venezuela
+                icon: icons.venezuela,
+                desc: "Rich with culture, history, and friendly locals, Venezuela is a chance to see something different. Located on the northern coast of South America, it is filled with many white-sand beaches, blue waters, and natural wonders, making it a great getaway. Fans of the outdoors will love Angel Falls, the highest waterfall in the world, or Pico Bolívar, the highest mountain in Venezuela. As English is not spoken here as much, it presents a great opportunity to immerse yourself in a new language."
             }
         ]
     },
     {
-        id: 2,
+        id: 0,
         name: "Europe",
         states: [
             {
                 id: 0,
                 name: "Austria",
-                icon: icons.austri
+                icon: icons.austri,
+                desc: "When most people think of Austria, they think of rolling green hills, skiing, Christmas markets, and The Sound of Music. And while the country does have all of this, it also has so much more! For music lovers, it’s the home of Mozart. For foodies, it’s home to the Wienerschnitzel. For outdoor lovers, you can paraglide, raft, and hike in every corner of this picturesque country. No matter what your love is, Austria likely has something just for you. The minute you arrive, the country’s charming villages will take you by surprise and have you feeling like you stepped into a Disney fairytale."
             }, 
             {
                 id: 1,
                 name: "Belgium",
-                icon: icons.belgium
+                icon: icons.belgium,
+                desc: "Belgium is a travel destination made for history buffs and chocolate addicts. Though the nation is small, it plays a big part in the world’s history. There are over 3,000 castles to explore, battlegrounds from the World Wars, and every museum imaginable. After you’ve had your history fill, you can kick your feet back and relax at one of the 1,000 breweries in the small country. Sip on a cold beer while you munch on frites—sounds dreamy to me! And to finish off the day? All the gourmet chocolate you can imagine! Many people tend to gloss over the country, visiting Brussels or Bruges for a day before moving on, but if you take the time, you’ll find that Belgium has so much more to explore!"
             }, 
             {
                 id: 2,
                 name: "Croatia",
-                icon: icons.croatia
+                icon: icons.croatia,
+                desc: "With piercing turquoise seas and fairytale-like architecture, there is no denying Croatia is breathtakingly beautiful! Spanning most of the Adriatic Sea, you’re never too far away from the coast when traveling in Croatia. And even if it’s not pretty beaches you seek, stone castles and magnificent waterfalls await travelers of all kinds. Whether you are backpacking through Croatia or are wanting to splurge on Yacht Week, these travel tips will help you plan your next adventure to the Land of a Thousand Islands."
             }, 
             {
                 id: 3,
@@ -239,7 +328,7 @@ const explore = [
         ]
     },
     {
-        id: 3,
+        id: 2,
         name: "Australia",
         states: [
             {
@@ -281,7 +370,7 @@ const explore = [
         ]
     },
     {
-        id: 4,
+        id: 3,
         name: "Africa",
         states: [
             {
@@ -337,7 +426,7 @@ const explore = [
         ]
     },
     {
-        id: 5,
+        id: 1,
         name: "Asia",
         states: [
             {
@@ -410,5 +499,7 @@ export default {
 
     continents,
     categories,
-    explore
+    explore,
+    initial_explore,
+    essentials
 }

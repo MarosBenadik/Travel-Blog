@@ -8,25 +8,32 @@ import 'react-modern-drawer/dist/index.css';
 
 import icons from '../../public/icons/icons';
 
-import images from '../../public/images/images';
-
-import Sticky from 'react-sticky-el';
-
 const NavBar = () => {
 
   const [ showNavBar, setShowNavBar ] = React.useState(false);
+
+  const [ placeholder, setPlaceholder ] = React.useState(false);
 
   const toggleDrawer = () => {
     setShowNavBar((prevState) => !prevState)
   }
 
+  function searchplaceholder() {
+
+    return (
+      <div>
+        <input className='search-placeholder' type="text" id="search" name="search"/>
+      </div>
+    )
+  }
+
+
   function DropDown () {
 
     return (
       <div>
-          <button className='navBar-parent' onClick={toggleDrawer}
-          >
-            <img src={icons.white_menu} className='dropDownLogo' alt='menu'/>
+          <button className='navBar-parent' onClick={toggleDrawer}>
+            <img src={icons.menu} className='dropDownLogo' alt='menu'/>
           </button>
           <Drawer
             open={showNavBar}
@@ -53,19 +60,28 @@ const NavBar = () => {
     <nav className='NavBar'>
       <Link to="/">
         <div className='logo-container'>
-          <img src={images.logo} className="logo" alt="travel logo"/>
-          <h1 className='logo-text'>Travel Blog</h1>
+          <img src={icons.globe} className="destination" alt="travel logo"/>
+          <h3 className='logo-text'>Destinations</h3>
         </div>
       </Link>
       <div
         className='components'
       >
-        <Link className="urlLinks" to="/"><h3>Home</h3></Link>
-        <Link className="urlLinks" to="/ourPlaces"><h3>Blogs</h3></Link>
-        <Link className="urlLinks" to="/questions"><h3>Questions</h3></Link>
-        <Link className="urlLinks" to="/forbusiness"><h3>For Blogers</h3></Link>
-        <Link className="urlLinks" to="/contactus"><h3>Contact Us</h3></Link>
-        <Link className="urlLinks" to="/faq"><h3>F&Qs</h3></Link>
+        <Link to="/"><div className='urlLinks'><h3 className='urlinks-text'>Home</h3></div></Link>
+        <Link className="urlLinks" to="/ourPlaces"><div className='urlLinks'><h3 className='urlinks-text'>Blogs</h3></div></Link>
+        <Link className="urlLinks" to="/questions"><div className='urlLinks'><h3 className='urlinks-text'>Questions</h3></div></Link>
+        <Link className="urlLinks" to="/forbusiness"><div className='urlLinks'><h3 className='urlinks-text'>For Blogers</h3></div></Link>
+        <Link className="urlLinks" to="/contactus"><div className='urlLinks'><h3 className='urlinks-text'>Contact Us</h3></div></Link>
+        <Link className="urlLinks" to="/faq"><div className='urlLinks'><h3 className='urlinks-text'>F&Qs</h3></div></Link>
+      </div>
+      <div className='company-name-container'>
+        <h1 className='company-name' >Away from Routine!</h1>
+      </div>
+      <div className='search-component' >
+        <button className='search-buttom' onClick={() => placeholder === true ? setPlaceholder(false) : setPlaceholder(true) }>
+          <img src={icons.search} alt='search-navbar' className='search-icon'/>
+        </button>
+        {placeholder && searchplaceholder()}
       </div>
       <div className='navBar'>
         {DropDown()}

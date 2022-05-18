@@ -4,7 +4,7 @@
 @import "../../public/assets/COLORS.css";
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 968px) {
     .OurPlaces{
         background-color: rgb(247, 244, 244);
         height: 100%;
@@ -95,12 +95,20 @@
         margin: auto, 10%;
     }
 
+    .blogs {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
     .desc {
         margin: 2%;
         background-color: var(--light_grean1);
         width: 90%;
         height: 100%;
-        padding: 2%;
+        padding: 1%;
         border-radius: 20px;
     }
 
@@ -113,7 +121,7 @@
         font-size: 18px;
         margin-left: 3%;
         font-weight: 500;
-        color: white;
+        color: black;
     }
     
     .newest {
@@ -132,10 +140,41 @@
     
     .right-part {
         width: 100%;
+        height: 100%;
+    }
+
+    .block-container {
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 300px;
+        display: inline-flex;
+        background-color: var(--white);
+        border-radius: 10px;
+    }
+
+    .my-content {
+        height: 700px;
+        width: 95%;
+        margin-left: 20px;
+        padding-top: 10px;
+    }
+
+    .recomended-container {
+        background-color: white;
+        width: 95%;
+        height: 30%;
+        border-radius: 10px;
+    }
+
+    .navbar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 1292px ) {
     .OurPlaces{
         background-color: rgb(247, 244, 244);
         height: 100%;
@@ -244,36 +283,64 @@
         font-size: 20px;
         margin-left: 3%;
         font-weight: 500;
-        color: white;
+        color: black;
     }
     
     .newest {
-        font-size: 20px;
-        margin-left: 3%;
+        font-size: 30px;
         font-weight: 600;
         color: var(--black);
     }
     .blogs {
         width: 100%;
-        height: 400px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         background-color: white;
     }
     .left-part {
-        width: 96%;
+        width: 90%;
         height: 100%;
         background-color: var(--light_grean1);
-        margin: 2%;
-        border-radius: 20px;
+        border-radius: 10px;
+        margin-left: 20px;
     }
     
     .right-part {
         width: 100%;
+        height: 100%;
+    }
+
+    .block-container {
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 300px;
+        display: inline-flex;
+        background-color: var(--white);
+        border-radius: 10px;
+    }
+
+    .my-content {
+        height: 700px;
+        width: 90%;
+    }
+
+    .recomended-container {
+        background-color: white;
+        width: 95%;
+        height: 30%;
+        border-radius: 10px;
+    }
+
+    .navbar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 1292px) {
     .OurPlaces{
         background-color: rgb(247, 244, 244);
         height: 100%;
@@ -388,18 +455,19 @@
         font-size: 28px;
         margin-left: 3%;
         font-weight: 500;
-        color: white;
+        color: black;
     }
     
     .newest {
         font-size: 28px;
-        margin-left: 3%;
+        margin-left: 1%;
+        margin-right: 1%;
         font-weight: 600;
         color: var(--black);
     }
     .blogs {
         width: 100%;
-        height: 400px;
+        height: 100%;
         display: grid;
         grid-template-columns: 3fr 1fr;
         background-color: white;
@@ -408,14 +476,40 @@
     .left-part {
         width: 90%;
         height: 100%;
-        background-color: var(--light_grean1);
         margin-right: 2%;
         margin-top: 2%;
         border-radius: 20px;
     }
     
     .right-part {
-        width: 70%;
+        width: 100%;
+        height: 100%;
+        margin-right: 5px;
+    }
+
+    .block-container {
+        width: 31%;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 300px;
+        display: inline-flex;
+        background-color: var(--white);
+        border-radius: 10px;
+    }
+
+    .my-content {
+        height: 700px;
+        width: 95%;
+        margin-left: 20px;
+        padding-top: 10px;
+    }
+
+    .recomended-container {
+        background-color: white;
+        width: 85%;
+        height: 30%;
+        border-radius: 10px;
+        margin-left: 20px;
     }
 }
 
@@ -468,6 +562,29 @@
     font-size: 18px;
     color: var(--black);
     font-weight: bolder;
+}
+
+.svgLoader {
+    animation: spin 0.5s linear infinite;
+    margin: auto;
+}
+
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.divLoader {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 

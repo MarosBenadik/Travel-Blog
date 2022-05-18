@@ -12,11 +12,12 @@
     .urllinks {
         margin-right: 13%;
         margin-top: 2%;
-        justify-content: space-around;
-        display: flex;
-        height: 280px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        
         flex: 100%;
-        flex-direction: row;
     }
 
     .link-text-container {
@@ -80,7 +81,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 660px;
+        height: 100%;
+        
         flex: 100%;
     }
 
@@ -138,6 +140,7 @@
 
     .urllinks-container{
         display: flex;
+        height: 100%;
         
     }
 
@@ -146,7 +149,7 @@
         margin-top: 2%;
         justify-content: space-around;
         display: flex;
-        height: 280px;
+        height: 100%;
         flex: 100%;
         flex-direction: row;
     }
