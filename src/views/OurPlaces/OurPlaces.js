@@ -166,9 +166,13 @@ const OurPlaces = () => {
 
     return (
       <div className='middleComponent'>
-        <p className='title-text'>{continent.name}</p>
         <div className='desc'>
+          <p className='title-text'>{continent.name}</p>
           <p className='desc-text'>{continent.desc}</p>
+        </div>
+        <div className='singlcontinent-imgs'>
+          <img src={continent.image} alt='continent1' className='single-continent-img'/>
+          <img src={continent.image1} alt='continent2' className='single-continent-img1'/>
         </div>
       </div>
     )

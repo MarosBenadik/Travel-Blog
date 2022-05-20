@@ -140,8 +140,8 @@ const Home = () => {
     return (
       <div className='instagram-component'>
         <div className='instagram-text'>
-          <h1>#AWAYFROMROUTINE</h1>
-          <h2>Tag your photos #AWAYFROMROUTINE to get featured on our community feed.</h2>
+          <h1>#I'AMAWAYFROMROUTINE</h1>
+          <h2>Tag your photos #I'AMAWAYFROMROUTINE to get featured on our community feed.</h2>
         </div>
       </div>
     )
@@ -239,15 +239,15 @@ const Home = () => {
                 <div className='form-input'>
                   <div className='input-data-placeholder'>
                     <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname" className='placeholder-input'/>
+                    <input type="text" id="fname" name="fname" className='placeholder-input' placeholder='First Name'/>
                   </div>
                   <div className='input-data-placeholder'>
                     <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname" className='placeholder-input'/>
+                    <input type="text" id="lname" name="lname" className='placeholder-input' placeholder='Last Name'/>
                   </div>
                   <div className='input-data-placeholder'>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" className='placeholder-input'/>
+                    <input type="email" id="email" name="email" className='placeholder-input' placeholder='Email'/>
                   </div>
                 </div>
                 <div className='submit-buttom'>
@@ -264,19 +264,69 @@ const Home = () => {
     )
   }
 
+  function bottomComponenBlogst() {
+
+    var settings = {
+      infinite: true,
+      lazyLoad: true,
+      speed: 700,
+      slidesToShow: 1,
+      centerMode: true,
+      centerPadding: 0,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
+    };
+
+    return (
+      <div className='middle-component'>
+        <Slider {...settings}>
+          {newBlogs.map((blog, index) => (
+            <div key={index} className='blogSlide' onClick={() => console.log("blog")}>
+              <div className='inside-blogSlide'>
+                <p>{blog.title}</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    )
+  }
+
   function topcategoriesComponent() {
 
     return (
       <div className='top-categories'>
         <div className='title-container'>
           <p className='top-categories-title'>TOP CATEGORIES</p>
-          <p>Some of the best blog categories among our readers!</p>
+          <p className='top-categories-subtitle'>Some of the best blog categories among our readers!</p>
         </div>
         <div className='categories-icons'>
-
+          {DATA.categories.slice(0,5).map(( category, index ) => (
+            <div key={index} onClick={() => <Link  to=""/>}>
+              <img src={category.image} alt='category' className='category-icon'/>
+              <p>{category.name}</p>
+            </div>
+          ))}
         </div>
         <div>
+            {bottomComponenBlogst()}
+        </div>
+      </div>
+    )
+  }
 
+  function bootomComponent() {
+
+    return (
+      <div className='bottom-component'>
+        <div className='wetravel'>
+          <p>Where we are now!</p>
+          <img src={images.map_vector} alt='wetravel' className='wetravel-image'/>
+        </div>
+        <div>
+          <p>Support US!</p>
         </div>
       </div>
     )
@@ -296,6 +346,7 @@ const Home = () => {
       {singleBlogComponent()}
       {singUpComponent()}
       {topcategoriesComponent()}
+      {bootomComponent()}
     </div>
   );
 }

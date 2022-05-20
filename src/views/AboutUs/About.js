@@ -1,10 +1,15 @@
 import React from 'react';
 import './About.css';
 
+import NavBar from '../../components/NavBar/NavBar';
+
 const About = () => {
   return (
     <div className='about'>
-        <p>About</p>
+
+      {NavBar()}
+
+      <p>About</p>
     </div>
   );
 }

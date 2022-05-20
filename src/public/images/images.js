@@ -18,8 +18,22 @@ const slovakia = require('../../bucket/images/slovakia.png');
 const journey = require('../../bucket/images/backgroun.png')
 const spain1 = require('../../bucket/images/spain1.jpeg');
 const map_vector = require('../../bucket/images/vector-map.png')
+const europe1 = require('../../bucket/images/europe.jpeg');
+const europe2 = require('../../bucket/images/europe1.jpeg');
+
+const contuctUs_img = require('../../bucket/images/beach-contact.png');
+const nature = require('../../bucket/images/nature.png');
+
+const we = require('../../bucket/images/we.png');
+const question = require('../../bucket/images/question.png');
 
 export default {
+    question,
+    we,
+    nature,
+    contuctUs_img,
+    europe1,
+    europe2,
     map_vector,
     spain1,
     journey,

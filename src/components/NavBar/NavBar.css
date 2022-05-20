@@ -14,6 +14,11 @@
         border-radius: 0.5px;
         border-color: #EAECEE;
         justify-content: space-around;
+
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        
     }
     .components {
         display: none;
@@ -87,6 +92,10 @@
         border-radius: 0.5px;
         border-color: #EAECEE;
         justify-content: space-around;
+
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
 
     .components {
@@ -206,6 +215,10 @@
         border-radius: 0.5px;
         border-color: #EAECEE;
         justify-content: space-around;
+
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
     .company-name-container{
         display: none;

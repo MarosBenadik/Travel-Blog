@@ -1,11 +1,18 @@
 import icons from '../icons/icons';
 import images from '../images/images';
 
+const curentLocation = {
+    name: "Italy",
+    longLat: [-2.9382763, 51.928374]
+}
+
 const continents = [
     {
         id: 0,
         name: "Europe",
         desc: "Europe is the continent of hopeless romantics. A place that radiates warmth, happiness, and enchantment in the form of hot summer nights, under the stars. By day, wander picturesque streets, laughing and chatting, or dip salty, sunkissed skin in beautiful blue waters. Continue to feed the soul by visiting the most sensational cities in the world! Each magical European city writes a love letter to the past, through its buildings and customs. For example, the abstract works of Gaudi in Barcelona, the love lock bridge of Paris, or the exotic grand bazaar of Istanbul. Alternatively, get ready for an epic adventure through the ages. Discover wonders like the majestic acropolis in Athens, the magnificent Colosseum in Rome, or the remarkable floating city of Venice.",
+        image: images.europe1,
+        image1: images.europe2
     },
     {
         id: 1,
@@ -112,8 +119,8 @@ const initial_explore = {
 const categories = [
     {
         id: 0,
-        name: "Newest Blogs",
-        image: icons.i_new
+        name: "Short-break",
+        image: icons.break_i
     },
     {
         id: 1,
@@ -145,6 +152,16 @@ const categories = [
         name: "Culture",
         image: icons.culture
     },
+    {
+        id: 7,
+        name: "Pet-friendly",
+        image: icons.pet
+    },
+    {
+        id: 8,
+        name: "Camping",
+        image: icons.camper
+    }
 ]
 
 const explore = [
@@ -493,10 +510,59 @@ const explore = [
     }
 ]
 
+const questions = [
+    {
+        id: 0,
+        title: "HOW DO YOU MANAGE TO TRAVEL THE WORLD? 🌍",
+        response: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit con sagittis Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum."
+    },
+    {
+        id: 1,
+        title: "HOW DID YOU BUILD AND MARKET YOUR BLOG? 🤔",
+        response: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit con sagittis Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu."
+    },
+    {
+        id: 2,
+        title: "WHAT RESTAURANTS DO YOU RECOMMEND? 🍕",
+        response: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit con sagittis Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum."
+    },
+    {
+        id: 3,
+        title: "WHAT GEAR & SOFTWARE DO YOU USE? 📷",
+        response: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit con sagittis Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum."
+    },
+    {
+        id: 4,
+        title: "HOW TO TRAVEL WITH YOUR CAT? 🐶",
+        response: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit con sagittis Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue."
+    },
+    {
+        id: 5,
+        title: "WHAT LOW BUDGET DESTINATIONS DO YOU RECOMMEND? 💸",
+        response: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit con sagittis Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    }
+]
+
+const instagram = [
+    {
+        id: 0,
+        post: images.europe1
+    },
+    {
+        id: 1,
+        post: images.greece
+    },
+    {
+        id: 2,
+        post: images.italy
+    },
+]
 
 
 export default {
-
+    instagram,
+    curentLocation,
+    questions,
     continents,
     categories,
     explore,

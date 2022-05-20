@@ -76,9 +76,15 @@ const idea = require('../../bucket/icons/idea.png');
 const country_guide = require('../../bucket/icons/country_guide.png');
 const todo = require('../../bucket/icons/todo.png');
 const journey = require('../../bucket/icons/journey.png');
+const pet = require('../../bucket/icons/pet.png')
+const break_i = require('../../bucket/icons/break.png');
+const camper = require('../../bucket/icons/camper.png')
 
 
 export default {
+    break_i,
+    camper,
+    pet,
     idea,
     country_guide,
     todo,

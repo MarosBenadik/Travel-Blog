@@ -45,7 +45,7 @@ const NavBar = () => {
             >
               <p className='title'>Menu</p>
               <Link className="urlLinks-navbar" to="/" ><span className='drob-menu'><img src={icons.home} alt='home' className='drob-icon'/><h3>Home</h3></span></Link>
-              <Link className="urlLinks-navbar" to="/ourPlaces" ><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Blogs</h3></span></Link>
+              <Link className="urlLinks-navbar" to="/blogs" ><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Blogs</h3></span></Link>
               <Link className="urlLinks-navbar" to="/questions"><span className='drob-menu'><img src={icons.question} alt='home' className='drob-icon'/><h3>Questions</h3></span></Link>
               <Link className="urlLinks-navbar" to="/forbusiness"><span className='drob-menu'><img src={icons.blogers} alt='home' className='drob-icon'/><h3>For Blogers</h3></span></Link>
               <Link className="urlLinks-navbar" to="/contactus"><span className='drob-menu'><img src={icons.contact} alt='home' className='drob-icon'/><h3>Contact Us</h3></span></Link>
@@ -58,7 +58,7 @@ const NavBar = () => {
 
   return (
     <nav className='NavBar'>
-      <Link to="/">
+      <Link to="/ourPlaces">
         <div className='logo-container'>
           <img src={icons.globe} className="destination" alt="travel logo"/>
           <h3 className='logo-text'>Destinations</h3>
@@ -68,7 +68,7 @@ const NavBar = () => {
         className='components'
       >
         <Link to="/"><div className='urlLinks'><h3 className='urlinks-text'>Home</h3></div></Link>
-        <Link className="urlLinks" to="/ourPlaces"><div className='urlLinks'><h3 className='urlinks-text'>Blogs</h3></div></Link>
+        <Link className="urlLinks" to="/blogs"><div className='urlLinks'><h3 className='urlinks-text'>Blogs</h3></div></Link>
         <Link className="urlLinks" to="/questions"><div className='urlLinks'><h3 className='urlinks-text'>Questions</h3></div></Link>
         <Link className="urlLinks" to="/forbusiness"><div className='urlLinks'><h3 className='urlinks-text'>For Blogers</h3></div></Link>
         <Link className="urlLinks" to="/contactus"><div className='urlLinks'><h3 className='urlinks-text'>Contact Us</h3></div></Link>

@@ -10,6 +10,7 @@ import Contuctus from './views/ContuctUs/Contactus';
 import Faq from './views/Faq/Faq';
 import Forbusiness from './views/ForBusiness/Forbusiness';
 import OurPlaces from './views/OurPlaces/OurPlaces';
+import Blogs from './views/Blogs/Blogs';
 
 import Error from './views/ErrorPage/ErrorPage';
 
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/forbusiness" element={<Forbusiness />}/>
           <Route path="/FAQ" element={<Faq />}/>
           <Route path="/ourPlaces" element={<OurPlaces />}/>
+          <Route path="/blogs" element={<Blogs />}/>
 
           <Route path="*" element={<Error />}/>
         </Routes>
