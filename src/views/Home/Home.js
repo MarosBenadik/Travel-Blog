@@ -123,8 +123,8 @@ const Home = () => {
         </div>
         <div className='stock'>
           {DATA.essentials.map((item, index) => (
-            <a href={item.link}>
-              <div key={index} className='esential-item'>
+            <a key={index} href={item.link}>
+              <div className='esential-item'>
                 <img src={item.image} alt='esentials' className='essential-image' />
               </div>
             </a>
@@ -180,7 +180,7 @@ const Home = () => {
   function bottomComponent() {
 
     return (
-      <div className='left'>
+      <div className='left-home'>
         {DATA.continents.map((continent, index) => (
           <button key={index} className='pin' onClick={() => handleExploreChange(index)}>
             <img src={icons.pin} alt='pin' className='icon'/><p>{continent.name}</p>
@@ -195,7 +195,7 @@ const Home = () => {
       <scrollable-component class="my-content">
         {explore.states.slice(0,7).map((state, index) => {
           return (
-            <button className='state-butom' onClick={() => setState(state)}>
+            <button key={index} className='state-butom' onClick={() => setState(state)}>
               <StateCard
                 key={index}
                 pic={state.icon}
@@ -235,29 +235,27 @@ const Home = () => {
               <p className='sign-up-title'>BEST MONEY - SAVING TRAVEL TIPS</p>
               <p>See how we helped real readers plan, save and go on the trip of a lifetime. And get actionable steps you can use to travel anywhere — no matter your income or where you're from!</p>
             <div className='input-data'>
-              <form >
-                <div className='form-input'>
-                  <div className='input-data-placeholder'>
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname" className='placeholder-input' placeholder='First Name'/>
-                  </div>
-                  <div className='input-data-placeholder'>
-                    <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname" className='placeholder-input' placeholder='Last Name'/>
-                  </div>
-                  <div className='input-data-placeholder'>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" className='placeholder-input' placeholder='Email'/>
-                  </div>
+              <div className='form-input'>
+                <div className='input-data-placeholder'>
+                  <p>First name:</p>
+                  <input type="text" id="fname" name="fname" className='placeholder-input' placeholder='First Name'/>
                 </div>
-                <div className='submit-buttom'>
-                  <button type="submit" className='submit'>Subscribe!</button>
+                <div className='input-data-placeholder'>
+                  <p>Last name:</p>
+                  <input type="text" id="lname" name="lname" className='placeholder-input' placeholder='Last Name'/>
                 </div>
-              </form>
+                <div className='input-data-placeholder'>
+                  <p>Email:</p>
+                  <input type="email" id="email" name="email" className='placeholder-input' placeholder='Email'/>
+                </div>
+              </div>
+              <div className='submit-buttom'>
+                <button type="submit" className='submit'>Subscribe!</button>
+              </div>
             </div>
           </div>
-          <div>
-            <p>Some Images</p>
+          <div className='home-save-tips-container'>
+            {/* place for picture */}
           </div>
         </div>
       </div>

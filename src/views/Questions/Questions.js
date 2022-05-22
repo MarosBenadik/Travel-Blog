@@ -14,13 +14,72 @@ import icons from '../../public/icons/icons';
 
 import images from '../../public/images/images';
 
+import axios from 'axios';
+
+import Moment from 'react-moment';
+
 const Questions = () => {
+
+  const [ name, setName ] = React.useState("");
+  const [ email, setEmail ] = React.useState("");
+  const [ message, setMessage ] = React.useState("");
 
   const [ categoryIndex, setCategory ] = React.useState(0);
 
-  const [ query, setQuery ] = React.useState("")
+  const [ query, setQuery ] = React.useState("");
 
-  console.log(query)
+  const [ askQuestion, showAskQuestion ] = React.useState(false);
+
+
+  const [ questions, setQuestions ] = React.useState([]);
+
+  const [ usedQuestions, setUsedQuestions ] = React.useState([]);
+
+  
+
+
+  React.useEffect( () => {
+    axios.get(`http://localhost:8800/questions/all`)
+      .then(res => {
+        const questions = res.data;
+        setQuestions(questions)
+      })
+  }, [])
+
+  function handleBlogsChange(next) {
+    const qurent_questions = questions.filter(x => x.category == next );
+    setUsedQuestions(qurent_questions)
+    setCategory(next)
+  }
+
+  console.log({usedQuestions: usedQuestions});
+  console.log({questions: questions});
+
+  async function handleSubmit() {
+    const body = {
+      name: name,
+      email: email,
+      message: message,
+      category: categoryIndex,
+    }
+
+    console.log(body)
+
+    await axios({
+      method: "post",
+      url: "http://localhost:8800/questions/add",
+      data: body,
+      headers: { "Content-Type": "application/json" },
+    })
+    .then(function (response) {
+      //handle success
+      console.log(response);
+    })
+    .catch(function (err) {
+      //handle error
+      console.log(err);
+    });
+  }
 
   function questionImageComponent() {
     return (
@@ -55,7 +114,7 @@ const Questions = () => {
     centerPadding: -10,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    beforeChange: (current, next) => setCategory(next)
+    beforeChange: (current, next) => handleBlogsChange(next)
   }
 
   function categoryComponent() {
@@ -76,6 +135,7 @@ const Questions = () => {
   }
 
   function questionHeader() {
+
     const curent_category = data.categories.find(x => x.id === categoryIndex);
 
     return (
@@ -96,14 +156,50 @@ const Questions = () => {
     )
   }
 
+  function askQuestionComponent() {
+
+    return (
+      <div className='ask-question-input'>
+        <div className='credentials'>
+          <label for="name">Enter Your Name:</label>
+          <input type="text" className='name' placeholder="Name" name="name" onChange={(value) => setName(value.target.value)}/>
+          <label for="email">Enter Your Email:</label>
+          <input type="email" className='name' placeholder="Email" name="email" onChange={(value) => setEmail(value.target.value)}/>
+        </div>
+        <div className='question-message'>
+          <label for="message">Write your Question:</label>
+          <input type="text" className='message' placeholder="Message" name="message" onChange={(value) => setMessage(value.target.value)}/>
+            <button className='contuctus-buttom' onClick={() => { 
+              handleSubmit() 
+            }}>Submit</button>
+        </div>
+      </div>
+    )
+  }
+
   function questionsComponent() {
 
     return (
       <div className='questions'>
         <div className='left'>
           <div className='askquestion'>
-            <p className='listQuestions'>Questions: 12</p>
-            <button className='ask-text' onClick={() => console.log("ask question")} >Ask Question</button>
+            <p className='listQuestions'>Questions: {usedQuestions.length}</p>              
+            <button className='ask-text' onClick={() => askQuestion === false ? showAskQuestion(true) : showAskQuestion(false)} >Ask Question</button>
+          </div>
+          { askQuestion && askQuestionComponent()}
+          <div className='question-list'>
+            {usedQuestions.map((question, index) => (
+              <div key={index} className='single-question'>
+                <div className='question-user'>
+                  <p className='question-name'>{question.name} asked question:</p>
+                  <Moment fromNow>{question.createdAt}</Moment>
+                </div>
+                <div className='question-body'>
+                  <h2>{question.message}</h2>
+                  <button className='response-icon-button'><img src={icons.menu} alt='response' className='response-icon'/></button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         <div className='right'>
@@ -113,14 +209,15 @@ const Questions = () => {
     )
   }
 
+
   return (
     <div className='question'>
       {NavBar()}
-        {questionImageComponent()}
-        {categoryComponent()}
-        {questionHeader()}
-        {searchComponent()}
-        {questionsComponent()}
+      {questionImageComponent()}
+      {categoryComponent()}
+      {questionHeader()}
+      {searchComponent()}
+      {questionsComponent()}
     </div>
   );
 }

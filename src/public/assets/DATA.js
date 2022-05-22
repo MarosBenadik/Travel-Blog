@@ -2,7 +2,7 @@ import icons from '../icons/icons';
 import images from '../images/images';
 
 const curentLocation = {
-    name: "Italy",
+    name: "SPAIN",
     longLat: [-2.9382763, 51.928374]
 }
 
@@ -161,6 +161,312 @@ const categories = [
         id: 8,
         name: "Camping",
         image: icons.camper
+    }
+]
+
+const states = [
+    {
+        id: 0,
+        name: "Canada",
+        icon: icons.canada,
+        desc: "Canada is one of those countries that continuously finds itself on “top 10” destination lists. Whether it’s for the country’s incredible natural beauty, delicious food, mountain resorts, unique culture, or unbeatable road trips—Canada has it all! And, Canada is home to 16 UNESCO World Heritage Sites! It also has the longest ski season in the world, polar bears, the Northern Lights, and poutine (fries covered in squeaky cheese and gravy! *drool*). On my first trip to the Great White North, I snowboarded the snowy mountains of Whistler and have since ticked off bucket list-worthy destinations like Banff National Park, Montreal, Mont Tremblant, and Vancouver."
+    }, 
+    {
+        id: 1,
+        name: "Mexico",
+        icon: icons.mexico,
+        desc: "Ahh, Mexico, a country rich with diversity and culture, and one of my favorites! For travelers looking to relax resort-side, and sip on margaritas by the beach, visit Cancun or Los Cabos. For those in search of a bustling city where you can learn about the history of the country and have some amazing foodie experiences, take a trip to Mexico City. Or maybe you want to cool off in the gem-colored waters of the trendy town of Tulum. No matter which getaway you choose, you will be met with some of the best food in the world, colorful buildings, and friendly locals that want to help you experience what their country has to offer."
+    }, 
+    {
+        id:2,
+        name: "United States",
+        icon: icons.usa,
+        desc: "Apart from my bias of being an American, I truly believe that everyone needs to explore the USA (yes, even those that already live here!) The more I travel around the states, the more I realize that they have SO much adventure to offer! Each state offers something unique—whether you’re looking to experience a relaxing tropical holiday, snow-filled adventure, or the wonders of our incredible National Parks, there’s something for every kind of traveler. The United States is the perfect destination for scenic drives, delicious food, cosmopolitan city life, wilderness, cultural diversity, beautiful beaches, and so much more."
+    },
+    {
+        id: 3,
+        name: "Argentina",
+        icon: icons.argentina,
+        desc: "Argentina is a tricky country to travel in. Whilst removing the 'blue dollar' has made accessing the local currency is much easier, the inflation that has run rampant over the last few years means that planning a budget for your trip can be difficult. However, do not let this put you off visiting this vast, varied and infinitely beautiful country. Whether you crave beautiful European cities, lush vineyards and world class wines, stunning natural landscapes and once-in-a-lifetime wildlife or cowboys and cattle, Argentina will prove a worthy choice. Just don't try and do it all at once - Argentina needs time!"
+    },{
+        id: 4,
+        name: "Bolivia",
+        icon: icons.bolivia,
+        desc: "There is no other place like Bolivia. Dubbed a country of extremes, that goes from sweltering Amazon lowlands to frozen cold mountain peaks, you can experience all kinds of climate in one country! I spent a month traveling around this incredible country, discovering its rich culture and unbelievable natural beauty. Some of my favorite experiences in Bolivia are cycling the World’s Deadliest Road in La Paz and taking a 4-day 4×4 tour to the incredible Uyuni Salt Flats. Bolivia is affordable, with beautiful natural landscapes, and it’s no wonder that many people consider it their favorite South American destination!"
+    },
+    {
+        id: 5,
+        name: "Brazil",
+        icon: icons.brazil,
+        desc: "Brazil encompasses around half of South America’s landmass, making it the largest country on the continent. Because it’s so large, it’s not surprising that it is made up of a wide variety of landscapes, coastlines, and experiences. Wildlife lovers can explore the wetlands and the rainforest, while city lovers can wander the streets of Rio. Along with beautiful beaches, one of the world’s best soccer teams, and the world-famous Carnival celebration, Brazil is truly a melting pot, perfect for every kind of traveler."
+    },
+    {
+        id: 6,
+        name: "Chile",
+        icon: icons.chile,
+        desc: "Chile is one of the most slender and longest countries in the world — it’s just 150 miles across at its widest point! From the snow-capped volcanoes of Patagonia and blistering heights of the Andes to world-class wineries and Maoi sculptures of Easter Island, there are a lot of wonderful things to see in Chile. Traveling to Chile was one of the best experiences I’ve had in South America. It just constantly blew me away. It’s one of the most developed South American countries (the capital, Santiago, is a tech hub for the region), the people were awesome, the food was incredible, and the scenery made me feel in awe of nature."
+    },
+    {
+        id: 7,
+        name: "Colombia",
+        icon: icons.columbia,
+        desc: "Colombia is fast becoming the travel highlight of South America. After decades of struggling with crime and cartels, Colombia has become a hub for digital nomads and budget backpackers. More and more people are visiting to soak up the sun and enjoy the country’s low cost of living."
+    },
+    {
+        id: 8,
+        name: "Peru",
+        icon: icons.peru,
+        desc: "After spending three months fundraising for Peruvian Hearts, an all-girls orphanage in Cusco, my friend and I embarked on an epic adventure to Peru to visit the orphanage and explore the beautiful country. We spent four days trekking the Inca Trail to Machu Picchu which was a major bucket list trip for me. Machu Picchu, one of the Seven Wonders of the World, is one of the biggest attractions for tourists around the world. This unique and fascinating country stands out from the crowd with its different cultural and natural treasures. Peru is also home to natural wonders like the Amazon, Lake Titicaca, and Rainbow Mountain as well as the beautiful coastal city of Lima. It’s a diverse country with countless destinations to discover!"
+    },
+    {
+        id: 9,
+        name: "Venezuela",
+        icon: icons.venezuela,
+        desc: "Rich with culture, history, and friendly locals, Venezuela is a chance to see something different. Located on the northern coast of South America, it is filled with many white-sand beaches, blue waters, and natural wonders, making it a great getaway. Fans of the outdoors will love Angel Falls, the highest waterfall in the world, or Pico Bolívar, the highest mountain in Venezuela. As English is not spoken here as much, it presents a great opportunity to immerse yourself in a new language."
+    },
+    {
+        id: 10,
+        name: "Austria",
+        icon: icons.austri,
+        desc: "When most people think of Austria, they think of rolling green hills, skiing, Christmas markets, and The Sound of Music. And while the country does have all of this, it also has so much more! For music lovers, it’s the home of Mozart. For foodies, it’s home to the Wienerschnitzel. For outdoor lovers, you can paraglide, raft, and hike in every corner of this picturesque country. No matter what your love is, Austria likely has something just for you. The minute you arrive, the country’s charming villages will take you by surprise and have you feeling like you stepped into a Disney fairytale."
+    }, 
+    {
+        id: 11,
+        name: "Belgium",
+        icon: icons.belgium,
+        desc: "Belgium is a travel destination made for history buffs and chocolate addicts. Though the nation is small, it plays a big part in the world’s history. There are over 3,000 castles to explore, battlegrounds from the World Wars, and every museum imaginable. After you’ve had your history fill, you can kick your feet back and relax at one of the 1,000 breweries in the small country. Sip on a cold beer while you munch on frites—sounds dreamy to me! And to finish off the day? All the gourmet chocolate you can imagine! Many people tend to gloss over the country, visiting Brussels or Bruges for a day before moving on, but if you take the time, you’ll find that Belgium has so much more to explore!"
+    }, 
+    {
+        id: 12,
+        name: "Croatia",
+        icon: icons.croatia,
+        desc: "With piercing turquoise seas and fairytale-like architecture, there is no denying Croatia is breathtakingly beautiful! Spanning most of the Adriatic Sea, you’re never too far away from the coast when traveling in Croatia. And even if it’s not pretty beaches you seek, stone castles and magnificent waterfalls await travelers of all kinds. Whether you are backpacking through Croatia or are wanting to splurge on Yacht Week, these travel tips will help you plan your next adventure to the Land of a Thousand Islands."
+    }, 
+    {
+        id: 13,
+        name: "Czech Republic",
+        icon: icons.cz
+    }, 
+    {
+        id: 14,
+        name: "Denmark",
+        icon: icons.denmark
+    }, 
+    {
+        id: 15,
+        name: "Finland",
+        icon: icons.finland
+    }, 
+    {
+        id: 16,
+        name: "France",
+        icon: icons.france
+    }, 
+    {
+        id: 17,
+        name: "Germany",
+        icon: icons.germany
+    },
+    { 
+        id: 18,
+        name: "Greece",
+        icon: icons.greece
+    },
+    { 
+        id: 19,
+        name: "Ireland",
+        icon: icons.ireland
+    },
+    { 
+        id: 20,
+        name: "Italy",
+        icon: icons.italy
+    },
+        
+    { 
+        id: 21,
+        name: "Malta",
+        icon: icons.malta
+    },
+    { 
+        id: 22,
+        name: "Netherlands",
+        icon: icons.netherlands
+    },
+    { 
+        id: 23,
+        name: "Norway",
+        icon: icons.norway
+    },
+    { 
+        id: 24,
+        name: "Portugal",
+        icon: icons.portugal
+    },
+    { 
+        id: 25,
+        name: "Slovak Republic",
+        icon: icons.sk
+    },
+    { 
+        id: 26,
+        name: "Spain",
+        icon: icons.spain
+    },
+    { 
+        id: 27,
+        name: "Sweden",
+        icon: icons.sweden
+    },
+    { 
+        id: 28,
+        name: "United Kingdom",
+        icon: icons.uk
+    },
+    {
+        id: 29,
+        name: "New Zeland",
+        icon: icons.new_zeland
+    },
+    {
+        id: 30,
+        name: "New South Wales",
+        icon: icons.australia
+    }, 
+    {
+        id: 31,
+        name: "Northern Territory",
+        icon: icons.australia
+    }, 
+    {
+        id: 32,
+        name: "Western Australia",
+        icon: icons.australia
+    },
+    {
+        id: 33,
+        name: "Queesland",
+        icon: icons.australia
+    }, 
+    {
+        id: 34,
+        name: "South Australia",
+        icon: icons.australia
+    }, 
+    {
+        id: 35,
+        name: "Tasmania",
+        icon: icons.australia
+    }, 
+    {
+        id: 36,
+        name: "Egypt",
+        icon: icons.egypt
+    }, 
+    {
+        id: 37,
+        name: "Tanzania",
+        icon: icons.tanzania
+    }, 
+    {
+        id: 38,
+        name: "South Africa",
+        icon: icons.southAfrica
+    }, 
+    {
+        id: 39,
+        name: "Morocco",
+        icon: icons.morocco
+    }, 
+    {
+        id: 40,
+        name: "Madagascar",
+        icon: icons.madagascar
+    }, 
+    {
+        id: 41,
+        name: "Tunisia",
+        icon: icons.tunisia
+    }, 
+    {
+        id: 42,
+        name: "Congo",
+        icon: icons.congo
+    }, 
+    {
+        id: 43,
+        name: "Mauritania",
+        icon: icons.mauritania
+    },
+    { 
+        id: 44,
+        name: "Mauritius",
+        icon: icons.mauritius
+    },
+    { 
+        id: 45,
+        name: "Seychelles",
+        icon: icons.seychelles
+    },
+    {
+        id: 46,
+        name: "Honk Kong",
+        icon: icons.honkkong
+    },
+    {
+        id: 47,
+        name: "Indonesia",
+        icon: icons.indonesia
+    },
+    { 
+        id: 48,
+        name: "India",
+        icon: icons.india
+    },
+    {
+        id: 49,
+        name: "Japan",
+        icon: icons.japan
+    },
+    {
+        id: 50,
+        name: "China",
+        icon: icons.china
+    },
+    {
+        id: 51,
+        name: "Philippines",
+        icon: icons.philipines
+    }, 
+    {
+        id: 52,
+        name: "Vietnam",
+        icon: icons.vietnam
+    }, 
+    {
+        id: 53,
+        name: "Thailand",
+        icon: icons.thailand
+    }, 
+    {
+        id: 54,
+        name: "Malaysia",
+        icon: icons.malaysia
+    }, 
+    {
+        id: 55,
+        name: "Sri Lanka",
+        icon: icons.srilanka
+    }, 
+    {
+        id: 56,
+        name: "United Arab Emirates",
+        icon: icons.uae
+    }, 
+    {
+        id: 57,
+        name: "Singapore",
+        icon: icons.singapore
     }
 ]
 
@@ -567,5 +873,7 @@ export default {
     categories,
     explore,
     initial_explore,
-    essentials
+    essentials,
+    states
+
 }

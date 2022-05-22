@@ -130,7 +130,7 @@
         cursor:pointer;
     }
 
-    .left{
+    .left-home{
         display: flex;
         align-items: center;
         height: 400px;
@@ -163,7 +163,7 @@
         background-color: var(--light_grean1);
     }
 
-    .left{
+    .left-home{
         display: flex;
         height: 100%;
     }
@@ -390,7 +390,7 @@
         cursor:pointer; 
     }
 
-    .left{
+    .left-home{
         display: flex;
         height: 100%;
         flex-direction: column;
@@ -428,9 +428,6 @@
         border-radius: 10px;
     }
     
-    .state-title {
-        
-    }
     
     .my-content {
         height: 300px;
@@ -440,7 +437,12 @@
         padding-bottom: 10px;
         background-color: var(--light_grean1);
         border-radius: 20px;
-    
+    }
+
+    .home-save-tips-container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
     }
     
     .state-text-container{
@@ -872,7 +874,7 @@
         width: 90%;
     }
 
-    .left {
+    .left-home {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -880,6 +882,7 @@
 
     .input-data-placeholder{
         display: flex;
+        margin-top: -40px;
         flex-direction: column;
     }
 

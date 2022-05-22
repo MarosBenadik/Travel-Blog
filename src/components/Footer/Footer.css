@@ -172,6 +172,13 @@
         margin-block-start: 15px;
     }
 
+    .link-text:hover {
+        color: black;
+        font-size: 19px;
+        text-decoration: none;
+        margin-block-start: 15px;
+    }
+
     .cc {
         background-color: rgb(250, 248, 248);
         padding: 23px;
@@ -195,5 +202,27 @@
         width: 35px;
         height: 35px;
         margin: 5px;
+    }
+
+    .icons:hover {
+        width: 38px;
+        height: 38px;
+        margin: 2px;
+    }
+
+    .link-text-logIn {
+        color: rgb(88, 84, 84);
+        font-size: 18px;
+        text-decoration: none;
+        margin-block-start: 15px;
+        margin-top: -30px;
+    }
+
+    .link-text-logIn:hover {
+        color: var(--orange);
+        font-size: 19px;
+        text-decoration: none;
+        margin-block-start: 15px;
+        margin-top: -30px;
     }
 }

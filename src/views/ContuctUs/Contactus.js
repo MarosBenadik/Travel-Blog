@@ -54,8 +54,10 @@ const Contuctus = () => {
   function contuctUsMiddleComponent() {
     return (
       <div className='contuct-us-divider'>
-        <div>
-          <p>sad</p>
+        <div className='contuctUs-img'>
+          <img src={images.greece} alt='top' className='about-top-img' />
+          <img src={images.forest} alt='forest' className='forest-img' />
+          <img src={images.we} alt='bottom' className='about-bottom-img' />
         </div>
         <div className='placeholder-container'>
           <p className='contuct-us-title'>GET IN TOUCH</p>

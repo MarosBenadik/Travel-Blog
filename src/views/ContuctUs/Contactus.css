@@ -85,6 +85,40 @@
     cursor: pointer;
 }
 
+.contuctUs-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.forest-img {
+    width: 50%;
+    height: 40%;
+}
+
+.about-top-img{
+    width: 20%;
+    height: 17%;
+    border-radius: 30rem;
+    margin-left: -50%;
+    border-width: 2px;
+    border-color: var(--orange);
+    border-style: double;
+}
+
+.about-bottom-img{
+    width: 20%;
+    height: 17%;
+    border-radius: 20rem;
+    margin-right: -40%;
+    border-width: 2px;
+    border-color: var(--orange);
+    border-style: double;
+}
+
 .contuctus-buttom:hover {
     width: 100%;
     height: 50px;

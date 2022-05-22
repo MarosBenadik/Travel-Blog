@@ -23,11 +23,25 @@ const europe2 = require('../../bucket/images/europe1.jpeg');
 
 const contuctUs_img = require('../../bucket/images/beach-contact.png');
 const nature = require('../../bucket/images/nature.png');
+const forest = require('../../bucket/images/forest.png');
+
+const travel_save = require('../../bucket/images/travel-save.png');
+
+
 
 const we = require('../../bucket/images/we.png');
 const question = require('../../bucket/images/question.png');
 
+const we_aboutus1 = require('../../bucket/images/we-aboutus1.png');
+const we_aboutus2 = require('../../bucket/images/we-aboutus2.png');
+const we_aboutus3 = require('../../bucket/images/we-aboutus3.png');
+
 export default {
+    travel_save,
+    forest,
+    we_aboutus3,
+    we_aboutus2,
+    we_aboutus1,
     question,
     we,
     nature,
