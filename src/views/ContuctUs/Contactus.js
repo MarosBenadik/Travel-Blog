@@ -9,6 +9,8 @@ import DATA from '../../public/assets/DATA';
 
 import axios from 'axios';
 
+import AddFull from '../../components/adds/AddFull';
+
 const Contuctus = () => {
 
   const [ name, setName ] = React.useState("");
@@ -101,6 +103,7 @@ const Contuctus = () => {
     <div className='contact'>
       {NavBar()}
       {contuctUsImageComponent()}
+      {AddFull()}
       {contuctUsMiddleComponent()}
       {OurPrintsComponent()}
     </div>

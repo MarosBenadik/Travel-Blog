@@ -1,0 +1,28 @@
+.advert-side {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border-radius: 1px;
+    border-color: var(--pink_beige);
+    background-color: white;
+    border-style: dotted none dotted none;
+    align-items: center;
+    justify-content: center;
+}
+
+.advert-full {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    border-radius: 1px;
+    border-color: var(--pink_beige);
+    background-color: white;
+    border-style: dotted none dotted none;
+    align-items: center;
+    justify-content: center;
+
+}

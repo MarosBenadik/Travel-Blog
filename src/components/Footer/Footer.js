@@ -5,6 +5,7 @@ import "./Footer.css"
 
 
 const NavBar = () => {
+
   return (
     <div className='footer'>
       <div className='urllinks-container'>
@@ -36,7 +37,7 @@ const NavBar = () => {
             </div>
             <div className='link'>
               <h3 className='link-text-container' >Have Account?</h3>
-              <Link className='link-text-logIn' to="/login">Log In</Link>
+              <Link className='link-text-logIn' to='/login'>Log In</Link>
             </div>
           </div>
         </div>

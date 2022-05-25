@@ -14,13 +14,19 @@ import images from '../../public/images/images';
 
 import Moment from 'react-moment';
 
+import AddSide from '../../components/adds/AddSide';
+
+import Select from 'react-select';
+
+import InstagramSide from '../../components/InstagramSide/InstagramSide';
+
 const Blogs = ({category}) => {
 
   //filter 
-  const [ continent, setContinent ] = React.useState(DATA.explore[0]);
-  const [ blogName, setBologName ] = React.useState([]);
-  const [ blogCategory, setBlogCategory ] = React.useState([]);
-  const [ blogState, setBlogState ] = React.useState([]);
+  const [ continent, setContinent ] = React.useState(null);
+  const [ blogName, setBologName ] = React.useState(null);
+  const [ blogCategory, setBlogCategory ] = React.useState(null);
+  const [ blogState, setBlogState ] = React.useState(null);
 
   console.log(continent)
   console.log(blogName)
@@ -33,7 +39,6 @@ const Blogs = ({category}) => {
 
     const thisContinent = DATA.explore.find(e => e.id === newContinent)
 
-    
     setContinent(thisContinent)
   }
 
@@ -49,31 +54,48 @@ const Blogs = ({category}) => {
   }, [])
 
   function filterComponent() {
-     return (
-       <div className='blogs-filter-component'>
-        <p>Choose a Name:</p>
-        <input placeholder='Search' onChange={(event) => setBologName(event.target.value)} value={blogName}/>
+
+    const stateChoice = [
+      {value: "Select Continent First", label: "Select Continent First"}
+    ]
+
+    return (
+      <div className='blogs-filter-component'>
+        <span className='clear-filter-part'><h3>Search:</h3><buttom className='clear-filter-buttom' onClick={() => {
+          setContinent(null)
+          setBologName(null)
+          setBlogCategory(null)
+          setBlogState(null)
+        }}>Clear Filter</buttom></span>
+        <p>Search by Name:</p>
+        <input placeholder='Search' className='blogs-search-placeholder' onChange={(event) => setBologName(event.target.value)} value={blogName}/>
+        <h3>Filter</h3>
         <p>Choose a Category:</p>
-        <select name="category" id="category" multiple={true} onChange={(event) => setBlogCategory(event.target.value)} value={blogCategory}>
-          {DATA.categories.map((category, index) => (
-            <option key={index} value={category.id}>{category.name}</option>
-          ))}
-        </select>
+        <Select
+          defaultValue={blogCategory}
+          onChange={setBlogCategory}
+          options={DATA.categories}
+          placeholder='Select Category'
+        />
         <p>Choose a Continent:</p>
-        <select name="continent" id="continent" multiple={true} onChange={(event) => changeContinent(event.target.value)} value={continent}>
-          {DATA.explore.map((c, index) => (
-            <option key={index} value={c.id} >{c.name}</option>
-          ))}
-        </select>
+        <Select
+          defaultValue={continent}
+          onChange={setContinent}
+          options={DATA.explore}
+          placeholder='Select Continent'
+        />
         <p>Choose a State:</p>
-        <select name="states" id="states" multiple={true} onChange={(event) => setBlogState(event.target.value)} value={blogState}>
-        {continent.states.map((continent, index) => (
-            <option key={index} value={continent.id}>{continent.name}</option>
-          ))}
-        </select>
-        <button>Filter</button>
-       </div>
-     )
+        <Select
+          defaultValue={blogState}
+          onChange={setBlogState}
+          options={continent === null ? stateChoice : continent.states}
+          placeholder='Select State'
+        />
+        <button className='blogs-filter-butom'>Filter</button>
+        {AddSide()}
+        {InstagramSide()}
+      </div>
+    )
   }
 
   function blogsComponent() {
@@ -105,10 +127,10 @@ const Blogs = ({category}) => {
             <div className='blog-nape-place-component'>
               <div className='blog-nape-place'>
                 <h3 className='blog-continent-text'>{getContinent(blog.continent)}</h3>
-                <h1>{blog.title}</h1>
-                <p>{blog.subTitle}</p>
-                <Link to={"/blogs/" + blog.slug} state={blog._id} >Keep Reading ...</Link>
-                <h4>"{blog.cleverQoute}"</h4>
+                <h1 className='blogs-title-text'>{blog.title}</h1>
+                <p className='blogs-subtitle-text'>{blog.subTitle}</p>
+                <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }}>Keep Reading ...</Link>
+                <h4 className='blogs-title-text'>"{blog.cleverQoute}"</h4>
               </div>
               <div className='blog-date'>
                 <Moment fromNow>{blog.createdAt}</Moment>
@@ -120,11 +142,13 @@ const Blogs = ({category}) => {
     )
   }
 
-  console.log(blogs)
-
   return (
     <div className='blogs-page'>
       {NavBar()}
+      <div className='blogs-page-top'>
+        <h1>Away From Routine.</h1>
+        <p className='blog-continent-text'>“Traveling – it leaves you speechless, then turns you into a storyteller”</p>
+      </div>
       <div className='blogs-page-divider'>
         {blogsComponent()}
         {filterComponent()}

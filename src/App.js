@@ -14,11 +14,15 @@ import Blogs from './views/Blogs/Blogs';
 import Terms from './views/Terms/Terms';
 import Privacy from './views/Privacy/Privacy';
 import Blog from './views/Blog/Blog';
+import Dashboard from './views/Dashboard/Dashboard';
 
+import Login from './views/Login/Login';
 
 import Error from './views/ErrorPage/ErrorPage';
 
+import RequireAuth from './components/ReaquireAuth/RequireAuth';
 
+import PersistLogin from './components/PersistLogin/PersistLogin';
 
 const App = () => {
   return (
@@ -36,7 +40,13 @@ const App = () => {
           <Route path="/blogs/:slug" element={<Blog />}/>
           <Route path="/terms" element={<Terms />}/>
           <Route path="/privacy" element={<Privacy />}/>
-        
+          <Route path="/login" element={<Login />}/>
+
+          <Route element={<PersistLogin />}>
+            <Route element={<RequireAuth/>}>
+              <Route path="/dashboard" element={<Dashboard />}/>
+            </Route>
+          </Route>
           <Route path="*" element={<Error />}/>
         </Routes>
         <div>

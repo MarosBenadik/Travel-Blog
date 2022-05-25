@@ -1,17 +1,145 @@
-@media (max-width: 306px) {
-    
-}
 
 @media (max-width: 568px) {
-    
+    .single-blog-divider {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .blog-single-sum-img {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        padding: 5%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    .single-blog-divider-imgs {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 7%;
+    }
 }
 
 @media (max-width: 992px) {
-    
+    .single-blog-divider {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .blog-single-sum-img {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: 80%;
+        padding: 5%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .single-blog-divider-imgs {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 7%;
+    }
 }
 
 @media (min-width: 992px) {
+    .single-blog-divider {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: fit-content;
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
+    .blog-single-sum-img {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: 40%;
+        padding: 5%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .single-blog-divider-imgs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 7%;
+    }
+}
+
+.blog-text-part {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.banner-state {
+    font-size: 49px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+}
+
+.recomended-section {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: white;
+    border-color: var(--dark_beige);
+    border-style: dotted none;
+}
+
+.recomended-section h2 {
+    margin-left: 5%;
+}
+
+.blog-page-img-banner {
+    display: flex;
+    position: absolute;
+    margin-top: 22%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 120px;
+    background-color: rgba(0,0,0,0.4) ;
+}
+
+.blog-adds-full-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 .blog-page {
@@ -28,20 +156,60 @@
     height: 650px;
 }
 
+.suportUs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -250px;
+    padding-top: 20px ;
+}
+
+
 .singl-blog-main-page {
     width: 85%;
-    height: 900px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-self: center;
     align-items: center;
     margin-top: -10%;
-    margin-bottom: 5%;
-    background-color: var(--white);
+    margin-bottom: 3%;
+    background-color: white;
+}
+
+.text-color {
+    color: var(--dark_beige);
 }
 
 .single-blog-page-title {
     font-size: 30px;
+    margin: 5% 5% 1% 5%;
+}
+
+.single-blog-page-text-part{
     margin: 5%;
-    
+    font-size: 20px;
+    line-height: 2 ;
+    text-align: justify;
+}
+
+.clever-qoute-container {
+    background-color: white;
+    border-radius: 7px;
+    padding-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.single-blog-page-subtitle-part {
+    margin: 5%;
+    font-size: 23px;
+    line-height: 2 ;
+    text-align: center;
+}
+.clever-qoute-blog{
+    color: var(--dark_beige);
 }

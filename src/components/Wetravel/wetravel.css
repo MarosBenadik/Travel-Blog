@@ -1,0 +1,83 @@
+@media (max-width: 568px) {
+    .we-image {
+        width: 60%;
+        height: 60%;
+    }
+    .shareArticle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .we-image {
+        width: 60%;
+        height: 60%;
+    }
+    .shareArticle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .we-image {
+        width: 80%;
+        height: 80%;
+    }
+    .shareArticle {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+        border-width: 2px;
+        border-color: var(--dark_beige);
+        border-style: dotted none;
+        margin-bottom: 3%;
+    }
+}
+
+.wetravel-component {
+    width: 100%;
+    height: 30%;
+    margin: 2%;
+}
+
+.author {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-img {
+    width: 60%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.img-faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recomended-section {
+    width: 100%;
+    height: 350px;
+    background-color: antiquewhite;
+}
+
+
+
+
+

@@ -1,0 +1,31 @@
+.slider-recomended-component {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.recomended-blogSlide {
+    width: 100%;
+    height: 100px;    
+}
+
+.slider-inside-blogSlide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slider-inside-blogSlide p {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--dark_beige);
+}
+
+.continent{
+    height: 400px;
+    width: 100%;
+    margin-bottom: 4%;
+}
