@@ -43,7 +43,7 @@ const NavBar = () => {
         </div>
       </div>
       <div className='cc'>
-        <p className='cc-text' >&copy; 2022 TRAVEL BLOG LTD.</p>
+        <p className='cc-text' >&copy; 2022 AWAY FROM ROUTINE LTD.</p>
       </div>
     </div>
   );

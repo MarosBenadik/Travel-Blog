@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Re } from 'react-router-dom';
 import './LogedNavBar.css';
 
 import Drawer from 'react-modern-drawer';
@@ -12,17 +12,20 @@ const LogedNavBar = () => {
 
   const [ showNavBar, setShowNavBar ] = React.useState(false);
 
-  const [ placeholder, setPlaceholder ] = React.useState(false);
-
   const toggleDrawer = () => {
     setShowNavBar((prevState) => !prevState)
+  }
+
+  const handleLogOut = () => {
+    sessionStorage.removeItem('data')
+
   }
 
   function DropDown () {
 
     return (
-        <div className='NavBar'>
-          <button className='navBar-parent' onClick={toggleDrawer}>
+        <div className='logedinNavBar-parent'>
+          <button className='logedinNavBar-parent' onClick={toggleDrawer}>
             <img src={icons.menu} className='dropDownLogo' alt='menu'/>
           </button>
           <Drawer
@@ -34,8 +37,11 @@ const LogedNavBar = () => {
               className='navBar-components'
             >
               <p className='title'>Menu</p>
-              <Link className="urlLinks-navbar" to="/" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.home} alt='home' className='drob-icon'/><h3>Home</h3></span></Link>
-              <Link className="urlLinks-navbar" to="/blogs" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Logout</h3></span></Link>
+              <Link className="urlLinks-navbar" to="/dashboard" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Dashboard</h3></span></Link>
+              <Link className="urlLinks-navbar" to="/createblog" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Create Blog</h3></span></Link>
+              <Link className="urlLinks-navbar" to="/updateblog" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Update Blog</h3></span></Link>
+              <Link className="urlLinks-navbar" to="/signups" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>New SignUps</h3></span></Link>
+              <Link className="urlLinks-navbar" to="/businesscontuct" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Business Contacts</h3></span></Link>
             </div>
           </Drawer>
       </div>
@@ -47,19 +53,20 @@ const LogedNavBar = () => {
         <div
             className='components'
         >
-            <Link to="/" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Home</h3></div></Link>
-            <Link className="urlLinks" to="/blogs" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Blogs</h3></div></Link>
+          <Link className="urlLinks" to="/dashboard" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Dashboard</h3></div></Link>
+          <Link className="urlLinks" to="/createblog" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Create Blog</h3></div></Link>
+          <Link className="urlLinks" to="/updateblog" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Update Blog</h3></div></Link>
+          <Link className="urlLinks" to="/signups" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>New SignUps</h3></div></Link>
+          <Link className="urlLinks" to="/businesscontuct" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Business Contacts</h3></div></Link>
         </div>
         <div className='company-name-container'>
             <h1 className='company-name' >Away from Routine!</h1>
         </div>
-        <div className='search-component' >
-            <button className='search-buttom' onClick={() => placeholder === true ? setPlaceholder(false) : setPlaceholder(true) }>
-            <p className='search-icon'>LogOut</p>
-            </button>
-        </div>
-        <div className='navBar'>
+        <div className='logedinNavBar-parent'>
             {DropDown()}
+        </div>
+        <div className='loged-in-logout'>
+          <button type="submit" onClick={ () => handleLogOut()} className='logout-buttom'><div className='urlLinks'><h3 className='urlinks-text'>log out</h3></div></button>
         </div>
     </nav>
   );

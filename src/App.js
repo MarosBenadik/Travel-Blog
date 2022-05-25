@@ -15,6 +15,7 @@ import Terms from './views/Terms/Terms';
 import Privacy from './views/Privacy/Privacy';
 import Blog from './views/Blog/Blog';
 import Dashboard from './views/Dashboard/Dashboard';
+import CreateBlog from './views/CreateBlog/CreateBlog';
 
 import Login from './views/Login/Login';
 
@@ -45,6 +46,7 @@ const App = () => {
           <Route element={<PersistLogin />}>
             <Route element={<RequireAuth/>}>
               <Route path="/dashboard" element={<Dashboard />}/>
+              <Route path="/createblog" element={<CreateBlog />}/>
             </Route>
           </Route>
           <Route path="*" element={<Error />}/>
