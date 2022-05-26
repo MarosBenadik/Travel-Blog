@@ -14,6 +14,8 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import Slider from "react-slick";
 
+import { Image, Transformation } from 'cloudinary-react';
+
 import icons from '../../public/icons/icons';
 
 import StateCard from '../../components/StateCard/StateCard';
@@ -98,13 +100,28 @@ const Home = () => {
       prevArrow: <PrevArrow />,
     };
 
+    function getCountry(id) {
+      const country = DATA.states.find(x => x.id === id);
+      return country.name;
+    }
+
     return (
       <div className='middle-component'>
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
             <div key={index} className='blogSlide' onClick={() => console.log("blog")}>
               <div className='inside-blogSlide'>
-                <p>{blog.title}</p>
+                <Image key={index} cloudName="ditsdxnax" publicId={blog.mainImg}>
+                  <Transformation dpr="auto" height="490" responsive width="auto" gravity="south" crop="scale" />
+                  <Transformation effect="art:hokusai" />
+                  <Transformation border="3px_solid_rgb:00390b" />
+                </Image>
+                <div className='blog-slider'>
+                  <p className='blog-slider-text'>{blog.title}</p>
+                </div>
+                <div className='blog-slider-country'>
+                  <p className='blog-slider-text'>{getCountry(blog.country)}</p>
+                </div>
               </div>
             </div>
           ))}
@@ -278,12 +295,18 @@ const Home = () => {
     };
 
     return (
-      <div className='middle-component'>
+      <div className='full-middle-component'>
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
-            <div key={index} className='blogSlide' onClick={() => console.log("blog")}>
-              <div className='inside-blogSlide'>
-                <p>{blog.title}</p>
+            <div key={index} className='full-blogSlide' onClick={() => console.log("blog")}>
+              <div>
+                <Image key={index} cloudName="ditsdxnax" publicId={blog.blogImg}>
+                  <Transformation dpr="auto" responsive width="300" gravity="north" crop="fit" />
+                  <Transformation effect="art:hokusai" />
+                </Image>
+              </div>
+              <div className='text-part'>
+                <h3>{blog.title}</h3>
               </div>
             </div>
           ))}

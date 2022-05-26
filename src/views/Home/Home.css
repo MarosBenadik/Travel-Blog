@@ -31,7 +31,7 @@
     }
     .middle-component{
         height: 100%;
-        width: 100%;
+        width: 102%;
     }
 
     .header-background{
@@ -578,7 +578,7 @@
     }
 
     .middle-component{
-        width: 90%;
+        width: 95%;
         height: 100%;
         margin: 1rem auto;
         justify-items: center;
@@ -586,10 +586,9 @@
     }
 
     .blogSlide {
-        height: 570px;
-        width: 100px;
-        background-color: var(--pink_beige);
-        margin: 20 auto;
+        height: 500px;
+        width: 100%;
+        background-color: white;  
     }
 
     .single-blog {
@@ -719,16 +718,17 @@
     }
 
     .inside-blogSlide{
-        margin: 5px;
-        margin-top: -10px;
-        height: 98%;
+        margin-top: 10px;
+        height: 100%;
+        width: 90%;
         background-color: white;
     }
 
     .blogSlide:hover {
-        height: 570px;
-        width: 20px;
+        height: 500px;
+        width: 100%;
         background-color: var(--dark_beige);
+        border-radius: 10px;
         margin: 50 auto;
     }
 
@@ -996,4 +996,75 @@
     --scrollbar-thumb-fill-color: black;
 
 }
+
+.blog-slider {
+    display: flex;
+    width: 7%;
+    height: 15%;
+    position: absolute;
+    top: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 0.5%;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+.blog-slider-country {
+    display: flex;
+    width: 4%;
+    height: 10%;
+    position: absolute;
+    top: 30%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 1.8%;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px
+}
+
+.blog-slider-text {
+    color: white;
+    align-self: center;
+    font-weight: 700;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.blog-slider-author {
+    display: flex;
+    width: 4%;
+    height: 10%;
+    position: absolute;
+    top: 60%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 1.8%;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px
+}
+
+.full-middle-component {
+    width: 80%;
+    height: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.full-blogSlide {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+}
+
+.text-part {
+
+    width: 300px;
+    height: 300px;
+}
+
+
 

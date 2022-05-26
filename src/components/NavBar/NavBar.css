@@ -204,6 +204,7 @@
 @media (min-width: 992px) {
     .NavBar{
         display: flex;
+        position: absolute;
         background: var(--main-color);
         background: -moz-linear-gradient(-45deg,  var(--main-color) 0%, var(--main-color1) 100%);
         background: -webkit-linear-gradient(-45deg,  var(--main-color1) 0%,var(--main-color) 100%);
