@@ -13,7 +13,7 @@ const Wetravel = () => {
           <div className='img-faq'>
             <h2>Where We Are planing to go next?</h2>
             <h4>{DATA.curentLocation.name}</h4>
-            <img src={images.map_vector} al='map' className='we-image'/>
+            <img src={images.map_vector} alt='map' className='we-image'/>
           </div>
         </div>
     )

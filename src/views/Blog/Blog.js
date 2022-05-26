@@ -40,7 +40,7 @@ const Blog = () => {
 
             setIsLoading(false)
           })
-    }, [])
+    }, [location.state])
 
     function getContinent(id) {
     

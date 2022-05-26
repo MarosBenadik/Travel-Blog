@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Re } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './LogedNavBar.css';
 
 import Drawer from 'react-modern-drawer';
