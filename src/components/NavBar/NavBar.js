@@ -47,7 +47,6 @@ const NavBar = () => {
               <Link className="urlLinks-navbar" to="/" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.home} alt='home' className='drob-icon'/><h3>Home</h3></span></Link>
               <Link className="urlLinks-navbar" to="/blogs" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Blogs</h3></span></Link>
               <Link className="urlLinks-navbar" to="/questions" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.question} alt='home' className='drob-icon'/><h3>Questions</h3></span></Link>
-              <Link className="urlLinks-navbar" to="/forbusiness" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blogers} alt='home' className='drob-icon'/><h3>For Blogers</h3></span></Link>
               <Link className="urlLinks-navbar" to="/contactus" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.contact} alt='home' className='drob-icon'/><h3>Contact Us</h3></span></Link>
               <Link className="urlLinks-navbar" to="/faq" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.faq} alt='home' className='drob-icon'/><h3>F&Qs</h3></span></Link>
             </div>
@@ -70,7 +69,6 @@ const NavBar = () => {
         <Link to="/" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Home</h3></div></Link>
         <Link className="urlLinks" to="/blogs" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Blogs</h3></div></Link>
         <Link className="urlLinks" to="/questions" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Questions</h3></div></Link>
-        <Link className="urlLinks" to="/forbusiness" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>For Blogers</h3></div></Link>
         <Link className="urlLinks" to="/contactus" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Contact Us</h3></div></Link>
         <Link className="urlLinks" to="/faq" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>F&Qs</h3></div></Link>
       </div>

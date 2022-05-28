@@ -7,13 +7,23 @@ import images from '../../public/images/images';
 
 import NavBar from '../../components/NavBar/NavBar';
 
+import { Link } from 'react-router-dom';
+
 import axios from 'axios';
+
+import DATA from '../../public/assets/DATA';
+
+import AddSide from '../../components/adds/AddSide';
+
+import Wetravel from '../../components/Wetravel/Wetravel';
 
 import ReactLoading from 'react-loading';
 
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import data from '../../public/assets/DATA';
+
+import { Image, Transformation } from 'cloudinary-react';
 
 const OurPlaces = () => {
 
@@ -29,7 +39,7 @@ const OurPlaces = () => {
 
   const [ categoryBlogs, setCategoryBlogs ] = React.useState([])
 
-  const recomendedBlogs = newBlogs.slice(0,8).sort(({likes:a}, {likes:b}) => b-a);
+  const recomendedBlogs = newBlogs.slice(0,5).sort(({likes:a}, {likes:b}) => b-a);
 
   React.useEffect( () => {
     axios.get(`http://localhost:8800/blogs/all`)
@@ -53,54 +63,6 @@ const OurPlaces = () => {
     setCategoryBlogs(changeBlogs)
   }
 
-  function recomendedComponenet() {
-
-    return (
-      <scrollable-component class="my-content">
-        {recomendedBlogs.map((blog, index) => {
-          return (
-            <div key={index} className='recomended-container' onClick={()=> console.log("blog")}>
-              <div>
-
-              </div>
-              <div>
-                <p>{blog.title}</p>
-
-              </div>
-              <div>
-
-              </div>
-            </div>
-          );
-        })}
-      </scrollable-component>
-    )
-  }
-
-  function curentCategoryComponent() {
-
-    return (
-      <scrollable-component class="my-content">
-        {categoryBlogs.map((blog, index) => {
-          return (
-            <div key={index} className='block-container' onClick={()=> console.log("blog")}>
-              <div>
-
-              </div>
-              <div>
-                <p>{blog.title}</p>
-
-              </div>
-              <div>
-
-              </div>
-            </div>
-          );
-        })}
-      </scrollable-component>
-    )
-  }
-
   function NextArrow({onClick}) {
     return (
       <div className='arrow back' onClick={onClick} >
@@ -121,7 +83,7 @@ const OurPlaces = () => {
     infinite: true,
     lazyLoad: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 5,
     centerMode: true,
     centerPadding: 0,
     nextArrow: <NextArrow />,
@@ -195,6 +157,86 @@ const OurPlaces = () => {
     )
   }
 
+  function getCategory(category) {
+    const blogCategory = DATA.categories.find(x => x.id === category)
+    return blogCategory.name
+  }
+
+  function recomendedBlogsSection() {
+    return (
+      <div >
+        {recomendedBlogs.map((blog, index) => (
+          <div key={index} className='recomended-blog' >
+            <p>{blog.title}</p>
+            <h3>{getCategory(blog.category)}</h3>
+            <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }}>Keep Reading ...</Link>
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  function getCountry(country) {
+    const findCountry = DATA.states.find(x => x.id === country);
+    return findCountry.name;
+  }
+
+  function blogsSection() {
+
+    function firstBlog() {
+
+      const blog = categoryBlogs[0];
+
+      return (
+        <div className='mainblog-destinations'>
+          <Image cloudName="ditsdxnax" publicId={blog.mainImg}>
+            <Transformation dpr="auto" responsive width="800" gravity="south" crop="fit" />
+            <Transformation effect="art:hokusai" />
+            <Transformation border="3px_solid_rgb:00390b" />
+          </Image>
+          <h1>{blog.title}</h1>
+          <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }}>Keep reading ...</Link>
+          <p>{blog.subTitle}</p>
+        </div>
+      )
+    }
+
+    function restOfBlogs() {
+      return (
+        <div className='restOfBlogs'>
+          {categoryBlogs.slice(1).map((blog, index) => (
+            <div className='single-blog-destinations'>
+              <Image cloudName="ditsdxnax" publicId={blog.mainImg}>
+                <Transformation dpr="auto" responsive width="200" gravity="south" crop="fit" />
+                <Transformation effect="art:hokusai" />
+                <Transformation border="3px_solid_rgb:00390b" />
+              </Image>
+              <p>{blog.title}</p>
+              <p>{getCountry(blog.country)}</p>
+              <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }}>Keep reading ...</Link>
+
+            </div>
+          ))}
+        </div>
+      )
+    }
+
+    return (
+      <div>
+        {firstBlog()}
+        {restOfBlogs()}
+      </div>
+    )
+  }
+
+  function noblogs() {
+    return (
+      <div>
+        <p>Curently no Blogs</p>
+      </div>
+    )
+  }
+
   function blogsComponent() {
 
     const curent_category = data.categories.find(x => x.id === categoryIndex);
@@ -203,11 +245,13 @@ const OurPlaces = () => {
       <div className='blogs'>
         <div className='right-part'>
           <p className='newest'>{curent_category.name}</p>
-          {curentCategoryComponent()}
+          {categoryBlogs.length !== 0 ? blogsSection() : noblogs()}
         </div>
         <div className='left-part'>
-          <p className='recomended'>Recomended Blogs</p>
-          {recomendedComponenet()}
+          <p className='recomended'>Recomended:</p>
+          {recomendedBlogsSection()}
+          {AddSide()}
+          {Wetravel()}
         </div>
       </div>
     )

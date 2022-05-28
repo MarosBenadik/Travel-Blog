@@ -50,6 +50,7 @@ const norway = require('../../bucket/icons/norway.png');
 const portugal = require('../../bucket/icons/portugal.png');
 const sk = require('../../bucket/icons/slovakia.png');
 const spain = require('../../bucket/icons/spain.png');
+const poland = require('../../bucket/icons/poland.png');
 const sweden = require('../../bucket/icons/sweden.png');
 const austri = require('../../bucket/icons/austria.png');
 const belgium = require('../../bucket/icons/belgium.png');
@@ -83,6 +84,7 @@ const camper = require('../../bucket/icons/camper.png')
 
 export default {
     break_i,
+    poland,
     camper,
     pet,
     idea,

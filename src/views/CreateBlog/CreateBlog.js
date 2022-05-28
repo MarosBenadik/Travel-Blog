@@ -132,7 +132,6 @@ const CreateBlog = () => {
 
     const uploadImage = async () => {
 
-        console.log("actual upload ")
         try{
             await axios.post(`http://localhost:8800/blogs/add`, 
                 JSON.stringify({

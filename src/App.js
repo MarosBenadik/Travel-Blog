@@ -16,6 +16,11 @@ import Privacy from './views/Privacy/Privacy';
 import Blog from './views/Blog/Blog';
 import Dashboard from './views/Dashboard/Dashboard';
 import CreateBlog from './views/CreateBlog/CreateBlog';
+import OurJourny from './views/OurJourny/OurJourny';
+import Guide from './views/Guide/Guide';
+import CreateJourny from './views/CreateJourny/CreateJourny';
+
+import Getinspire from './views/Getinspired/Getinspired';
 
 import Login from './views/Login/Login';
 
@@ -42,11 +47,15 @@ const App = () => {
           <Route path="/terms" element={<Terms />}/>
           <Route path="/privacy" element={<Privacy />}/>
           <Route path="/login" element={<Login />}/>
+          <Route path="/getinspire" element={<Getinspire />} />
+          <Route path="/ourjourny" element={<OurJourny />} />
+          <Route path="/guide" element={<Guide />} />
 
           <Route element={<PersistLogin />}>
             <Route element={<RequireAuth/>}>
               <Route path="/dashboard" element={<Dashboard />}/>
               <Route path="/createblog" element={<CreateBlog />}/>
+              <Route path="/createjourny" element={<CreateJourny />}/>
             </Route>
           </Route>
           <Route path="*" element={<Error />}/>

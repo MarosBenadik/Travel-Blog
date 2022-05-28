@@ -18,6 +18,8 @@ import AddSide from '../../components/adds/AddSide';
 
 import Select from 'react-select';
 
+import { Image, Transformation } from 'cloudinary-react';
+
 import InstagramSide from '../../components/InstagramSide/InstagramSide';
 
 const Blogs = ({category}) => {
@@ -119,7 +121,11 @@ const Blogs = ({category}) => {
         {blogs.slice(0,5).map(( blog, index ) => (
           <div key={index} className={index % 2 === 0 ? 'blog-left-img' : 'blog-right-img'}>
             <div className='blogs-image-place'>
-              <img src={images.norway} alt='single-blog' className='blogs-single-blog-image' />
+              <Image key={index} cloudName="ditsdxnax" publicId={blog.mainImg}>
+                <Transformation dpr="auto" height="300" responsive width="auto" gravity="south" crop="fit" />
+                <Transformation effect="art:hokusai" />
+                <Transformation border="3px_solid_rgb:00390b" />
+              </Image>
               <div className='blog-img-banner'>
                 <p className='banner-category'>{getCategory(blog.category)}</p>
               </div>

@@ -49,20 +49,19 @@ const Home = () => {
     return (
       <div className='top-component'>
         <div className='bacground-text' >
-          <Link to="/ourPlaces" className='text'><img src={icons.idea} alt='idea' className='top-icon' />Get Inspired!</Link>
+          <Link to="/getinspire" className='text'><img src={icons.idea} alt='idea' className='top-icon' />Get Inspired!</Link>
         </div>
         <div className='bacground-text' >
-          <Link to="/ourPlaces" className='text'><img src={icons.country_guide} alt='idea' className='top-icon' />Travel Guides!</Link>
+          <Link to="/guide" className='text'><img src={icons.country_guide} alt='idea' className='top-icon' />Travel Guides!</Link>
         </div>
         <div className='top-logo' >
           <h2>Away from Routine!</h2>
           <p className='subtitle'>Ready, to go ?</p>
         </div>
         <div className='bacground-text' >
-          <Link to="/ourPlaces" className='text'><img src={icons.journey} alt='idea' className='top-icon' />Our journey!</Link>
+          <Link to="/ourjourny" className='text'><img src={icons.journey} alt='idea' className='top-icon' />Our journey!</Link>
         </div>
-        <div className='bacground-text' >
-          
+        <div className='bacground-text' > 
           <Link to="/ourPlaces" className='text'><img src={icons.todo} alt='idea' className='top-icon' />Bucket list!</Link>
         </div>
       </div>
@@ -109,7 +108,7 @@ const Home = () => {
       <div className='middle-component'>
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
-            <div key={index} className='blogSlide' onClick={() => console.log("blog")}>
+            <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='blogSlide' >
               <div className='inside-blogSlide'>
                 <Image key={index} cloudName="ditsdxnax" publicId={blog.mainImg}>
                   <Transformation dpr="auto" height="490" responsive width="auto" gravity="south" crop="scale" />
@@ -123,7 +122,7 @@ const Home = () => {
                   <p className='blog-slider-text'>{getCountry(blog.country)}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </Slider>
       </div>
@@ -298,17 +297,19 @@ const Home = () => {
       <div className='full-middle-component'>
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
-            <div key={index} className='full-blogSlide' onClick={() => console.log("blog")}>
-              <div>
+            <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='full-blogSlide' >
+              <div className='divider-part'>
+                <h3>{blog.title}</h3>
+                <h3>"{blog.cleverQoute}"</h3>
+                <p>Author: {blog.author}</p>
+              </div>
+              <div className='image-part'>
                 <Image key={index} cloudName="ditsdxnax" publicId={blog.blogImg}>
-                  <Transformation dpr="auto" responsive width="300" gravity="north" crop="fit" />
+                  <Transformation dpr="auto" responsive width="auto" crop="fit" />
                   <Transformation effect="art:hokusai" />
                 </Image>
               </div>
-              <div className='text-part'>
-                <h3>{blog.title}</h3>
-              </div>
-            </div>
+            </Link>
           ))}
         </Slider>
       </div>

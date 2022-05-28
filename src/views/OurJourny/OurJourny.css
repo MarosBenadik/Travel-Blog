@@ -1,0 +1,116 @@
+@media (max-width: 568px) {
+    
+}
+
+@media (max-width: 992px) {
+    .journy-desc-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .single-journy{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .journy-city {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 22px;
+        color: var(--dark_beige);
+        font-weight: 100;
+        margin-bottom: -80%;
+    }
+
+    .h4-journy{
+        display: none;
+    }
+    
+    .journy-text h3 {
+        text-align: center;
+        font-size: 18px;
+        margin-top: -2%;
+    }
+
+    .journy-image {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .journy-desc-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .single-journy{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .journy-text p {
+        text-align: center;
+        font-size: 25px;
+        color: var(--dark_beige);
+        font-weight: 800;
+    }
+    
+    .journy-text h3 {
+        text-align: center;
+    }
+
+    .journy-image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.OurJourny-page {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    background-image:  url("../../bucket/images/pathBack.png");
+}
+
+.path-image {
+    display: flex;
+    width: 100%;
+}
+
+.journy-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 3%;
+}
+
+.journy-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.journy-inline {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: space-between;
+}
+
