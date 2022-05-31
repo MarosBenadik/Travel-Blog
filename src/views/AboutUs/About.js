@@ -18,21 +18,20 @@ const About = () => {
     return (
       <div className='top-component'>
         <div className='bacground-text' >
-          <Link to="/ourPlaces" className='text'><img src={icons.idea} alt='idea' className='top-icon' />Get Inspired!</Link>
+          <Link to="/getinspire" className='text'><img src={icons.idea} alt='idea' className='top-icon' />Get Inspired!</Link>
         </div>
         <div className='bacground-text' >
-          <Link to="/ourPlaces" className='text'><img src={icons.country_guide} alt='idea' className='top-icon' />Travel Guides!</Link>
+          <Link to="/guide" className='text'><img src={icons.country_guide} alt='idea' className='top-icon' />Travel Guides!</Link>
         </div>
         <div className='top-logo' >
           <h2>Away from Routine!</h2>
           <p className='subtitle'>Ready, to go ?</p>
         </div>
         <div className='bacground-text' >
-          <Link to="/ourPlaces" className='text'><img src={icons.journey} alt='idea' className='top-icon' />Our journey!</Link>
+          <Link to="/ourjourny" className='text'><img src={icons.journey} alt='idea' className='top-icon' />Our journey!</Link>
         </div>
-        <div className='bacground-text' >
-          
-          <Link to="/ourPlaces" className='text'><img src={icons.todo} alt='idea' className='top-icon' />Bucket list!</Link>
+        <div className='bacground-text' > 
+          <Link to="/photos" className='text'><img src={icons.camera} alt='idea' className='top-icon' />Photos!</Link>
         </div>
       </div>
     )

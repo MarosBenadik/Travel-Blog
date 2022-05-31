@@ -1,0 +1,102 @@
+@media (max-width: 568px) {
+    .category-single-blog {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 992px) {
+    .category-single-blog {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 992px) {
+    .category-single-blog {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+.getinspire-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bucket-list {
+    width: 92%;
+    height: 100%;
+    border-radius: 2px;
+    border-color: var(--main-color);
+    border-style: dotted;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+
+.middle-component-guide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.get-inspire-img {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.bucketlist-single {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-left: 5%;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.bucketlist-single-img {
+    width: 40px;
+    height: 40px;
+}
+
+.bucketlist-text-line {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: line-through;
+    color: var(--dark_beige);
+}
+
+.bucketlist-text {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.result-getinspire {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bucketlist-single p {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 5%;
+    margin-bottom: 20px;
+}
+

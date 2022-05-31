@@ -1133,6 +1133,78 @@ const instagram = [
     },
 ]
 
+const bucketList = [
+    {
+        id: 0,
+        visited: false,
+        name: "Tokio",
+        destination: "Shinto Shrines and Buddhist Temples",
+        country: "Japan"
+    },
+    {
+        id: 1,
+        visited: false,
+        name: "Rio de Janeiro",
+        destination: "Visit the Christ the Redeemer",
+        country: "Brazil"
+    },
+    {
+        id: 2,
+        visited: true,
+        name: "Danang",
+        destination: "Ride the Hai Van Pass",
+        country: "Vietnam"
+    },
+    {
+        id: 3,
+        visited: false,
+        name: "Murmansk ",
+        destination: "See the Northern Lights in Murmansk",
+        country: "Russia"
+    },
+    {
+        id: 4,
+        visited: false,
+        name: "Australia",
+        destination: "South Australian Road Trips",
+        country: "Australia"
+    },
+    {
+        id: 5,
+        visited: false,
+        name: "Palawan",
+        destination: "Impossibly turquoise waters meet rainforest-shrouded coves and pristine beaches",
+        country: "Philippines"
+    },
+    {   
+        id: 6,
+        visited: false,
+        name: "Isla Incahuas",
+        destination: "Hilly outcrop peppered with ancient cacti",
+        country: "Bolivia"
+    },{
+        id: 7,
+        visited: false,
+        name: "Rosario Island",
+        destination: "Archipelago of islets off the north coast of Colombia",
+        country: "Colombia"
+    },
+    {
+        id: 8,
+        visited: false,
+        name: "Agra",
+        destination: "​See the Taj Mahal",
+        country: "India"
+    },
+    {
+        id: 9,
+        visited: false,
+        name: "Niagara Falls",
+        destination: "​Soar over the falls on the Rainbow Air Helicopter Tour.",
+        country: "Canada"
+    },
+]
+
 
 export default {
     instagram,
@@ -1143,6 +1215,6 @@ export default {
     explore,
     initial_explore,
     essentials,
-    states
-
+    states,
+    bucketList,
 }

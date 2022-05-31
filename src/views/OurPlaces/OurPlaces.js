@@ -27,7 +27,26 @@ import { Image, Transformation } from 'cloudinary-react';
 
 const OurPlaces = () => {
 
-  const slider_images = [images.europe, images.asia, images.australia, images.africa, images.south_amerika, images.north_amerika];
+  const slider_images = [
+    {
+      img: images.europe,
+      name: "Europe"
+    },{
+      img: images.asia,
+      name: "Asia"
+    },{
+      img: images.australia,
+      name: "Australia"
+    },{
+      img: images.africa,
+      name: "Africa"
+    },{
+      img: images.south_amerika,
+      name: "South America"
+    },{
+      img: images.north_amerika,
+      name: "North America"
+    }];
 
   const [ imageIndex, setImageIndex ] = React.useState(0);
 
@@ -114,7 +133,8 @@ const OurPlaces = () => {
         <Slider {...settings}>
           {slider_images.map((img, index) => (
             <div key={index} className={index === imageIndex ? "activeSlide" : "inactiveSlide"} onClick={() => setImageIndex(index)}>
-              <img src={img} alt={img} className='img-size'/>
+              <img src={img.img} alt={img} className='img-size'/>
+              <h3 className='single-part'>{img.name}</h3>
             </div>
           ))}
         </Slider>

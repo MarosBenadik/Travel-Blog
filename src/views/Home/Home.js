@@ -62,7 +62,7 @@ const Home = () => {
           <Link to="/ourjourny" className='text'><img src={icons.journey} alt='idea' className='top-icon' />Our journey!</Link>
         </div>
         <div className='bacground-text' > 
-          <Link to="/ourPlaces" className='text'><img src={icons.todo} alt='idea' className='top-icon' />Bucket list!</Link>
+          <Link to="/photos" className='text'><img src={icons.camera} alt='idea' className='top-icon' />Photos!</Link>
         </div>
       </div>
     )
@@ -321,15 +321,15 @@ const Home = () => {
     return (
       <div className='top-categories'>
         <div className='title-container'>
-          <p className='top-categories-title'>TOP CATEGORIES</p>
-          <p className='top-categories-subtitle'>Some of the best blog categories among our readers!</p>
+          <p className='top-categories-title'>Get inspired:</p>
+          <p className='top-categories-subtitle'>Some of the best blog categories to inpire you!</p>
         </div>
         <div className='categories-icons'>
           {DATA.categories.slice(0,5).map(( category, index ) => (
-            <div key={index} onClick={() => <Link  to=""/>}>
+            <Link style={{ textDecoration: 'none' }} to="/getinspire" key={index}>
               <img src={category.image} alt='category' className='category-icon'/>
               <p>{category.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <div>

@@ -19,6 +19,7 @@ import CreateBlog from './views/CreateBlog/CreateBlog';
 import OurJourny from './views/OurJourny/OurJourny';
 import Guide from './views/Guide/Guide';
 import CreateJourny from './views/CreateJourny/CreateJourny';
+import Photo from './views/Photos/Photos.js';
 
 import Getinspire from './views/Getinspired/Getinspired';
 
@@ -50,6 +51,7 @@ const App = () => {
           <Route path="/getinspire" element={<Getinspire />} />
           <Route path="/ourjourny" element={<OurJourny />} />
           <Route path="/guide" element={<Guide />} />
+          <Route path="/photos" element={<Photo />} />
 
           <Route element={<PersistLogin />}>
             <Route element={<RequireAuth/>}>
