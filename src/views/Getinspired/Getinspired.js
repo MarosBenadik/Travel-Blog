@@ -51,18 +51,26 @@ const Getinspire = () => {
 
     const blog = newBlogs[0];
 
+    const blog1 = newBlogs[1];
+
     return (
-      <div className='getInspire-destinations'>
-        <div className='get-inspire-img'>
-          <Image cloudName="ditsdxnax" publicId={blog.mainImg}>
-            <Transformation dpr="auto" responsive width="500" gravity="south" crop="fit" />
-            <Transformation effect="art:hokusai" />
-            <Transformation border="3px_solid_rgb:00390b" />
-          </Image>
+      <div>
+        <div className='getInspire-destinations'>
+          <div className='get-inspire-img'>
+            <img src={blog.blogImg} className='slider-image-home-full'/>
+          </div>
+          <h1>{blog.title}</h1>
+          <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }}>Keep reading ...</Link>
+          <p>{blog.subTitle}</p>
         </div>
-        <h1>{blog.title}</h1>
-        <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }}>Keep reading ...</Link>
-        <p>{blog.subTitle}</p>
+        <div className='getInspire-destinations'>
+          <div className='get-inspire-img'>
+            <img src={blog1.blogImg} className='slider-image-home-full'/>
+          </div>
+          <h1>{blog1.title}</h1>
+          <Link to={"/blogs/" + blog1.slug} state={blog1._id} style={{ textDecoration: 'none' }}>Keep reading ...</Link>
+          <p>{blog1.subTitle}</p>
+        </div>
       </div>
     )
   }
@@ -122,11 +130,7 @@ const Getinspire = () => {
         {categoryBlogs.map((blog, index) => (
           <div key={index} className='category-single-blog'>
             <div>
-              <Image cloudName="ditsdxnax" publicId={blog.mainImg}>
-                <Transformation dpr="auto" responsive width="200" gravity="south" crop="fit" />
-                <Transformation effect="art:hokusai" />
-                <Transformation border="3px_solid_rgb:00390b" />
-              </Image>
+              <img src={blog.img} className='slider-image-inspire-full'/>
             </div>
             <div>
               <h2>{blog.title}</h2> 

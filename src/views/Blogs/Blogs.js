@@ -121,11 +121,7 @@ const Blogs = ({category}) => {
         {blogs.slice(0,5).map(( blog, index ) => (
           <div key={index} className={index % 2 === 0 ? 'blog-left-img' : 'blog-right-img'}>
             <div className='blogs-image-place'>
-              <Image key={index} cloudName="ditsdxnax" publicId={blog.mainImg}>
-                <Transformation dpr="auto" height="300" responsive width="auto" gravity="south" crop="fit" />
-                <Transformation effect="art:hokusai" />
-                <Transformation border="3px_solid_rgb:00390b" />
-              </Image>
+              <img src={blog.mainImg} className='slider-image-blogs'/>
               <div className='blog-img-banner'>
                 <p className='banner-category'>{getCategory(blog.category)}</p>
               </div>

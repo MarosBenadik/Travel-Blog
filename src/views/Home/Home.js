@@ -109,16 +109,12 @@ const Home = () => {
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
             <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='blogSlide' >
-              <div className='inside-blogSlide'>
-                <Image key={index} cloudName="ditsdxnax" publicId={blog.mainImg}>
-                  <Transformation dpr="auto" height="490" responsive width="auto" gravity="south" crop="scale" />
-                  <Transformation effect="art:hokusai" />
-                  <Transformation border="3px_solid_rgb:00390b" />
-                </Image>
+              <div className='inside-blogSlide' key={index}>
+                <img src={blog.mainImg} className='slider-image-home'/>
                 <div className='blog-slider'>
-                  <p className='blog-slider-text'>{blog.title}</p>
+                  <p>{blog.title}</p>
                 </div>
-                <div className='blog-slider-country'>
+                <div className='blog-slider'>
                   <p className='blog-slider-text'>{getCountry(blog.country)}</p>
                 </div>
               </div>
@@ -297,19 +293,18 @@ const Home = () => {
       <div className='full-middle-component'>
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
-            <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='full-blogSlide' >
-              <div className='divider-part'>
-                <h3>{blog.title}</h3>
-                <h3>"{blog.cleverQoute}"</h3>
-                <p>Author: {blog.author}</p>
-              </div>
-              <div className='image-part'>
-                <Image key={index} cloudName="ditsdxnax" publicId={blog.blogImg}>
-                  <Transformation dpr="auto" responsive width="auto" crop="fit" />
-                  <Transformation effect="art:hokusai" />
-                </Image>
-              </div>
-            </Link>
+            <div className='single-home-full-slider'>
+              <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='full-blogSlide' >
+                <div className='divider-part'>
+                  <h3>{blog.title}</h3>
+                  <h3>"{blog.cleverQoute}"</h3>
+                  <p>Author: {blog.author}</p>
+                </div>
+                <div className='image-part'>
+                  <img src={blog.blogImg} className='slider-image-home-full'/>
+                </div>
+              </Link>
+            </div>
           ))}
         </Slider>
       </div>

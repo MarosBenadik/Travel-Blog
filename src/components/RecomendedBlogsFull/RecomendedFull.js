@@ -7,6 +7,8 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import Slider from "react-slick";
 
+import { Link } from 'react-router-dom';
+
 const RecomendedFull = () => { 
 
     function NextArrow({onClick}) {
@@ -44,7 +46,7 @@ const RecomendedFull = () => {
             {DATA.continents.map((blog, index) => (
                 <div key={index} className='recomended-blogSlide' onClick={() => console.log("blog")}>
                     <div className='slider-inside-blogSlide' onClick={() => {}}>
-                        <p>{blog.name}</p>
+                        <Link style={{ textDecoration: 'none' }} to="/getinspire" key={index}>{blog.name}</Link>
                     </div>
                 </div>
             ))}

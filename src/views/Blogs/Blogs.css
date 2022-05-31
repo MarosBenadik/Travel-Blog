@@ -221,3 +221,8 @@ Image {
     width: 100%;
     object-fit: contain;
 }
+
+.slider-image-blogs {
+    width: 90%;
+    height: 90%;
+}
