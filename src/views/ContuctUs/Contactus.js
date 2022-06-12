@@ -57,9 +57,7 @@ const Contuctus = () => {
     return (
       <div className='contuct-us-divider'>
         <div className='contuctUs-img'>
-          <img src={images.greece} alt='top' className='about-top-img' />
-          <img src={images.forest} alt='forest' className='forest-img' />
-          <img src={images.we} alt='bottom' className='about-bottom-img' />
+         
         </div>
         <div className='placeholder-container'>
           <p className='contuct-us-title'>GET IN TOUCH</p>
@@ -67,7 +65,7 @@ const Contuctus = () => {
           <div className='contuctus-placeholders' >
             <input type="text" className='names' placeholder="Name" name="name" onChange={(value) => setName(value.target.value)}/>
             <input type="email" className='names' placeholder="Email" name="email" onChange={(value) => setEmail(value.target.value)}/>
-            <input type="text" className='message' placeholder="Message" name="message" onChange={(value) => setMessage(value.target.value)}/>
+            <textarea type="text" className='message' placeholder="Message" name="message" onChange={(value) => setMessage(value.target.value)}/>
             <button className='contuctus-buttom' onClick={() => { 
               handleSubmit() 
               setPopUp('success')

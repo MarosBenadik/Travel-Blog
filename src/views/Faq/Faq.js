@@ -38,7 +38,7 @@ const Faq = () => {
         </div>
         <div className='side-component'>
           <div className='img-faq'>
-            <img src={images.we} al='us' className='we-image' />
+            <img src={images.we} alt='us' className='we-image' />
           </div>
           {Wetravel()}
           {AddSide()}

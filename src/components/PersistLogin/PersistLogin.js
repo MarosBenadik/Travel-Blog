@@ -35,7 +35,7 @@ const PersistLogin = () => {
         }
 
         !auth?.data ? verifyToken() : setIsLoading(false);
-    }, [auth.data]);
+    }, [ auth.data, refreshToken, setAuth ]);
 
     return (
         <>

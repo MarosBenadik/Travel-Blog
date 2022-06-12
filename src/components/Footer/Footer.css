@@ -141,7 +141,7 @@
     .urllinks-container{
         display: flex;
         height: 100%;
-        
+        margin-bottom: 2%;
     }
 
     .urllinks {
@@ -226,3 +226,4 @@
         margin-top: -30px;
     }
 }
+

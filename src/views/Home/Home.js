@@ -14,6 +14,8 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import Slider from "react-slick";
 
+import { Image, Transformation } from 'cloudinary-react';
+
 import icons from '../../public/icons/icons';
 
 import StateCard from '../../components/StateCard/StateCard';
@@ -47,21 +49,20 @@ const Home = () => {
     return (
       <div className='top-component'>
         <div className='bacground-text' >
-          <Link to="/ourPlaces" className='text'><img src={icons.idea} alt='idea' className='top-icon' />Get Inspired!</Link>
+          <Link to="/getinspire" className='text'><img src={icons.idea} alt='idea' className='top-icon' />Get Inspired!</Link>
         </div>
         <div className='bacground-text' >
-          <Link to="/ourPlaces" className='text'><img src={icons.country_guide} alt='idea' className='top-icon' />Travel Guides!</Link>
+          <Link to="/guide" className='text'><img src={icons.country_guide} alt='idea' className='top-icon' />Travel Guides!</Link>
         </div>
         <div className='top-logo' >
           <h2>Away from Routine!</h2>
           <p className='subtitle'>Ready, to go ?</p>
         </div>
         <div className='bacground-text' >
-          <Link to="/ourPlaces" className='text'><img src={icons.journey} alt='idea' className='top-icon' />Our journey!</Link>
+          <Link to="/ourjourny" className='text'><img src={icons.journey} alt='idea' className='top-icon' />Our journey!</Link>
         </div>
-        <div className='bacground-text' >
-          
-          <Link to="/ourPlaces" className='text'><img src={icons.todo} alt='idea' className='top-icon' />Bucket list!</Link>
+        <div className='bacground-text' > 
+          <Link to="/photos" className='text'><img src={icons.camera} alt='idea' className='top-icon' />Photos!</Link>
         </div>
       </div>
     )
@@ -98,15 +99,30 @@ const Home = () => {
       prevArrow: <PrevArrow />,
     };
 
+    function getCountry(id) {
+      const country = DATA.states.find(x => x.id === id);
+      return country.name;
+    }
+
     return (
       <div className='middle-component'>
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
-            <div key={index} className='blogSlide' onClick={() => console.log("blog")}>
+            <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='blogSlide' >
               <div className='inside-blogSlide'>
-                <p>{blog.title}</p>
+                <Image key={index} cloudName="ditsdxnax" publicId={blog.mainImg}>
+                  <Transformation dpr="auto" height="490" responsive width="auto" gravity="south" crop="scale" />
+                  <Transformation effect="art:hokusai" />
+                  <Transformation border="3px_solid_rgb:00390b" />
+                </Image>
+                <div className='blog-slider'>
+                  <p className='blog-slider-text'>{blog.title}</p>
+                </div>
+                <div className='blog-slider-country'>
+                  <p className='blog-slider-text'>{getCountry(blog.country)}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </Slider>
       </div>
@@ -278,14 +294,22 @@ const Home = () => {
     };
 
     return (
-      <div className='middle-component'>
+      <div className='full-middle-component'>
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
-            <div key={index} className='blogSlide' onClick={() => console.log("blog")}>
-              <div className='inside-blogSlide'>
-                <p>{blog.title}</p>
+            <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='full-blogSlide' >
+              <div className='divider-part'>
+                <h3>{blog.title}</h3>
+                <h3>"{blog.cleverQoute}"</h3>
+                <p>Author: {blog.author}</p>
               </div>
-            </div>
+              <div className='image-part'>
+                <Image key={index} cloudName="ditsdxnax" publicId={blog.blogImg}>
+                  <Transformation dpr="auto" responsive width="auto" crop="fit" />
+                  <Transformation effect="art:hokusai" />
+                </Image>
+              </div>
+            </Link>
           ))}
         </Slider>
       </div>
@@ -297,15 +321,15 @@ const Home = () => {
     return (
       <div className='top-categories'>
         <div className='title-container'>
-          <p className='top-categories-title'>TOP CATEGORIES</p>
-          <p className='top-categories-subtitle'>Some of the best blog categories among our readers!</p>
+          <p className='top-categories-title'>Get inspired:</p>
+          <p className='top-categories-subtitle'>Some of the best blog categories to inpire you!</p>
         </div>
         <div className='categories-icons'>
           {DATA.categories.slice(0,5).map(( category, index ) => (
-            <div key={index} onClick={() => <Link  to=""/>}>
+            <Link style={{ textDecoration: 'none' }} to="/getinspire" key={index}>
               <img src={category.image} alt='category' className='category-icon'/>
               <p>{category.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <div>

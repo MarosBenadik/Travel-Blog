@@ -187,46 +187,62 @@ const states = [
         id: 0,
         name: "Canada",
         icon: icons.canada,
+        value: 0,
+        label: "Canada",
         desc: "Canada is one of those countries that continuously finds itself on “top 10” destination lists. Whether it’s for the country’s incredible natural beauty, delicious food, mountain resorts, unique culture, or unbeatable road trips—Canada has it all! And, Canada is home to 16 UNESCO World Heritage Sites! It also has the longest ski season in the world, polar bears, the Northern Lights, and poutine (fries covered in squeaky cheese and gravy! *drool*). On my first trip to the Great White North, I snowboarded the snowy mountains of Whistler and have since ticked off bucket list-worthy destinations like Banff National Park, Montreal, Mont Tremblant, and Vancouver."
     }, 
     {
         id: 1,
         name: "Mexico",
         icon: icons.mexico,
+        value: 1,
+        label: "Mexico",
         desc: "Ahh, Mexico, a country rich with diversity and culture, and one of my favorites! For travelers looking to relax resort-side, and sip on margaritas by the beach, visit Cancun or Los Cabos. For those in search of a bustling city where you can learn about the history of the country and have some amazing foodie experiences, take a trip to Mexico City. Or maybe you want to cool off in the gem-colored waters of the trendy town of Tulum. No matter which getaway you choose, you will be met with some of the best food in the world, colorful buildings, and friendly locals that want to help you experience what their country has to offer."
     }, 
     {
         id:2,
         name: "United States",
         icon: icons.usa,
+        value: 2,
+        label: "United States",
         desc: "Apart from my bias of being an American, I truly believe that everyone needs to explore the USA (yes, even those that already live here!) The more I travel around the states, the more I realize that they have SO much adventure to offer! Each state offers something unique—whether you’re looking to experience a relaxing tropical holiday, snow-filled adventure, or the wonders of our incredible National Parks, there’s something for every kind of traveler. The United States is the perfect destination for scenic drives, delicious food, cosmopolitan city life, wilderness, cultural diversity, beautiful beaches, and so much more."
     },
     {
         id: 3,
         name: "Argentina",
         icon: icons.argentina,
+        value: 3,
+        label: "Argentina",
         desc: "Argentina is a tricky country to travel in. Whilst removing the 'blue dollar' has made accessing the local currency is much easier, the inflation that has run rampant over the last few years means that planning a budget for your trip can be difficult. However, do not let this put you off visiting this vast, varied and infinitely beautiful country. Whether you crave beautiful European cities, lush vineyards and world class wines, stunning natural landscapes and once-in-a-lifetime wildlife or cowboys and cattle, Argentina will prove a worthy choice. Just don't try and do it all at once - Argentina needs time!"
     },{
         id: 4,
         name: "Bolivia",
         icon: icons.bolivia,
+        value: 4,
+        label: "Bolivia",
         desc: "There is no other place like Bolivia. Dubbed a country of extremes, that goes from sweltering Amazon lowlands to frozen cold mountain peaks, you can experience all kinds of climate in one country! I spent a month traveling around this incredible country, discovering its rich culture and unbelievable natural beauty. Some of my favorite experiences in Bolivia are cycling the World’s Deadliest Road in La Paz and taking a 4-day 4×4 tour to the incredible Uyuni Salt Flats. Bolivia is affordable, with beautiful natural landscapes, and it’s no wonder that many people consider it their favorite South American destination!"
     },
     {
         id: 5,
         name: "Brazil",
         icon: icons.brazil,
+        value: 5,
+        label: "Brazil",
         desc: "Brazil encompasses around half of South America’s landmass, making it the largest country on the continent. Because it’s so large, it’s not surprising that it is made up of a wide variety of landscapes, coastlines, and experiences. Wildlife lovers can explore the wetlands and the rainforest, while city lovers can wander the streets of Rio. Along with beautiful beaches, one of the world’s best soccer teams, and the world-famous Carnival celebration, Brazil is truly a melting pot, perfect for every kind of traveler."
     },
     {
         id: 6,
         name: "Chile",
         icon: icons.chile,
+        value: 6,
+        label: "Chile",
         desc: "Chile is one of the most slender and longest countries in the world — it’s just 150 miles across at its widest point! From the snow-capped volcanoes of Patagonia and blistering heights of the Andes to world-class wineries and Maoi sculptures of Easter Island, there are a lot of wonderful things to see in Chile. Traveling to Chile was one of the best experiences I’ve had in South America. It just constantly blew me away. It’s one of the most developed South American countries (the capital, Santiago, is a tech hub for the region), the people were awesome, the food was incredible, and the scenery made me feel in awe of nature."
     },
     {
         id: 7,
         name: "Colombia",
+        value: 7,
+        label: "Colombia",
         icon: icons.columbia,
         desc: "Colombia is fast becoming the travel highlight of South America. After decades of struggling with crime and cartels, Colombia has become a hub for digital nomads and budget backpackers. More and more people are visiting to soak up the sun and enjoy the country’s low cost of living."
     },
@@ -234,258 +250,365 @@ const states = [
         id: 8,
         name: "Peru",
         icon: icons.peru,
+        value: 8,
+        label: "Peru",
         desc: "After spending three months fundraising for Peruvian Hearts, an all-girls orphanage in Cusco, my friend and I embarked on an epic adventure to Peru to visit the orphanage and explore the beautiful country. We spent four days trekking the Inca Trail to Machu Picchu which was a major bucket list trip for me. Machu Picchu, one of the Seven Wonders of the World, is one of the biggest attractions for tourists around the world. This unique and fascinating country stands out from the crowd with its different cultural and natural treasures. Peru is also home to natural wonders like the Amazon, Lake Titicaca, and Rainbow Mountain as well as the beautiful coastal city of Lima. It’s a diverse country with countless destinations to discover!"
     },
     {
         id: 9,
         name: "Venezuela",
         icon: icons.venezuela,
+        value: 9,
+        label: "Venezuela",
         desc: "Rich with culture, history, and friendly locals, Venezuela is a chance to see something different. Located on the northern coast of South America, it is filled with many white-sand beaches, blue waters, and natural wonders, making it a great getaway. Fans of the outdoors will love Angel Falls, the highest waterfall in the world, or Pico Bolívar, the highest mountain in Venezuela. As English is not spoken here as much, it presents a great opportunity to immerse yourself in a new language."
     },
     {
         id: 10,
         name: "Austria",
         icon: icons.austri,
+        value: 10,
+        label: "Austria",
         desc: "When most people think of Austria, they think of rolling green hills, skiing, Christmas markets, and The Sound of Music. And while the country does have all of this, it also has so much more! For music lovers, it’s the home of Mozart. For foodies, it’s home to the Wienerschnitzel. For outdoor lovers, you can paraglide, raft, and hike in every corner of this picturesque country. No matter what your love is, Austria likely has something just for you. The minute you arrive, the country’s charming villages will take you by surprise and have you feeling like you stepped into a Disney fairytale."
     }, 
     {
         id: 11,
         name: "Belgium",
         icon: icons.belgium,
+        value: 11,
+        label: "Belgium",
         desc: "Belgium is a travel destination made for history buffs and chocolate addicts. Though the nation is small, it plays a big part in the world’s history. There are over 3,000 castles to explore, battlegrounds from the World Wars, and every museum imaginable. After you’ve had your history fill, you can kick your feet back and relax at one of the 1,000 breweries in the small country. Sip on a cold beer while you munch on frites—sounds dreamy to me! And to finish off the day? All the gourmet chocolate you can imagine! Many people tend to gloss over the country, visiting Brussels or Bruges for a day before moving on, but if you take the time, you’ll find that Belgium has so much more to explore!"
     }, 
     {
         id: 12,
         name: "Croatia",
         icon: icons.croatia,
+        value: 12,
+        label: "Croatia",
         desc: "With piercing turquoise seas and fairytale-like architecture, there is no denying Croatia is breathtakingly beautiful! Spanning most of the Adriatic Sea, you’re never too far away from the coast when traveling in Croatia. And even if it’s not pretty beaches you seek, stone castles and magnificent waterfalls await travelers of all kinds. Whether you are backpacking through Croatia or are wanting to splurge on Yacht Week, these travel tips will help you plan your next adventure to the Land of a Thousand Islands."
     }, 
     {
         id: 13,
         name: "Czech Republic",
-        icon: icons.cz
+        icon: icons.cz,
+        value: 13,
+        label: "Czech Republic",
     }, 
     {
         id: 14,
         name: "Denmark",
-        icon: icons.denmark
+        icon: icons.denmark,
+        value: 14,
+        label: "Denmark",
     }, 
     {
         id: 15,
         name: "Finland",
-        icon: icons.finland
+        icon: icons.finland,
+        value: 15,
+        label: "Finland",
     }, 
     {
         id: 16,
         name: "France",
-        icon: icons.france
+        icon: icons.france,
+        value: 16,
+        label: "France",
     }, 
     {
         id: 17,
         name: "Germany",
-        icon: icons.germany
+        icon: icons.germany,
+        value: 17,
+        label: "Germany",
     },
     { 
         id: 18,
         name: "Greece",
-        icon: icons.greece
+        icon: icons.greece,
+        value: 18,
+        label: "Greece",
     },
     { 
         id: 19,
         name: "Ireland",
-        icon: icons.ireland
+        icon: icons.ireland,
+        value: 19,
+        label: "Ireland",
     },
     { 
         id: 20,
         name: "Italy",
-        icon: icons.italy
+        icon: icons.italy,
+        value: 20,
+        label: "Italy",
     },
         
     { 
         id: 21,
         name: "Malta",
-        icon: icons.malta
+        icon: icons.malta,
+        value: 21,
+        label: "Malta",
     },
     { 
         id: 22,
         name: "Netherlands",
-        icon: icons.netherlands
+        icon: icons.netherlands,
+        value: 22,
+        label: "Netherlands",
     },
     { 
         id: 23,
         name: "Norway",
-        icon: icons.norway
+        icon: icons.norway,
+        value: 23,
+        label: "Norway",
     },
     { 
         id: 24,
         name: "Portugal",
-        icon: icons.portugal
+        icon: icons.portugal,
+        value: 24,
+        label: "Portugal",
     },
     { 
         id: 25,
         name: "Slovak Republic",
-        icon: icons.sk
+        icon: icons.sk,
+        value: 25,
+        label: "Slovak Republic",
     },
     { 
         id: 26,
         name: "Spain",
-        icon: icons.spain
+        icon: icons.spain,
+        value: 26,
+        label: "Spain",
     },
     { 
         id: 27,
         name: "Sweden",
-        icon: icons.sweden
+        icon: icons.sweden,
+        value: 27,
+        label: "Sweden",
     },
     { 
         id: 28,
         name: "United Kingdom",
-        icon: icons.uk
+        icon: icons.uk,
+        value: 28,
+        label: "United Kingdom",
     },
     {
         id: 29,
         name: "New Zeland",
-        icon: icons.new_zeland
+        icon: icons.new_zeland,
+        value: 29,
+        label: "New Zeland",
     },
     {
         id: 30,
         name: "New South Wales",
-        icon: icons.australia
+        icon: icons.australia,
+        value: 30,
+        label: "New South Wales",
     }, 
     {
         id: 31,
         name: "Northern Territory",
-        icon: icons.australia
+        icon: icons.australia,
+        value: 31,
+        label: "Northern Territory",
     }, 
     {
         id: 32,
         name: "Western Australia",
-        icon: icons.australia
+        icon: icons.australia,
+        value: 32,
+        label: "Western Australia",
     },
     {
         id: 33,
         name: "Queesland",
-        icon: icons.australia
+        icon: icons.australia,
+        value: 33,
+        label: "Queesland",
     }, 
     {
         id: 34,
         name: "South Australia",
-        icon: icons.australia
+        icon: icons.australia,
+        value: 34,
+        label: "Queesland",
     }, 
     {
         id: 35,
         name: "Tasmania",
-        icon: icons.australia
+        icon: icons.australia,
+        value: 35,
+        label: "Tasmania",
     }, 
     {
         id: 36,
         name: "Egypt",
-        icon: icons.egypt
+        icon: icons.egypt,
+        value: 36,
+        label: "Egypt",
     }, 
     {
         id: 37,
         name: "Tanzania",
-        icon: icons.tanzania
+        icon: icons.tanzania,
+        value: 37,
+        label: "Tanzania",
     }, 
     {
         id: 38,
         name: "South Africa",
-        icon: icons.southAfrica
+        icon: icons.southAfrica,
+        value: 38,
+        label: "South Africa",
     }, 
     {
         id: 39,
         name: "Morocco",
-        icon: icons.morocco
+        icon: icons.morocco,
+        value: 39,
+        label: "Morocco",
     }, 
     {
         id: 40,
         name: "Madagascar",
-        icon: icons.madagascar
+        icon: icons.madagascar,
+        value: 40,
+        label: "Madagascar",
     }, 
     {
         id: 41,
         name: "Tunisia",
-        icon: icons.tunisia
+        icon: icons.tunisia,
+        value: 41,
+        label: "Tunisia",
     }, 
     {
         id: 42,
         name: "Congo",
-        icon: icons.congo
+        icon: icons.congo,
+        value: 42,
+        label: "Congo",
     }, 
     {
         id: 43,
         name: "Mauritania",
-        icon: icons.mauritania
+        icon: icons.mauritania,
+        value: 43,
+        label: "Mauritania",
     },
     { 
         id: 44,
         name: "Mauritius",
-        icon: icons.mauritius
+        icon: icons.mauritius,
+        value: 44,
+        label: "Mauritius",
     },
     { 
         id: 45,
         name: "Seychelles",
-        icon: icons.seychelles
+        icon: icons.seychelles,
+        value: 45,
+        label: "Seychelles",
     },
     {
         id: 46,
         name: "Honk Kong",
-        icon: icons.honkkong
+        icon: icons.honkkong,
+        value: 46,
+        label: "Honk Kong",
     },
     {
         id: 47,
         name: "Indonesia",
-        icon: icons.indonesia
+        icon: icons.indonesia,
+        value: 47,
+        label: "Indonesia",
     },
     { 
         id: 48,
         name: "India",
-        icon: icons.india
+        icon: icons.india,
+        value: 48,
+        label: "India",
     },
     {
         id: 49,
         name: "Japan",
-        icon: icons.japan
+        icon: icons.japan,
+        value: 49,
+        label: "Japan",
     },
     {
         id: 50,
         name: "China",
-        icon: icons.china
+        icon: icons.china,
+        value: 50,
+        label: "China",
     },
     {
         id: 51,
         name: "Philippines",
-        icon: icons.philipines
+        icon: icons.philipines,
+        value: 51,
+        label: "Philippines",
     }, 
     {
         id: 52,
         name: "Vietnam",
-        icon: icons.vietnam
+        icon: icons.vietnam,
+        value: 52,
+        label: "Vietnam",
     }, 
     {
         id: 53,
         name: "Thailand",
-        icon: icons.thailand
+        icon: icons.thailand,
+        value: 53,
+        label: "Thailand",
     }, 
     {
         id: 54,
         name: "Malaysia",
-        icon: icons.malaysia
+        icon: icons.malaysia,
+        value: 54,
+        label: "Malaysia",
     }, 
     {
         id: 55,
         name: "Sri Lanka",
-        icon: icons.srilanka
+        icon: icons.srilanka,
+        value: 55,
+        label: "Sri Lanka",
     }, 
     {
         id: 56,
         name: "United Arab Emirates",
-        icon: icons.uae
+        icon: icons.uae,
+        value: 56,
+        label: "United Arab Emirates",
     }, 
     {
         id: 57,
         name: "Singapore",
-        icon: icons.singapore
-    }
+        icon: icons.singapore,
+        value: 57,
+        label: "Singapore",
+    },
+    {
+        id: 58,
+        name: "Poland",
+        icon: icons.poland,
+        value: 58,
+        label: "Poland",
+    },
 ]
 
 const explore = [
@@ -1010,6 +1133,78 @@ const instagram = [
     },
 ]
 
+const bucketList = [
+    {
+        id: 0,
+        visited: false,
+        name: "Tokio",
+        destination: "Shinto Shrines and Buddhist Temples",
+        country: "Japan"
+    },
+    {
+        id: 1,
+        visited: false,
+        name: "Rio de Janeiro",
+        destination: "Visit the Christ the Redeemer",
+        country: "Brazil"
+    },
+    {
+        id: 2,
+        visited: true,
+        name: "Danang",
+        destination: "Ride the Hai Van Pass",
+        country: "Vietnam"
+    },
+    {
+        id: 3,
+        visited: false,
+        name: "Murmansk ",
+        destination: "See the Northern Lights in Murmansk",
+        country: "Russia"
+    },
+    {
+        id: 4,
+        visited: false,
+        name: "Australia",
+        destination: "South Australian Road Trips",
+        country: "Australia"
+    },
+    {
+        id: 5,
+        visited: false,
+        name: "Palawan",
+        destination: "Impossibly turquoise waters meet rainforest-shrouded coves and pristine beaches",
+        country: "Philippines"
+    },
+    {   
+        id: 6,
+        visited: false,
+        name: "Isla Incahuas",
+        destination: "Hilly outcrop peppered with ancient cacti",
+        country: "Bolivia"
+    },{
+        id: 7,
+        visited: false,
+        name: "Rosario Island",
+        destination: "Archipelago of islets off the north coast of Colombia",
+        country: "Colombia"
+    },
+    {
+        id: 8,
+        visited: false,
+        name: "Agra",
+        destination: "​See the Taj Mahal",
+        country: "India"
+    },
+    {
+        id: 9,
+        visited: false,
+        name: "Niagara Falls",
+        destination: "​Soar over the falls on the Rainbow Air Helicopter Tour.",
+        country: "Canada"
+    },
+]
+
 
 export default {
     instagram,
@@ -1020,6 +1215,6 @@ export default {
     explore,
     initial_explore,
     essentials,
-    states
-
+    states,
+    bucketList,
 }

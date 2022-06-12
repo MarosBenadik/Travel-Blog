@@ -116,6 +116,7 @@
         font-size: 18px;
         color: var(--black);
         font-weight: 500;
+        text-align: center;
     }
     .recomended {
         font-size: 18px;
@@ -278,6 +279,7 @@
         font-size: 18px;
         color: var(--black);
         font-weight: 500;
+        text-align: center;
     }
 
     .recomended {
@@ -377,7 +379,7 @@
     }
 
     .activeSlide img {
-        transform: scale(1.0);
+        transform: scale(0.8);
         opacity: 1;
         border-radius: 35px;
         align-self: center;
@@ -387,8 +389,8 @@
     }
 
     .img-size {
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
         align-self: center;
         justify-self: center;
     }
@@ -481,6 +483,7 @@
         margin-right: 20%;
         color: var(--black);
         font-weight: 500;
+        text-align: center;
     }
 
     .recomended {
@@ -517,7 +520,9 @@
         width: 100%;
         height: 100%;
         margin-right: 5px;
-        background-color: var(--main-color);
+        border-width: 3px;
+        border-color: var(--main-color);
+        border-style: none dotted none none ;
     }
 
     .block-container {
@@ -619,6 +624,70 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.recomended-blog {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    border-width: 1px;
+    margin-bottom: 5px;
+    border-color: var(--gray);
+    margin-left: 5%;
+    border-style: none none double none;
+}
+
+.recomended-blog p {
+    text-align: center;
+}
+
+.recomended-blog h3 {
+    color: var(--dark_beige);
+}
+
+.mainblog-destinations {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    border-radius: 2px;
+    border-style:  dotted none;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 20px;
+    border-color: var(--dark_beige);
+}
+
+.mainblog-destinations p {
+    text-align: center;
+}
+
+.restOfBlogs {
+    display: inline-flex;
+    width: 90%;
+    height: 100%;
+    padding: 5%;
+}
+
+.single-blog-destinations {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 350px;
+    border-color: var(--gray);
+    border-width: 2px;
+    padding-top: 20px;
+    border-style: double;
+    align-items: center;
+    margin: 10px;
+}
+
+.single-blog-destinations p {
+    text-align: center;
+}
+
 
 
 

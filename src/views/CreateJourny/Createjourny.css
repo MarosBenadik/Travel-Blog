@@ -1,0 +1,33 @@
+
+.CreateJourny-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.create-journy {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    align-items: center;
+}
+
+.create-journy input {
+    width: 60%;
+    height: 30px;
+    margin-bottom: 30px;
+
+}
+
+.create-journy textarea {
+    width: 60%;
+    height: 130px;
+    margin-bottom: 30px;
+}
+
+.create-blog-choices h3 {
+    margin-left: 10px;
+}

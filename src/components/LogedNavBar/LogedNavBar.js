@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Re } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './LogedNavBar.css';
 
 import Drawer from 'react-modern-drawer';
@@ -39,7 +39,7 @@ const LogedNavBar = () => {
               <p className='title'>Menu</p>
               <Link className="urlLinks-navbar" to="/dashboard" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Dashboard</h3></span></Link>
               <Link className="urlLinks-navbar" to="/createblog" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Create Blog</h3></span></Link>
-              <Link className="urlLinks-navbar" to="/updateblog" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Update Blog</h3></span></Link>
+              <Link className="urlLinks-navbar" to="/createjourny" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Add Country</h3></span></Link>
               <Link className="urlLinks-navbar" to="/signups" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>New SignUps</h3></span></Link>
               <Link className="urlLinks-navbar" to="/businesscontuct" style={{ textDecoration: 'none' }}><span className='drob-menu'><img src={icons.blog} alt='home' className='drob-icon'/><h3>Business Contacts</h3></span></Link>
             </div>
@@ -55,7 +55,7 @@ const LogedNavBar = () => {
         >
           <Link className="urlLinks" to="/dashboard" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Dashboard</h3></div></Link>
           <Link className="urlLinks" to="/createblog" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Create Blog</h3></div></Link>
-          <Link className="urlLinks" to="/updateblog" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Update Blog</h3></div></Link>
+          <Link className="urlLinks" to="/createjourny" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Add Country</h3></div></Link>
           <Link className="urlLinks" to="/signups" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>New SignUps</h3></div></Link>
           <Link className="urlLinks" to="/businesscontuct" style={{ textDecoration: 'none' }}><div className='urlLinks'><h3 className='urlinks-text'>Business Contacts</h3></div></Link>
         </div>

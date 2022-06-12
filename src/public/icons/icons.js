@@ -50,6 +50,7 @@ const norway = require('../../bucket/icons/norway.png');
 const portugal = require('../../bucket/icons/portugal.png');
 const sk = require('../../bucket/icons/slovakia.png');
 const spain = require('../../bucket/icons/spain.png');
+const poland = require('../../bucket/icons/poland.png');
 const sweden = require('../../bucket/icons/sweden.png');
 const austri = require('../../bucket/icons/austria.png');
 const belgium = require('../../bucket/icons/belgium.png');
@@ -78,11 +79,35 @@ const todo = require('../../bucket/icons/todo.png');
 const journey = require('../../bucket/icons/journey.png');
 const pet = require('../../bucket/icons/pet.png')
 const break_i = require('../../bucket/icons/break.png');
-const camper = require('../../bucket/icons/camper.png')
+const camper = require('../../bucket/icons/camper.png');
+const airport = require('../../bucket/icons/airport.png');
+const bed = require('../../bucket/icons/bed.png');
+const bus = require('../../bucket/icons/bus.png');
+const car = require('../../bucket/icons/car.png');
+const mountains = require('../../bucket/icons/mountains.png');
+const plane = require('../../bucket/icons/plane.png');
+const rent = require('../../bucket/icons/rent.png');
+const sport = require('../../bucket/icons/sport.png');
+const ticket = require('../../bucket/icons/ticket.png');
+const hotel = require('../../bucket/icons/hotel.png');
+const ok = require('../../bucket/icons/ok.png');
+const camera = require('../../bucket/icons/camera.png');
 
 
 export default {
+    camera,
+    ok,
+    bus,
+    ticket,
+    mountains,
+    car,
+    hotel,
+    rent,
+    bed,
+    plane,
+    airport,
     break_i,
+    poland,
     camper,
     pet,
     idea,

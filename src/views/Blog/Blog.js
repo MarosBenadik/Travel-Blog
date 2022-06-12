@@ -24,6 +24,8 @@ import Moment from 'react-moment';
 
 import AddFull from '../../components/adds/AddFull';
 
+import { Image, Transformation } from 'cloudinary-react';
+
 const Blog = () => {
 
     const location = useLocation()
@@ -40,7 +42,7 @@ const Blog = () => {
 
             setIsLoading(false)
           })
-    }, [])
+    }, [location.state])
 
     function getContinent(id) {
     
@@ -94,7 +96,11 @@ const Blog = () => {
     return (
         <div className='blog-page'>
             {NavBar()}
-            <img src={images.greece} alt='mainImg' className='single-blog-mainImg' />
+            <Image cloudName="ditsdxnax" publicId={blog.blogImg}>
+                <Transformation dpr="auto" height="700" responsive width="auto" gravity="south" crop="fit" />
+                <Transformation effect="art:hokusai" />
+                <Transformation border="3px_solid_rgb:00390b" />
+            </Image>
             <div className='blog-page-img-banner'>
                 <p className='banner-state'>{getState(blog.country)}</p>
             </div>
@@ -106,15 +112,16 @@ const Blog = () => {
                 <h1 className='text-color'>
                     {getContinent(blog.continent)}
                 </h1>
-                <div class='single-blog-divider'>
+                <div class='single-blog'>
                     <h2 className='single-blog-page-subtitle-part'>{blog.subTitle}</h2>
-                    <img src={images.italy} alt='subImg' className='blog-single-sum-img'/>
-                </div>
-                <div className='clever-qoute-container'>
                     <h2 className='clever-qoute-blog'>"{blog.cleverQoute}"</h2>
                 </div>
                 <div class='single-blog-divider-imgs'>
-                    <img src={images.italy} alt='subImg' className='blog-single-sum-img'/>
+                    <Image cloudName="ditsdxnax" publicId={blog.img}>
+                        <Transformation dpr="auto" height="390" responsive width="auto" gravity="south" crop="fit" />
+                        <Transformation effect="art:hokusai" />
+                        <Transformation border="3px_solid_rgb:00390b" />
+                    </Image>
                     <p className='single-blog-page-text-part'>{blog.partOne}</p>
                 </div>
                 <div class='blog-adds-full-container'>
@@ -122,10 +129,17 @@ const Blog = () => {
                 </div>
                 <div class='single-blog-divider-imgs'>
                     <p className='single-blog-page-text-part'>{blog.partTwo}</p>
-                    <img src={images.italy} alt='subImg' className='blog-single-sum-img'/>
-                </div>
+                    <Image cloudName="ditsdxnax" publicId={blog.img1}>
+                        <Transformation dpr="auto" height="390" responsive width="auto" gravity="south" crop="fit" />
+                        <Transformation effect="art:hokusai" />
+                        <Transformation border="3px_solid_rgb:00390b" />
+                    </Image>                </div>
                 <div class='single-blog-divider-imgs'>
-                    <img src={images.italy} alt='subImg' className='blog-single-sum-img'/>
+                    <Image cloudName="ditsdxnax" publicId={blog.img2}>
+                        <Transformation dpr="auto" height="390" responsive width="auto" gravity="south" crop="fit" />
+                        <Transformation effect="art:hokusai" />
+                        <Transformation border="3px_solid_rgb:00390b" />
+                    </Image>
                     <p className='single-blog-page-text-part'>{blog.partThree}</p>
                 </div>
                 <div className='blog-adds-full-container'>
@@ -133,7 +147,11 @@ const Blog = () => {
                 </div>
                 <div class='single-blog-divider-imgs'>
                     <p className='single-blog-page-text-part'>{blog.partFour}</p>
-                    <img src={images.italy} alt='subImg' className='blog-single-sum-img'/>
+                    <Image cloudName="ditsdxnax" publicId={blog.img3}>
+                        <Transformation dpr="auto" height="390" responsive width="auto" gravity="south" crop="fit" />
+                        <Transformation effect="art:hokusai" />
+                        <Transformation border="3px_solid_rgb:00390b" />
+                    </Image>
                 </div>
                 {shareArticle()}
                 <div className='recomended-section'>

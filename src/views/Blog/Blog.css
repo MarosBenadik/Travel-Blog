@@ -212,4 +212,12 @@
 }
 .clever-qoute-blog{
     color: var(--dark_beige);
+    margin: 5%;
+    font-size: 23px;
+    background-color: white;
+    padding: 2%;
+    border-radius: 10px;
+    line-height: 2 ;
+    text-align: center;
+    margin-top: 10%;
 }

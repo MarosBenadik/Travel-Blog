@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import icons from '../../public/icons/icons';
 import "./Footer.css"
 
-
-const NavBar = () => {
+const Footer = () => {
 
   return (
     <div className='footer'>
@@ -16,11 +15,6 @@ const NavBar = () => {
             <Link className='link-text' to="/aboutus">About Us</Link>
             <Link className='link-text' to="/questions">Questions</Link>
             <Link className='link-text' to="/FAQ">FAQ</Link>
-          </div>
-          <div className='link'>
-            <h3 className='link-text-container' >For Business</h3>
-            <Link className='link-text' to="/forbusiness">For businesses</Link>
-            <Link className='link-text' to="/forblogers">For Blogers</Link>
           </div>
           <div className='link'>
             <h3 className='link-text-container' >Legal</h3>
@@ -36,9 +30,17 @@ const NavBar = () => {
               <a href="https://www.instagram.com/chicchicapp/" title="Instagram"><img className='icons' src={icons.linkedin} alt='Instagram'/></a>
             </div>
             <div className='link'>
-              <h3 className='link-text-container' >Have Account?</h3>
-              <Link className='link-text-logIn' to='/login'>Log In</Link>
+              <h3 className='link-text-container' >Support us</h3>
+              <div className='link-socialMedia' >
+                <a href="https://www.facebook.com/chicchicapp/" title="Facebook"><img className='icons' src={icons.facebook} alt='Facebook'/></a>
+                <a href="https://www.linkedin.com/company/chicchic/" title="Linkedin"><img className='icons' src={icons.instagram} alt='linkedIn'/></a>
+                <a href="https://www.instagram.com/chicchicapp/" title="Instagram"><img className='icons' src={icons.linkedin} alt='Instagram'/></a>
+              </div>
             </div>
+          </div>
+          <div className='link'>
+            <h3 className='link-text-container' >Have Account?</h3>
+            <Link className='link-text-logIn' to='/login'>Log In</Link>
           </div>
         </div>
       </div>
@@ -49,4 +51,4 @@ const NavBar = () => {
   );
 }
 
-export default NavBar;
+export default Footer;

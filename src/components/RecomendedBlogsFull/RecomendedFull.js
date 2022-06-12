@@ -1,8 +1,6 @@
 import React from 'react';
 import './RecomendedFull.css';
 
-import images from '../../public/images/images';
-
 import DATA from '../../public/assets/DATA';
 
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
