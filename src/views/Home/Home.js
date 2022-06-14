@@ -14,8 +14,6 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import Slider from "react-slick";
 
-import { Image, Transformation } from 'cloudinary-react';
-
 import icons from '../../public/icons/icons';
 
 import StateCard from '../../components/StateCard/StateCard';
@@ -110,7 +108,7 @@ const Home = () => {
           {newBlogs.map((blog, index) => (
             <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='blogSlide' >
               <div className='inside-blogSlide' key={index}>
-                <img src={blog.mainImg} className='slider-image-home'/>
+                <img src={blog.mainImg} className='slider-image-home' alt='img'/>
                 <div className='blog-slider'>
                   <p>{blog.title}</p>
                 </div>
@@ -204,7 +202,7 @@ const Home = () => {
 
   const StatesWindow = () => {
     return (
-      <scrollable-component class="my-content">
+      <div class="my-content">
         {explore.states.slice(0,7).map((state, index) => {
           return (
             <button key={index} className='state-butom' onClick={() => setState(state)}>
@@ -216,7 +214,7 @@ const Home = () => {
             </button>
           );
         })}
-      </scrollable-component>
+      </div>
     );
   };
 
@@ -301,7 +299,7 @@ const Home = () => {
                   <p>Author: {blog.author}</p>
                 </div>
                 <div className='image-part'>
-                  <img src={blog.blogImg} className='slider-image-home-full'/>
+                  <img src={blog.blogImg} className='slider-image-home-full' alt='img'/>
                 </div>
               </Link>
             </div>

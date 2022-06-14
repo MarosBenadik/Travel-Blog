@@ -10,8 +10,6 @@ import images from '../../public/images/images';
 
 import DATA from '../../public/assets/DATA';
 
-import { Image, Transformation } from 'cloudinary-react';
-
 const OurJourny = () => {
 
     const [ journies, setJournies ] = React.useState([]);
@@ -43,15 +41,11 @@ const OurJourny = () => {
                     <div key={index} className='single-journy'>
                         <div className='journy-desc-container'>
                             <div className='journy-image'>
-                                <Image key={index} cloudName="ditsdxnax" publicId={journy.img}>
-                                    <Transformation dpr="auto" height="150" responsive width="auto" gravity="south" crop="fit" />
-                                    <Transformation effect="art:hokusai" />
-                                    <Transformation border="3px_solid_rgb:edcac6" />
-                                </Image>
+                                <img src={images.norway} alt='journy' className='ourJourny-img'/>
                             </div>
                             <div className='journy-text'>
                                 <p className='journy-city'>{journy.city}</p>
-                                <span className='journy-inline'><img src={getFlag(journy.state)}/><h4>{getState(journy.state)}</h4></span>
+                                <span className='journy-inline'><img src={getFlag(journy.state)} alt='img'/><h4>{getState(journy.state)}</h4></span>
                                 <h3>{journy.year}</h3>
                                 <h4 className='h4-journy'>{journy.desc}</h4>
                             </div>

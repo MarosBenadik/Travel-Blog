@@ -8,8 +8,6 @@ import NavBar from '../../components/NavBar/NavBar';
 
 import axios from 'axios';
 
-import { Image, Transformation } from 'cloudinary-react';
-
 import DATA from '../../public/assets/DATA';
 import icons from '../../public/icons/icons';
 
@@ -57,7 +55,7 @@ const Getinspire = () => {
       <div>
         <div className='getInspire-destinations'>
           <div className='get-inspire-img'>
-            <img src={blog.blogImg} className='slider-image-home-full'/>
+            <img src={blog.blogImg} className='slider-image-home-full' alt='img-blog'/>
           </div>
           <h1>{blog.title}</h1>
           <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }}>Keep reading ...</Link>
@@ -65,7 +63,7 @@ const Getinspire = () => {
         </div>
         <div className='getInspire-destinations'>
           <div className='get-inspire-img'>
-            <img src={blog1.blogImg} className='slider-image-home-full'/>
+            <img src={blog1.blogImg} className='slider-image-home-full' alt='img-full'/>
           </div>
           <h1>{blog1.title}</h1>
           <Link to={"/blogs/" + blog1.slug} state={blog1._id} style={{ textDecoration: 'none' }}>Keep reading ...</Link>
@@ -80,7 +78,7 @@ const Getinspire = () => {
       <div>
         {DATA.bucketList.map((item, index) => (
           <div key={index} className='bucketlist-single'>
-            <img src={item.visited === true ? icons.ok : icons.pin} className='bucketlist-single-img'/>
+            <img src={item.visited === true ? icons.ok : icons.pin} className='bucketlist-single-img' alt='img'/>
             <p className={item.visited === true ? 'bucketlist-text-line' : 'bucketlist-text' } >{item.name}</p>
             <p style={{color: '#D1aCA5'}}>{item.country}</p>
             <p>{item.destination}</p>
@@ -130,7 +128,7 @@ const Getinspire = () => {
         {categoryBlogs.map((blog, index) => (
           <div key={index} className='category-single-blog'>
             <div>
-              <img src={blog.img} className='slider-image-inspire-full'/>
+              <img src={blog.img} className='slider-image-inspire-full' alt='img'/>
             </div>
             <div>
               <h2>{blog.title}</h2> 
