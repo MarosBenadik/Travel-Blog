@@ -34,28 +34,38 @@ const Guide = () => {
         <div className='recomendation-guide'>
           <div className='guide-part'>
             <h2>Find Cheap Flights</h2>
-            <div className='single-part'>
+            <div className='single-part' >
               <img src={icons.plane} alt='flight' className='guide-icon'/>
-              <h4>Find cheap flights on SkyScanner</h4>
+              <a href='https://www.skyscanner.net'>
+                <h4>Find cheap flights on SkyScanner</h4>
+              </a>
             </div>
             <div className='single-part'>
               <img src={icons.airport} alt='flight' className='guide-icon'/>
-              <h4>Find cheap flights on RyanAir</h4>
+              <a href='https://www.ryanair.com/sk/en'>
+                <h4>Find cheap flights on RyanAir</h4>
+              </a>
             </div>
             <div className='single-part'>
               <img src={icons.plane} alt='flight' className='guide-icon'/>
-              <h4>Find cheap flights on WizzAir</h4>
+              <a href='https://wizzair.com/'>
+                <h4>Find cheap flights on WizzAir</h4>
+              </a>
             </div>
           </div>
           <div className='guide-part'>
             <h2>Find Cheap Accomodation:</h2>
             <div className='single-part'>
               <img src={icons.bed} alt='flight' className='guide-icon'/>
-              <h4>Find cheap Accomodation on  AirBNB</h4>
+              <a href='https://www.airbnb.co.uk'>
+                <h4>Find cheap Accomodation on  AirBNB</h4>
+              </a>
             </div>
             <div className='single-part'>
               <img src={icons.hotel} alt='flight' className='guide-icon'/>
-              <h4>Find cheap Accomodation on Booking</h4>
+              <a href='https://www.booking.com'>
+                <h4>Find cheap Accomodation on Booking</h4>
+              </a>
             </div>
             <div className='single-part'>
               <img src={icons.rent} alt='flight' className='guide-icon'/>

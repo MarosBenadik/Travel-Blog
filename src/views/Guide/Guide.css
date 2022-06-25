@@ -59,6 +59,11 @@
     cursor: pointer;
 }
 
+.single-part a {
+    text-decoration: none;
+    color: var(--black);
+}
+
 .single-part:hover {
     display: flex;
     flex-direction: row;
