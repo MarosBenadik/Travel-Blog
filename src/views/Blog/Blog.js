@@ -24,8 +24,6 @@ import Moment from 'react-moment';
 
 import AddFull from '../../components/adds/AddFull';
 
-import { Image, Transformation } from 'cloudinary-react';
-
 const Blog = () => {
 
     const location = useLocation()
@@ -96,11 +94,8 @@ const Blog = () => {
     return (
         <div className='blog-page'>
             {NavBar()}
-            <Image cloudName="ditsdxnax" publicId={blog.blogImg}>
-                <Transformation dpr="auto" height="700" responsive width="auto" gravity="south" crop="fit" />
-                <Transformation effect="art:hokusai" />
-                <Transformation border="3px_solid_rgb:00390b" />
-            </Image>
+            <img cloudName="ditsdxnax" publicId={blog.blogImg}/>
+                
             <div className='blog-page-img-banner'>
                 <p className='banner-state'>{getState(blog.country)}</p>
             </div>
