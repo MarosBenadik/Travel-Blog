@@ -23,8 +23,6 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import data from '../../public/assets/DATA';
 
-import { Image, Transformation } from 'cloudinary-react';
-
 const OurPlaces = () => {
 
   const slider_images = [
@@ -209,11 +207,7 @@ const OurPlaces = () => {
 
       return (
         <div className='mainblog-destinations'>
-          <Image cloudName="ditsdxnax" publicId={blog.mainImg}>
-            <Transformation dpr="auto" responsive width="800" gravity="south" crop="fit" />
-            <Transformation effect="art:hokusai" />
-            <Transformation border="3px_solid_rgb:00390b" />
-          </Image>
+          <img src={blog.blogImg} className='slider-image-home-full' alt='mainblog'/>
           <h1>{blog.title}</h1>
           <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }}>Keep reading ...</Link>
           <p>{blog.subTitle}</p>
@@ -225,16 +219,11 @@ const OurPlaces = () => {
       return (
         <div className='restOfBlogs'>
           {categoryBlogs.slice(1).map((blog, index) => (
-            <div className='single-blog-destinations'>
-              <Image cloudName="ditsdxnax" publicId={blog.mainImg}>
-                <Transformation dpr="auto" responsive width="200" gravity="south" crop="fit" />
-                <Transformation effect="art:hokusai" />
-                <Transformation border="3px_solid_rgb:00390b" />
-              </Image>
+            <div key={index} className='single-blog-destinations'>
+              <img src={blog.blogImg} className='slider-image-home-full' alt='blogs'/>
               <p>{blog.title}</p>
               <p>{getCountry(blog.country)}</p>
               <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }}>Keep reading ...</Link>
-
             </div>
           ))}
         </div>

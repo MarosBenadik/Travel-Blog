@@ -14,8 +14,6 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import Slider from "react-slick";
 
-import { Image, Transformation } from 'cloudinary-react';
-
 import icons from '../../public/icons/icons';
 
 import StateCard from '../../components/StateCard/StateCard';
@@ -109,16 +107,12 @@ const Home = () => {
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
             <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='blogSlide' >
-              <div className='inside-blogSlide'>
-                <Image key={index} cloudName="ditsdxnax" publicId={blog.mainImg}>
-                  <Transformation dpr="auto" height="490" responsive width="auto" gravity="south" crop="scale" />
-                  <Transformation effect="art:hokusai" />
-                  <Transformation border="3px_solid_rgb:00390b" />
-                </Image>
+              <div className='inside-blogSlide' key={index}>
+                <img src={blog.mainImg} className='slider-image-home' alt='img'/>
                 <div className='blog-slider'>
-                  <p className='blog-slider-text'>{blog.title}</p>
+                  <p>{blog.title}</p>
                 </div>
-                <div className='blog-slider-country'>
+                <div className='blog-slider'>
                   <p className='blog-slider-text'>{getCountry(blog.country)}</p>
                 </div>
               </div>
@@ -208,7 +202,7 @@ const Home = () => {
 
   const StatesWindow = () => {
     return (
-      <scrollable-component class="my-content">
+      <div class="my-content">
         {explore.states.slice(0,7).map((state, index) => {
           return (
             <button key={index} className='state-butom' onClick={() => setState(state)}>
@@ -220,7 +214,7 @@ const Home = () => {
             </button>
           );
         })}
-      </scrollable-component>
+      </div>
     );
   };
 
@@ -297,19 +291,18 @@ const Home = () => {
       <div className='full-middle-component'>
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
-            <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='full-blogSlide' >
-              <div className='divider-part'>
-                <h3>{blog.title}</h3>
-                <h3>"{blog.cleverQoute}"</h3>
-                <p>Author: {blog.author}</p>
-              </div>
-              <div className='image-part'>
-                <Image key={index} cloudName="ditsdxnax" publicId={blog.blogImg}>
-                  <Transformation dpr="auto" responsive width="auto" crop="fit" />
-                  <Transformation effect="art:hokusai" />
-                </Image>
-              </div>
-            </Link>
+            <div className='single-home-full-slider'>
+              <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='full-blogSlide' >
+                <div className='divider-part'>
+                  <h3>{blog.title}</h3>
+                  <h3>"{blog.cleverQoute}"</h3>
+                  <p>Author: {blog.author}</p>
+                </div>
+                <div className='image-part'>
+                  <img src={blog.blogImg} className='slider-image-home-full' alt='img'/>
+                </div>
+              </Link>
+            </div>
           ))}
         </Slider>
       </div>

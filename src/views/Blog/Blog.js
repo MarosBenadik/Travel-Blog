@@ -8,8 +8,6 @@ import {useLocation} from 'react-router-dom';
 
 import NavBar from '../../components/NavBar/NavBar';
 
-import images from '../../public/images/images';
-
 import DATA from '../../public/assets/DATA';
 
 import icons from '../../public/icons/icons';
@@ -94,8 +92,7 @@ const Blog = () => {
     return (
         <div className='blog-page'>
             {NavBar()}
-            <img cloudName="ditsdxnax" publicId={blog.blogImg}/>
-                
+            <img src={blog.blogImg} className='slider-image-home-full' alt='mainImg'/>
             <div className='blog-page-img-banner'>
                 <p className='banner-state'>{getState(blog.country)}</p>
             </div>
@@ -107,16 +104,12 @@ const Blog = () => {
                 <h1 className='text-color'>
                     {getContinent(blog.continent)}
                 </h1>
-                <div class='single-blog'>
+                <div class='single-blog-qoute'>
                     <h2 className='single-blog-page-subtitle-part'>{blog.subTitle}</h2>
                     <h2 className='clever-qoute-blog'>"{blog.cleverQoute}"</h2>
                 </div>
                 <div class='single-blog-divider-imgs'>
-                    <Image cloudName="ditsdxnax" publicId={blog.img}>
-                        <Transformation dpr="auto" height="390" responsive width="auto" gravity="south" crop="fit" />
-                        <Transformation effect="art:hokusai" />
-                        <Transformation border="3px_solid_rgb:00390b" />
-                    </Image>
+                    <img src={blog.img} className='blog-img-single' alt='img'/>
                     <p className='single-blog-page-text-part'>{blog.partOne}</p>
                 </div>
                 <div class='blog-adds-full-container'>
@@ -124,33 +117,24 @@ const Blog = () => {
                 </div>
                 <div class='single-blog-divider-imgs'>
                     <p className='single-blog-page-text-part'>{blog.partTwo}</p>
-                    <Image cloudName="ditsdxnax" publicId={blog.img1}>
-                        <Transformation dpr="auto" height="390" responsive width="auto" gravity="south" crop="fit" />
-                        <Transformation effect="art:hokusai" />
-                        <Transformation border="3px_solid_rgb:00390b" />
-                    </Image>                </div>
-                <div class='single-blog-divider-imgs'>
-                    <Image cloudName="ditsdxnax" publicId={blog.img2}>
-                        <Transformation dpr="auto" height="390" responsive width="auto" gravity="south" crop="fit" />
-                        <Transformation effect="art:hokusai" />
-                        <Transformation border="3px_solid_rgb:00390b" />
-                    </Image>
-                    <p className='single-blog-page-text-part'>{blog.partThree}</p>
+                    <img src={blog.img1} className='blog-img-single' alt='img'/>
                 </div>
-                <div className='blog-adds-full-container'>
+                <div class='blog-adds-full-container'>
                     {AddFull()}
                 </div>
                 <div class='single-blog-divider-imgs'>
-                    <p className='single-blog-page-text-part'>{blog.partFour}</p>
-                    <Image cloudName="ditsdxnax" publicId={blog.img3}>
-                        <Transformation dpr="auto" height="390" responsive width="auto" gravity="south" crop="fit" />
-                        <Transformation effect="art:hokusai" />
-                        <Transformation border="3px_solid_rgb:00390b" />
-                    </Image>
+                    <img src={blog.img2} className='blog-img-single' alt='img2'/>
+                    <p className='single-blog-page-text-part'>{blog.partThree}</p>
                 </div>
-                {shareArticle()}
+                <div class='single-blog-divider-imgs'>
+                    <p className='single-blog-page-text-part'>{blog.partFour}</p>
+                    <img src={blog.img3} className='blog-img-single' alt='img'/>
+                </div>
+                <div className='share-article-blog'>
+                    {shareArticle()}
+                </div>
                 <div className='recomended-section'>
-                    <h2>Explore More:</h2>
+                    <h2>Explore Travel tips:</h2>
                     {RecomendedFull()}
                 </div>
                 <div class='single-blog-divider'>
