@@ -9,6 +9,8 @@ import DATA from '../../public/assets/DATA';
 
 import axios from 'axios';
 
+import backend from '../../public/heroku.js';
+
 import AddFull from '../../components/adds/AddFull';
 
 const Contuctus = () => {
@@ -31,7 +33,7 @@ const Contuctus = () => {
 
     await axios({
       method: "post",
-      url: "http://localhost:8800/contuct-us/add",
+      url: backend + "/contuct-us/add",
       data: body,
       headers: { "Content-Type": "application/json" },
     })

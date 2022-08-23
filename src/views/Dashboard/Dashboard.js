@@ -1,9 +1,10 @@
 import React from 'react';
-import icons from '../../public/icons/icons';
 
 import LogedNavBar from '../../components/LogedNavBar/LogedNavBar';
 
 import axios from 'axios';
+
+import backend from '../../public/heroku.js';
 
 import "./Dashboard.css"
 
@@ -12,14 +13,12 @@ const Dashboard = () => {
     const [ messages, setMessages ] = React.useState([]);
 
     React.useEffect( () => {
-        axios.get(`http://localhost:8800/contuct-us/all`)
+        axios.get(backend + `/contuct-us/all`)
           .then(res => {
             const messages = res.data;
     
             setMessages(messages.slice(0,5))
         })
-
-        {/* business contacts */}
     }, [])
 
     const messagesDash = () => {

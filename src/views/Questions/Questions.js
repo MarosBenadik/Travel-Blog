@@ -16,6 +16,8 @@ import images from '../../public/images/images';
 
 import axios from 'axios';
 
+import backend from '../../public/heroku.js';
+
 import Moment from 'react-moment';
 
 const Questions = () => {
@@ -35,11 +37,8 @@ const Questions = () => {
 
   const [ usedQuestions, setUsedQuestions ] = React.useState([]);
 
-  
-
-
   React.useEffect( () => {
-    axios.get(`http://localhost:8800/questions/all`)
+    axios.get(backend + `/questions/all`)
       .then(res => {
         const questions = res.data;
         setQuestions(questions)
@@ -47,7 +46,7 @@ const Questions = () => {
   }, [])
 
   function handleBlogsChange(next) {
-    const qurent_questions = questions.filter(x => x.category == next );
+    const qurent_questions = questions.filter(x => x.category === next );
     setUsedQuestions(qurent_questions)
     setCategory(next)
   }
@@ -67,7 +66,7 @@ const Questions = () => {
 
     await axios({
       method: "post",
-      url: "http://localhost:8800/questions/add",
+      url: backend + "/questions/add",
       data: body,
       headers: { "Content-Type": "application/json" },
     })

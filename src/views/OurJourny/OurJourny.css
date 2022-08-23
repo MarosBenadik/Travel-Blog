@@ -151,3 +151,9 @@
     justify-content: space-between;
 }
 
+.ourJourny-img {
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+}
+

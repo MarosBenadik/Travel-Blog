@@ -8,6 +8,8 @@ import Select from 'react-select';
 
 import DATA from '../../public/assets/DATA';
 
+import backend from '../../public/heroku.js';
+
 import Modal from 'react-modal';
 
 import { useNavigate } from 'react-router-dom';
@@ -69,7 +71,7 @@ const CreateJourny = () => {
     const handleSubmit = async () => {
 
         try{
-            await axios.post(`http://localhost:8800/journy/add`, 
+            await axios.post(backend + `/journy/add`, 
                 JSON.stringify({
                     city: city,
                     category: category,

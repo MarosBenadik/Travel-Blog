@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
+import heroku from '../../public/heroku.js';
+
 import images from '../../public/images/images';
 
 import NavBar from '../../components/NavBar/NavBar';
@@ -13,8 +15,6 @@ import axios from 'axios';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import Slider from "react-slick";
-
-import { Image, Transformation } from 'cloudinary-react';
 
 import icons from '../../public/icons/icons';
 
@@ -29,7 +29,7 @@ const Home = () => {
   const [ newBlogs, setNewBlogs ] = React.useState([]);
 
   React.useEffect( () => {
-    axios.get(`http://localhost:8800/blogs/all`)
+    axios.get(heroku + `/blogs/all`)
       .then(res => {
         const blogs = res.data;
 
@@ -109,16 +109,12 @@ const Home = () => {
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
             <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='blogSlide' >
-              <div className='inside-blogSlide'>
-                <Image key={index} cloudName="ditsdxnax" publicId={blog.mainImg}>
-                  <Transformation dpr="auto" height="490" responsive width="auto" gravity="south" crop="scale" />
-                  <Transformation effect="art:hokusai" />
-                  <Transformation border="3px_solid_rgb:00390b" />
-                </Image>
+              <div className='inside-blogSlide' key={index}>
+                <img src={blog.mainImg} className='slider-image-home' alt='img'/>
                 <div className='blog-slider'>
-                  <p className='blog-slider-text'>{blog.title}</p>
+                  <p>{blog.title}</p>
                 </div>
-                <div className='blog-slider-country'>
+                <div className='blog-slider'>
                   <p className='blog-slider-text'>{getCountry(blog.country)}</p>
                 </div>
               </div>
@@ -208,9 +204,8 @@ const Home = () => {
 
   const StatesWindow = () => {
     return (
-      <scrollable-component class="my-content">
-        {explore.states.slice(0,7).map((state, index) => {
-          return (
+      <div className="my-content">
+        {explore.states.slice(0,7).map((state, index) => (
             <button key={index} className='state-butom' onClick={() => setState(state)}>
               <StateCard
                 key={index}
@@ -218,9 +213,8 @@ const Home = () => {
                 name={state.name}
               />
             </button>
-          );
-        })}
-      </scrollable-component>
+        ))}
+      </div>
     );
   };
 
@@ -297,19 +291,18 @@ const Home = () => {
       <div className='full-middle-component'>
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
-            <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='full-blogSlide' >
-              <div className='divider-part'>
-                <h3>{blog.title}</h3>
-                <h3>"{blog.cleverQoute}"</h3>
-                <p>Author: {blog.author}</p>
-              </div>
-              <div className='image-part'>
-                <Image key={index} cloudName="ditsdxnax" publicId={blog.blogImg}>
-                  <Transformation dpr="auto" responsive width="auto" crop="fit" />
-                  <Transformation effect="art:hokusai" />
-                </Image>
-              </div>
-            </Link>
+            <div className='single-home-full-slider' key={index}>
+              <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} className='full-blogSlide' >
+                <div className='divider-part'>
+                  <h3>{blog.title}</h3>
+                  <h3>"{blog.cleverQoute}"</h3>
+                  <p>Author: {blog.author}</p>
+                </div>
+                <div className='image-part'>
+                  <img src={blog.blogImg} className='slider-image-home-full' alt='img'/>
+                </div>
+              </Link>
+            </div>
           ))}
         </Slider>
       </div>
