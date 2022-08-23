@@ -11,6 +11,8 @@ import { Link } from 'react-router-dom';
 
 import axios from 'axios';
 
+import backend from '../../public/heroku.js';
+
 import DATA from '../../public/assets/DATA';
 
 import AddSide from '../../components/adds/AddSide';
@@ -59,7 +61,7 @@ const OurPlaces = () => {
   const recomendedBlogs = newBlogs.slice(0,5).sort(({likes:a}, {likes:b}) => b-a);
 
   React.useEffect( () => {
-    axios.get(`http://localhost:8800/blogs/all`)
+    axios.get(backend + `/blogs/all`)
       .then(res => {
         const blogs = res.data;
         

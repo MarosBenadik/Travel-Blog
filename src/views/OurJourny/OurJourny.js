@@ -4,6 +4,8 @@ import './OurJourny.css';
 
 import axios from 'axios';
 
+import backend from '../../public/heroku.js';
+
 import NavBar from '../../components/NavBar/NavBar';
 
 import images from '../../public/images/images';
@@ -15,7 +17,7 @@ const OurJourny = () => {
     const [ journies, setJournies ] = React.useState([]);
 
     React.useEffect( () => {
-        axios.get(`http://localhost:8800/journy/all`)
+        axios.get(backend + `/journy/all`)
           .then(res => {
             const journy = res.data;
     

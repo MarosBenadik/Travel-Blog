@@ -1,19 +1,19 @@
 {
-  "short_name": "ChicChic",
-  "name": "ChicChic website",
+  "short_name": "Away From Routine",
+  "name": "Away From Routine",
   "icons": [
     {
-      "src": "cc_logo.webp",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "cc_logo.webp",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "cc_logo.webp",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }

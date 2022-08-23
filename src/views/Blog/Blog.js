@@ -10,6 +10,8 @@ import NavBar from '../../components/NavBar/NavBar';
 
 import DATA from '../../public/assets/DATA';
 
+import backend from '../../public/heroku.js';
+
 import icons from '../../public/icons/icons';
 
 import Wetravel from '../../components/Wetravel/Wetravel';
@@ -31,7 +33,7 @@ const Blog = () => {
     const [ blog, setBlog ] = React.useState({});
 
     React.useEffect( () => {
-        axios.get("http://localhost:8800/blogs/" + location.state)
+        axios.get(backend + "/blogs/" + location.state)
           .then(res => {
             const newBlog = res.data;
             setBlog(newBlog)

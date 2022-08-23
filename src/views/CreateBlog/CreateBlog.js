@@ -4,6 +4,8 @@ import LogedNavBar from '../../components/LogedNavBar/LogedNavBar';
 
 import axios from 'axios';
 
+import backend from '../../public/heroku.js';
+
 import { useNavigate } from 'react-router-dom';
 
 import DATA from '../../public/assets/DATA';
@@ -133,7 +135,7 @@ const CreateBlog = () => {
     const uploadImage = async () => {
 
         try{
-            await axios.post(`http://localhost:8800/blogs/add`, 
+            await axios.post(backend + `/blogs/add`, 
                 JSON.stringify({
                     title: title,
                     category: category,

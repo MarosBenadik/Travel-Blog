@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
+import heroku from '../../public/heroku.js';
+
 import images from '../../public/images/images';
 
 import NavBar from '../../components/NavBar/NavBar';
@@ -27,7 +29,7 @@ const Home = () => {
   const [ newBlogs, setNewBlogs ] = React.useState([]);
 
   React.useEffect( () => {
-    axios.get(`http://localhost:8800/blogs/all`)
+    axios.get(heroku + `/blogs/all`)
       .then(res => {
         const blogs = res.data;
 
@@ -202,9 +204,8 @@ const Home = () => {
 
   const StatesWindow = () => {
     return (
-      <div class="my-content">
-        {explore.states.slice(0,7).map((state, index) => {
-          return (
+      <div className="my-content">
+        {explore.states.slice(0,7).map((state, index) => (
             <button key={index} className='state-butom' onClick={() => setState(state)}>
               <StateCard
                 key={index}
@@ -212,8 +213,7 @@ const Home = () => {
                 name={state.name}
               />
             </button>
-          );
-        })}
+        ))}
       </div>
     );
   };
@@ -291,8 +291,8 @@ const Home = () => {
       <div className='full-middle-component'>
         <Slider {...settings}>
           {newBlogs.map((blog, index) => (
-            <div className='single-home-full-slider'>
-              <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} key={index} className='full-blogSlide' >
+            <div className='single-home-full-slider' key={index}>
+              <Link to={"/blogs/" + blog.slug} state={blog._id} style={{ textDecoration: 'none' }} className='full-blogSlide' >
                 <div className='divider-part'>
                   <h3>{blog.title}</h3>
                   <h3>"{blog.cleverQoute}"</h3>

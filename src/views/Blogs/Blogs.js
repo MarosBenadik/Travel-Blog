@@ -10,6 +10,8 @@ import DATA from '../../public/assets/DATA';
 
 import NavBar from '../../components/NavBar/NavBar';
 
+import backend from '../../public/heroku.js';
+
 import Moment from 'react-moment';
 
 import AddSide from '../../components/adds/AddSide';
@@ -32,16 +34,9 @@ const Blogs = ({category}) => {
   console.log(blogState)
 
   const [ blogs, setBlogs ] = React.useState([]);
- 
-  const changeContinent = (newContinent) => {
-
-    const thisContinent = DATA.explore.find(e => e.id === newContinent)
-
-    setContinent(thisContinent)
-  }
 
   React.useEffect( () => {
-    axios.get(`http://localhost:8800/blogs/all`)
+    axios.get(backend + `/blogs/all`)
       .then(res => {
         const blogs = res.data;
 

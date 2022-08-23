@@ -7,6 +7,8 @@ import useAuth from '../../hooks/useAuth';
 
 import axios from 'axios';
 
+import backend from '../../public/heroku.js';
+
 import "./Login.css"
 
 
@@ -36,7 +38,7 @@ const Login = () => {
         e.preventDefault();
         
         try {
-            const response = await axios.post(`http://localhost:8800/user/login`, 
+            const response = await axios.post(backend + `/user/login`, 
                 JSON.stringify({email: user, password: pwd}),
                 {
                     headers: { 'Content-Type': 'application/json'},

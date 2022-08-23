@@ -8,6 +8,8 @@ import NavBar from '../../components/NavBar/NavBar';
 
 import axios from 'axios';
 
+import backend from '../../public/heroku.js';
+
 import DATA from '../../public/assets/DATA';
 import icons from '../../public/icons/icons';
 
@@ -20,7 +22,7 @@ const Getinspire = () => {
   const [ categoryBlogs, setCategoryBlogs ] = React.useState(newBlogs);
 
   React.useEffect( () => {
-    axios.get(`http://localhost:8800/blogs/all`)
+    axios.get(backend + `/blogs/all`)
       .then(res => {
         const blogs = res.data;
 
