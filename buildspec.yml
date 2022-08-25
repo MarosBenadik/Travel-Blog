@@ -1,29 +1,24 @@
-version: 0.0
-os: linux
-
-files:
-  - source: /
-    destination: /home/ec2-user/Travel-Blog
-
-permissions:
-  - object: /
-    pattern: "**"
-    owner: ec2-user
-    group: ec2-user
-
-hooks:
-
-  BeforeInstall:
-    - location: scripts/before_install.sh
-      timeout: 300
-      runas: root
-  
-  AfterInstall:
-    - location: scripts/after_install.sh
-      timeout: 300
-      runas: root
-
-  ApplicationStart:
-    - location: scripts/app_start.sh
-      timeout: 300
-      runas: root
+version: 0.2 
+phases: 
+    install: 
+        runtime-versions: 
+            nodejs: 16.x
+        commands: 
+            - npm install 
+    pre_build: 
+        commands: 
+            - echo prebuild phase
+    build: 
+        commands: 
+            - echo Build started on `date` 
+            - npm run build 
+    post_build: 
+        commands: 
+            - echo Build completed on `date` 
+cache: 
+    paths: 
+        - 'node_modules/**/*' 
+artifacts: 
+    files: 
+        - '**/*' 
+    name: Travel-Blog-$(date +%Y-%m-%d)
