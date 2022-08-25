@@ -1,24 +1,25 @@
 version: 0.2 
 phases: 
-    install: 
-        runtime-versions: 
-            nodejs: latest
-        commands: 
-            - npm install 
-    pre_build: 
-        commands: 
-            - echo prebuild phase
-    build: 
-        commands: 
-            - echo Build started on `date` 
-            - npm start 
-    post_build: 
-        commands: 
-            - echo Build completed on `date` 
+  install: 
+    runtime-versions: 
+      nodejs: latest
+    commands:
+      - n 16
+      - npm install 
+  pre_build: 
+    commands: 
+      - echo prebuild phase
+  build: 
+    commands: 
+      - echo Build started on `date` 
+      - npm start 
+  post_build: 
+    commands: 
+      - echo Build completed on `date` 
 cache: 
-    paths: 
-        - 'node_modules/**/*' 
+  paths: 
+    - 'node_modules/**/*' 
 artifacts: 
-    files: 
-        - '**/*' 
-    name: Travel-Blog-$(date +%Y-%m-%d)
+  files: 
+      - '**/*' 
+  name: Travel-Blog-$(date +%Y-%m-%d)
