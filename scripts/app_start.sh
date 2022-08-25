@@ -1,4 +1,4 @@
-cd /home/ec2-user/server/src
+cd /home/ec2-user/Travel-Blog/src
 npm start
 pm2 start npm --name "Travel-Blog" -- start
 pm2 startup
